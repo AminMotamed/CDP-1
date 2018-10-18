@@ -1,0 +1,23 @@
+- Auteurs   (détails à propos des auteurs)
+
+- Changelog (liste des différentes modifications, versions)
+
+- Hacking   (texte à propos des détails concernant le hack de Gimp)
+
+- News      (différentes nouveautés apportées par les différentes versions)
+
+- README    (informations sur le logiciel GIMP concernant les versions, la page officiel de GIMP, customisation...)
+
+- Configure (permettant de configurer l'application dans plusieurs ordinateurs)
+
+- Cursor    (différentes images concernant les curseurs du logiciel)
+
+- Data      (concerne les différentes données/outils du logiciel permettant de réaliser par exemple des retouches (pinceau, image, palette...))
+
+- Docs      (documentation permettant d'apprendre plus sur l'architecture du code du logiciel Gimp. Coupé en 2 avec également une documentation pour les developpeurs)
+
+- Lib       (les différentes librairies dont le logiciel utilise)
+
+- Po        (différentes informations que l'on peut apercevoir dans le logiciel Gimp (côté utilisateur) traduit dans plusieurs langues)
+
+- Plugins   (les différentes plugins utilisés par le logiciel)
