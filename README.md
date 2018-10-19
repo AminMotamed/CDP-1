@@ -15,4 +15,4 @@ Le groupe est constitué de 5 membres :
 - LOKO Loïc 
 - MOTAMED SALEHI Amin
 - BOUCHIHA Anas 
-- GHOUIBI Ghasen
+- GHOUIBI Ghassen

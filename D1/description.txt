@@ -1,30 +1,48 @@
-- Auteurs   : détails à propos des auteurs du logiciel (les gens qui ont codé mais également ceux qui ont documenté)
+- Auteurs   : détails à propos des auteurs du logiciel (les gens qui ont codé mais 
+            également ceux qui ont documenté)
             : .xml, xsl
 
 - Changelog : liste des différentes modifications, versions
-            : les commits des différentes modifications, avec le nom de l'auteur, la date et une indication sur la modif'
+            : les commits des différentes modifications, avec le nom de l'auteur, 
+            la date et une indication sur la modif'
 
 - Hacking.  : texte à propos des détails concernant le hack de Gimp
 
 - News      : différentes nouveautés apportées par les différentes versions
-            : plusieurs fichiers NEWS des différentes versions en expliquant dans chacun des fichiers les modifications entre chaque version, les contributeurs, les librairies utilisées/ajoutées...
+            : plusieurs fichiers NEWS des différentes versions en expliquant dans 
+            chacun des fichiers les modifications entre chaque version, les 
+            contributeurs, les librairies utilisées/ajoutées...
 
-- README    : informations sur le logiciel GIMP concernant les versions, la page officiel de GIMP, customisation...
+- README    : informations sur le logiciel GIMP concernant les versions, la page 
+            officiel de GIMP, customisation...
 
 - Configure : permettant de configurer l'application dans plusieurs ordinateurs
 
-- Cursor    : différentes images concernant les curseurs du logiciel
+- Cursors   : différentes images concernant les curseurs du logiciel
             : images .png selon les différentes évènements réalisés par l'utilisateur
 
 - Data      : concerne les différentes données/outils dont dispose le logiciel Gimp
-            : les outils pour pouvoir dessiner (pinceau, palette de couleurs..) + d'autres données comme le logo du logiciel
+            : les outils pour pouvoir dessiner (pinceau, palette de couleurs..) + 
+            d'autres données comme le logo du logiciel
 
-- Docs      : documentation permettant d'apprendre plus sur l'architecture du code du logiciel Gimp. Coupé en 2 avec
-            également une documentation pour les developpeurs
+- desktop    : les différents logos du logiciels prévus pour les raccourcis "bureau"
+             : .png sous différents formats
 
-- Lib       : les différentes librairies utilisées par le logiciel
 
-- Po        : différentes informations que l'on peut apercevoir dans le logiciel Gimp (côté utilisateur) traduit dans
-            plusieurs langues
+- Docs       : documentation permettant d'apprendre plus sur le logiciel Gimp (architecture,
+             commandes...).
+- docs       : TODO
+             : généralement des .in pour la documentation
+- devel-docs : documentation consacrée pour les développeurs. On y trouve des informations 
+             sur les librairies, les bugs...
+
+- Lib          : les différentes librairies utilisées par le logiciel
+- libgimpmath  : les librairies qui contiennent des formules/expressions en mathématiques
+- libgimpcolor : les librairies qui permettent la manipulation des couleurs de notre 
+               objet (RGB, HSV...)
+- libgimp 
+
+- Po        : différentes informations que l'on peut apercevoir dans le logiciel Gimp 
+            (côté utilisateur) traduit dans plusieurs langues
 
 - Plugins   : les différentes plugins utilisés par le logiciel
