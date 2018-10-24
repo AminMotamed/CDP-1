@@ -1,0 +1,153 @@
+[libgimpwidgets]:librairie de manipulation de widgets le nom du dossier  
+
+
+[m4macros]: un dossier qui contient des macros comme le nom indique vu l'extension .m4 {M4 est un langage de traitement de macros} on pense que c'est un dossier qui comprte les scripts macros vu que dans le makefile on trouve une installation de ces derniers .
+
+
+[menus]: contient des fichiers xml pour les font-menu image-menu tool-option le nom l'indique déjà
+
+[modules]:ce dossier permet de gerer des filtres et ajouter ces fonctionnalités pour la librairie de base de gimp {
+	libcolor-selector-cmyk.la		\
+	libcolor-selector-water.la		\
+	libcolor-selector-wheel.la		\
+	libdisplay-filter-color-blind.la	\
+	libdisplay-filter-gamma.la		\
+	libdisplay-filter-high-contrast.la	\
+	$(display_filter_lcms_module)		\
+	$(display_filter_proof_module)		\
+	$(controller_midi_module)		\
+	$(controller_linux_input_module)	\
+	$(controller_dx_dinput_module)
+}
+aussi les noms de fichiers comme display-filter-high-contrast.c
+
+[plug-ins/]{
+
+
+	[plug-ins/color-rotate]:manipulation de la rotation de couleur et dans ce dossier un sous dossier des images de roation comme {color-rotate-360.png} source les noms de fichiers et le contenu des fichiers *.c
+	
+	[plug-ins/common]:dans ce dossier on trouve les plug-ins les plus commun (les plus courant)on prend comme exemple le fichier file-pdf-save.c , web-page.c et mail.c .. etc
+
+	[plug-ins/file-bmp]:manipulation d'image format bmp {écrire , lire, chargement ,compression ...etc } justification bmp-read.c bmp-write.c comme le nom de fichier l'indique #define LOAD_PROC      "file-bmp-load" / #define SAVE_PROC      "file-bmp-save" /#define PLUG_IN_BINARY "file-bmp" /#define PLUG_IN_ROLE   "gimp-file-bmp"
+
+	[plug-ins/file-compressor]:manipulation de la compression gzip ,bzip2 et traitement de fichier a ce format jusitification static cont Compressor compressors[],aussi le nom du fichier qui l'indique.
+
+	[plug-ins/help]:comme le nom l'indique apporte une aide a l'utilisateur,les fichiers helpdomain gimp helptypes ,le nom du fichier qui l'indique justification {
+	#define GIMP_HELP_DEFAULT_DOMAIN  "http://www.gimp.org/help"
+	#define GIMP_HELP_DEFAULT_ID      "gimp-main"
+	#define GIMP_HELP_DEFAULT_LOCALE  "en"
+
+	#define GIMP_HELP_PREFIX          "help"
+	#define GIMP_HELP_ENV_URI         "GIMP2_HELP_URI"
+	}
+
+	[plug-ins/file-xjt]:ce dossier permet de sauvegarder les images compresser de cimp avec toutes les propriétes qui sont disponibles en gimp la justification est le fichier README_xjt_fileformat.txt 
+
+
+
+	[plug-ins/file-fits]:ce dossier contient les Flexible Image Transport System , c'est un format de fichiers, Il sert au stockage, à la transmission et au traitement des images les noms de fichiers et de dossier.
+
+	
+
+	[plug-ins/file-psd] : ce dossier contient des fonctionalités de photo shop document load et save comme on trouve dans les fichiers respectives psd-save.c et psd-load.c 
+
+
+	
+	[plug-ins/flame]: une animation a partir du readme on peut reperer {images, documentation, and other interfaces (a batch animation renderer and a low-quality interactive editor) (par contre le site ne marche pas du coup c'est un peu difficile de deviner ce que c'est vraiment)}
+	[plug-ins/ui]:structuration des données des  images à l'extension gif et png , la présence des fichier xml et le nom de fichier l'indique plug-in-file-gif.ui plug-in-file-png.ui
+	
+	[plug-ins/file-ico]:manipulation d'image format ico la justification c'est le nom de dossier et pareil on trouve des fichiers de sauvegardre et importation ico-save.c ico-load.c
+	
+	[plug-ins/file-jpeg]: manipulation d'image du format jpeg et on trouve dans le dossier {jpeg-quality.c  jpeg-settings.c} qui sert a modifier la quality de les images settings et pareil save et load 
+	
+
+	[plug-ins/help-browser]:comme le nom l'indique aussi c'est une aide au navigateur et vu les noms des fichiers on trouve egalement des actions cette fonction{gimp_throbber_button_clicked (GtkWidget    *widget,} mais aussi les boites de dialog dans le fichier dialog.c et .h .
+	
+	[plug-ins/ifs-compose]:c'est un dossier qui permet la création de fractales du système de fonctions itérées par voie directe manipulation à l’écran du composant transformé justification README.ifscompose
+	
+	[plug-ins/gimpressionist]:c'est dossier qui permet de donner des effets presque naturel de painting justification le README 
+
+	[plug-ins/twain]:Ce dossier est relié à la bibliothèque de support TWAIN afin de pour capturer des images à partir de périphériques TWAIN directement dans des images GIMP source README
+
+	[plug-ins/map-object]:c'est un dossier qui permet d'avoir un filter pour les images source README {image filter plug-in for GIMP}
+
+	[plug-ins/lighting]:c'est un dossier de filtre de brillance source README { Lighting Effects }
+
+
+	[plug-ins/gradient-flare]:ce dossier rend l'effet de lumière parasite à l'aide de dégradés personnalisés source README
+
+	[plug-ins/gfig]:ce dossier vous permet de dessiner les formes suivantes {Lines ,Circles,Ellipses,n sided regular polygons (n >=3),Curves (arcs),Spirals
+	,N pointed stars,Simple Beizer curves} source README
+
+	[plug-ins/file-fli]:manipulation de FLI and FLC videos et qui permet le chargement de ces derniers {* This is a first loader for FLI and FLC movies. It uses as the same method as
+ 	* the gif plug-in to store the animation (i.e. 1 layer/frame).} source fli-gimp.c ligne 21
+	
+	[plug-ins/pagecurl]:ce dossier manipule des tournes pages (pied de page) (curl en anglais) on distingue ça a traves les images curl0.png par exemple 
+
+	[plug-ins/selection-to-path]:Ce dossier prendra une sélection et la convertira en chemin source README	
+	
+	[plug-ins/print]: ce dossier manipule les print source les fonctions dans print.c begin_print,end_print ligne 54,57 par exemple
+
+	[plug-ins/file-uri]: ce dossier permet l'echange des images via le réseau source fichier uri-backend-wget.c {uri_backend_get_load_protocols (void){return "http:,https:,ftp:";}}
+
+	[plug-ins/file-sgi]:ce dossier manipule Silicon Graphics Image ou RGB file format le nom de dossier le confirme le fichier sgi-lib.c { sgiClose()    - Close an SGI image file.
+	*   sgiGetRow()   - Get a row of image data from a file.
+	*   sgiOpen()     - Open an SGI image file for reading or writing.
+	*   sgiOpenFile() - Open an SGI image file for reading or writing.
+	*   sgiPutRow()   - Put a row of image data to a file.
+	*   getlong()     - Get a 32-bit big-endian integer.
+	*   getshort()    - Get a 16-bit big-endian integer.
+	*   putlong()     - Put a 32-bit big-endian integer.
+	*   putshort()    - Put a 16-bit big-endian integer.
+	*   read_rle8()   - Read 8-bit RLE data.
+	*   read_rle16()  - Read 16-bit RLE data.
+	*   write_rle8()  - Write 8-bit RLE data.
+	*   write_rle16() - Write 16-bit RLE data.}
+
+	[plug-ins/pygimp]:ce dossier manipule des fonctions implémenté en python source  liste de fichier suivante { benchmark-foreground-extract.py  palette-offset.py       python-eval.py
+	clothify.py                      palette-sort.py         shadow_bevel.py
+	colorxhtml.py                    palette-to-gradient.py  sphere.py
+	file-openraster.py               pyconsole.py            text-brush.py
+	foggify.py                       py-slice.py             whirlpinch.py
+	gradients-save-as-css.py         python-console.py
+	}
+
+	[plug-ins/imagemap]:ce dossier manipule les images avec des fonctions on cite couper,coller,editer,supprimer source les fichier *.c comme imap_cmd_delete.c
+
+	[plug-ins/win-snap]:ce dossier permet de faire une capture d'écran pour les  utilisateurs de win32 source winsnap.c ligne 26
+
+	[plug-ins/metadata]:ce dossier c'est le début d'un éditeur de métadonnées mais il est complet source README
+
+	[plug-ins/script-fu]:pour /ftx &tinyscheme -> implementation du  language Scheme(pour hériter des bibliothèques) source README -> des scripts d'interface sont présente dans le dossier père  
+	[plug-ins/fractal-explorer]:Explorateur fractal et on trouve dans les exemples roses,soleil,bois => fichiers wood flower et d'autres 
+
+ 	[plug-ins/maze]:plug-in d'una labyrinthe avec l'aglorithms les fichiers maze-algorithms* et maze* aussi le nom du dossier
+
+
+	[plug-ins/file-faxg3]:manipulation d'image ligne 193 load_image () dans le fichier faxg3.c aussi par l'utilisation des arbres dans le fichier g3.h	
+
+	
+
+}
+
+
+
+[po] :les traductions dans différentes langues disponibles les fichiers contiennent généralement des informations sur la langue :justification l'extension po et 			  aussi les en-têtes des fichiers où on trouve l'équipe de traduction et la langue l'encodage la version et plein d'autres information.
+
+[po-libgimp] 	: les traductions dans différentes langues concernant les librairies comme le nom l'indique
+
+[po-plug-ins]: les traductions dans différentes langues concernant les plug-ins comme le nom l'indique
+
+[po-python 	]: les traductions dans différentes langues concernant les plug-ins codées en python comme le nom l'indique
+
+[po-script-fu ]: les traductions dans différentes langues concernant les scripts ()on trouve également #~ msgid "Background color" #~ msgstr "لون الخلفية" les #msgid #msgstr ,#~ msgid "Block size" et d'autres fonctionnalités
+
+[po-tips]: les traductions dans différentes langues concernant les astuces de gimp (exemple drag and drop ) et les raccourcies de clavier msgid ""
+"You can use <tt>Ctrl</tt>-<tt>Tab</tt> to cycle through all layers in an "
+"image (if your window manager doesn't trap those keys...)."
+
+[themes]:lance de des scripts exemple :(find "$(distdir)/$$file" -type d ! -perm -700 -exec chmod u+rwx {} \;; \) et vu le nom ça concerne les thémes
+
+[themes/default/images]:on trouve les images(icones pour gimp) avec l'extension .png 
+
+[themes/Small]: modification des styles exemple(style "gimp-grid-view-style" = "gimp-default-style")
