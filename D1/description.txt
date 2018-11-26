@@ -1,30 +1,30 @@
-- Auteurs   : détails à propos des auteurs du logiciel (les gens qui ont codé mais également ceux qui ont documenté)
-            : .xml, xsl
+- Auteurs   : liste de l'ensemble des auteurs/contributeurs du logiciel (les gens qui ont codé mais également ceux qui ont documenté).
+            : .xml, .xsl, .dtd, AUTHORS
 
-- Changelog : liste des différentes modifications, versions
-            : les commits des différentes modifications, avec le nom de l'auteur, la date et une indication sur la modif'
+- Copying   : contient la licence publique générale GNU (GNU General Public License) qui permet de fixer les conditions légales de distribution d'un logiciel libre du projet GNU (Wikipedia)
+            : COPYING
 
-- Hacking.  : texte à propos des détails concernant le hack de Gimp
+- Changelog : liste des différentes modifications. On retrouve les commits des différentes modifications, avec le nom de l'auteur, la date et une indication sur la modif'
+            : ChangeLog*
 
-- News      : différentes nouveautés apportées par les différentes versions
-            : plusieurs fichiers NEWS des différentes versions en expliquant dans chacun des fichiers les modifications entre chaque version, les contributeurs, les librairies utilisées/ajoutées...
+- Hacking   : texte à propos des détails concernant le hack de Gimp (les pré-requis pour pouvoir utiliser GIMP, la manière dont procède la compilation, les patchs ou encore l'accès à GIMP via Git)
+            : HACKING
 
-- README    : informations sur le logiciel GIMP concernant les versions, la page officiel de GIMP, customisation...
+- Install   : différentes instructions/commandes permettant d'installer GIMP sur notre machine
+            : INSTALL
 
-- Configure : permettant de configurer l'application dans plusieurs ordinateurs
+- License   : contient les différentes licences du programme. En réalité, traite plutot GNU GPL et demande d'aller voir le fichier COPYING (qui traite plus en détail à propos de cette licence).
+            : LICENSE
 
-- Cursor    : différentes images concernant les curseurs du logiciel
-            : images .png selon les différentes évènements réalisés par l'utilisateur
+- News      : différentes nouveautés apportées par les différentes versions plusieurs fichiers NEWS des différentes versions en expliquant les changements, les nouveautés ou encore les corrections apportées dans les différentes dossiers (et également en général) entre chaque version.
+            : NEWS
 
-- Data      : concerne les différentes données/outils dont dispose le logiciel Gimp
-            : les outils pour pouvoir dessiner (pinceau, palette de couleurs..) + d'autres données comme le logo du logiciel
+- README    : informations sur le logiciel GIMP concernant les versions, la page officiel de GIMP, customisation... Il est conseillé de lire ce fichier au départ, pour avoir dans un premier des informations sur le logiciel/programme que nous sommes en train d'utiliser puis dans un second temps la manière de l'utiliser.
+            : README
 
-- Docs      : documentation permettant d'apprendre plus sur l'architecture du code du logiciel Gimp. Coupé en 2 avec
-            également une documentation pour les developpeurs
+- Configure : permettant de configurer l'application dans différentes machines. Utilisé avec Makefile.in et Makefile.am. Configure génèrera un Makefile depuis le Makefile.in qui lui-même a été généré par Makefile.am (en utilisant automake et autoconf) (src: stackoverflow.com).
+            : configure
 
-- Lib       : les différentes librairies utilisées par le logiciel
+- acinclude : les inclusions pour le fichier aclocal.m4
 
-- Po        : différentes informations que l'on peut apercevoir dans le logiciel Gimp (côté utilisateur) traduit dans
-            plusieurs langues
-
-- Plugins   : les différentes plugins utilisés par le logiciel
+- aclocal   : macros définies pour autoconf (ac = autoconf)

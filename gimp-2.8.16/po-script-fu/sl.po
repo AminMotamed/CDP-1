@@ -1,0 +1,297 @@
+# Slovenian translation of GIMP Script-Fu.
+# Copyright (C) 2007-2011 Free Software Foundation, Inc.
+#
+# Nedeljko Grabant <nedeljkograbant@gmail.com>, 2007.
+# Martin Srebotnjak <miles@filmsi.net>, 2007 - 2011, translated from scratch.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GIMP 2.8 scriptfu\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gimp&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-08-10 05:34+0000\n"
+"PO-Revision-Date: 2015-08-10 17:52+0200\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
+"Language-Team: Martin Srebotnjak <miles@filmsi.net>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Poedit-SourceCharset: iso-8859-1\n"
+"X-Generator: Poedit 1.8.4\n"
+
+#: ../plug-ins/script-fu/script-fu.c:111
+msgid "Interactive console for Script-Fu development"
+msgstr "Interaktivna konzola za razvoj Script-Fu"
+
+#: ../plug-ins/script-fu/script-fu.c:117
+msgid "_Console"
+msgstr "_Konzola"
+
+#: ../plug-ins/script-fu/script-fu.c:141
+msgid "Server for remote Script-Fu operation"
+msgstr "Strežnik za oddaljeno upravljanje Script-Fu"
+
+#: ../plug-ins/script-fu/script-fu.c:151
+msgid "_Start Server..."
+msgstr "_Zaženi strežnik ..."
+
+#: ../plug-ins/script-fu/script-fu.c:307
+msgid "_GIMP Online"
+msgstr "_GIMP na spletu"
+
+#: ../plug-ins/script-fu/script-fu.c:308
+msgid "_User Manual"
+msgstr "_Uporabniški vodnik"
+
+#: ../plug-ins/script-fu/script-fu.c:311
+msgid "_Script-Fu"
+msgstr "_Skript-Fu"
+
+#: ../plug-ins/script-fu/script-fu.c:313
+msgid "_Test"
+msgstr "_Preizkusi"
+
+#: ../plug-ins/script-fu/script-fu.c:316
+msgid "_Buttons"
+msgstr "_Gumbi"
+
+#: ../plug-ins/script-fu/script-fu.c:318
+msgid "_Logos"
+msgstr "_Logotipi"
+
+#: ../plug-ins/script-fu/script-fu.c:320
+msgid "_Patterns"
+msgstr "_Vzorci"
+
+#: ../plug-ins/script-fu/script-fu.c:323
+msgid "_Web Page Themes"
+msgstr "_Teme spletnih strani"
+
+#: ../plug-ins/script-fu/script-fu.c:325
+msgid "_Alien Glow"
+msgstr "_Svetleči napis  ..."
+
+#: ../plug-ins/script-fu/script-fu.c:327
+msgid "_Beveled Pattern"
+msgstr "_Izbočeni vzorec"
+
+#: ../plug-ins/script-fu/script-fu.c:329
+msgid "_Classic.Gimp.Org"
+msgstr "_Classic.Gimp.Org"
+
+#: ../plug-ins/script-fu/script-fu.c:332
+msgid "Alpha to _Logo"
+msgstr "Alfa v _logotip"
+
+#: ../plug-ins/script-fu/script-fu.c:335
+msgid "Re-read all available Script-Fu scripts"
+msgstr "Ponovno preberi vse dosegljive skripte Script-Fu"
+
+#: ../plug-ins/script-fu/script-fu.c:340
+msgid "_Refresh Scripts"
+msgstr "_Osveži skripte"
+
+#: ../plug-ins/script-fu/script-fu.c:363
+msgid ""
+"You can not use \"Refresh Scripts\" while a Script-Fu dialog box is open.  "
+"Please close all Script-Fu windows and try again."
+msgstr ""
+"Ko je odprto pogovorno okno Script-Fu, ne smete uporabiti \"Osveži skripte"
+"\".  Prosimo, zaprite vsa okna Script-Fu in poskusite znova."
+
+#: ../plug-ins/script-fu/script-fu-console.c:130
+#: ../plug-ins/script-fu/script-fu-console.c:197
+msgid "Script-Fu Console"
+msgstr "Konzola Script-Fu"
+
+#: ../plug-ins/script-fu/script-fu-console.c:193
+msgid "Welcome to TinyScheme"
+msgstr "Dobrodošli v TinyScheme"
+
+#: ../plug-ins/script-fu/script-fu-console.c:199
+msgid "Interactive Scheme Development"
+msgstr "Interaktivni razvoj shem"
+
+#: ../plug-ins/script-fu/script-fu-console.c:235
+msgid "_Browse..."
+msgstr "_Prebrskaj ..."
+
+#: ../plug-ins/script-fu/script-fu-console.c:293
+msgid "Save Script-Fu Console Output"
+msgstr "Shrani izpis konzole Script-Fu"
+
+#: ../plug-ins/script-fu/script-fu-console.c:340
+#, c-format
+msgid "Could not open '%s' for writing: %s"
+msgstr "'%s' ni mogoče odpreti za pisanje: %s"
+
+#: ../plug-ins/script-fu/script-fu-console.c:369
+msgid "Script-Fu Procedure Browser"
+msgstr "Brskalnik procedur Script-Fu"
+
+#: ../plug-ins/script-fu/script-fu-eval.c:60
+msgid "Script-Fu evaluation mode only allows non-interactive invocation"
+msgstr "Ocenjevalni način konzole Script-Fu omogoča le ne-interaktiven priklic"
+
+#: ../plug-ins/script-fu/script-fu-interface.c:198
+msgid "Script-Fu cannot process two scripts at the same time."
+msgstr "Script-Fu ne more obdelati dveh skriptov naenkrat."
+
+#: ../plug-ins/script-fu/script-fu-interface.c:200
+#, c-format
+msgid "You are already running the \"%s\" script."
+msgstr "Že poganjate skript \"%s\"."
+
+#: ../plug-ins/script-fu/script-fu-interface.c:226
+#, c-format
+msgid "Script-Fu: %s"
+msgstr "Script-Fu: %s"
+
+#. we add a colon after the label;
+#. *  some languages want an extra space here
+#.
+#: ../plug-ins/script-fu/script-fu-interface.c:290
+#, c-format
+msgid "%s:"
+msgstr "%s: "
+
+#: ../plug-ins/script-fu/script-fu-interface.c:337
+msgid "Script-Fu Color Selection"
+msgstr "Izbor barv Script-Fu"
+
+#: ../plug-ins/script-fu/script-fu-interface.c:446
+msgid "Script-Fu File Selection"
+msgstr "Izbor datoteke Script-Fu"
+
+#: ../plug-ins/script-fu/script-fu-interface.c:449
+msgid "Script-Fu Folder Selection"
+msgstr "Izbor mape Script-Fu"
+
+#: ../plug-ins/script-fu/script-fu-interface.c:462
+msgid "Script-Fu Font Selection"
+msgstr "Izbor pisave Script-Fu"
+
+#: ../plug-ins/script-fu/script-fu-interface.c:470
+msgid "Script-Fu Palette Selection"
+msgstr "Izbor palete Script-Fu"
+
+#: ../plug-ins/script-fu/script-fu-interface.c:479
+msgid "Script-Fu Pattern Selection"
+msgstr "Izbor vzorca Script-fu"
+
+#: ../plug-ins/script-fu/script-fu-interface.c:488
+msgid "Script-Fu Gradient Selection"
+msgstr "Izbor preliva Script-Fu"
+
+#: ../plug-ins/script-fu/script-fu-interface.c:497
+msgid "Script-Fu Brush Selection"
+msgstr "Izbor čopiča Script-Fu"
+
+#: ../plug-ins/script-fu/script-fu-interface.c:857
+#, c-format
+msgid "Error while executing %s:"
+msgstr "Napaka pri izvajanju %s:"
+
+#: ../plug-ins/script-fu/script-fu-scripts.c:146
+msgid "Too few arguments to 'script-fu-register' call"
+msgstr "Premalo argumentov za klic 'script-fu-register'"
+
+#: ../plug-ins/script-fu/script-fu-scripts.c:605
+#, c-format
+msgid "Error while loading %s:"
+msgstr "Napaka pri nalaganju %s:"
+
+#: ../plug-ins/script-fu/script-fu-server.c:824
+msgid "Script-Fu Server Options"
+msgstr "Možnosti strežnika Script-Fu"
+
+#: ../plug-ins/script-fu/script-fu-server.c:829
+msgid "_Start Server"
+msgstr "_Zaženi strežnik"
+
+#: ../plug-ins/script-fu/script-fu-server.c:862
+msgid "Listen on IP:"
+msgstr "Poslušaj IP:"
+
+#: ../plug-ins/script-fu/script-fu-server.c:869
+msgid "Server port:"
+msgstr "Vrata strežnika:"
+
+#: ../plug-ins/script-fu/script-fu-server.c:875
+msgid "Server logfile:"
+msgstr "Dnevniška datoteka strežnika:"
+
+#: ../plug-ins/script-fu/script-fu-server.c:887
+msgid ""
+"Listening on an IP address other than 127.0.0.1 (especially 0.0.0.0) can "
+"allow attackers to remotely execute arbitrary code on this machine."
+msgstr ""
+"Poslušanje naslova IP, ki ni 127.0.0.1 (še posebej 0.0.0.0) lahko omogoči "
+"napadalcem, da oddaljeno izvedejo neželeno kodo na tem računalniku."
+
+#: ../plug-ins/script-fu/scripts/alien-glow-arrow.scm:182
+#: ../plug-ins/script-fu/scripts/beveled-pattern-arrow.scm:156
+msgid "Right"
+msgstr "Desno"
+
+#: ../plug-ins/script-fu/scripts/blended-logo.scm:136
+#: ../plug-ins/script-fu/scripts/blended-logo.scm:195
+msgid "FG-BG-RGB"
+msgstr "Ospredje-ozadje-RGB"
+
+#: ../plug-ins/script-fu/scripts/erase-rows.scm:47
+msgid "Rows"
+msgstr "Vrstice"
+
+#: ../plug-ins/script-fu/scripts/erase-rows.scm:48
+msgid "Even"
+msgstr "Sodo"
+
+#: ../plug-ins/script-fu/scripts/erase-rows.scm:49
+msgid "Erase"
+msgstr "Izbriši"
+
+#: ../plug-ins/script-fu/scripts/font-map.scm:164
+msgid "Black on white"
+msgstr "Črno na belem"
+
+#: ../plug-ins/script-fu/scripts/guides-new-percent.scm:35
+#: ../plug-ins/script-fu/scripts/guides-new.scm:35
+msgid "Horizontal"
+msgstr "Vodoravno"
+
+#: ../plug-ins/script-fu/scripts/rendermap.scm:90
+msgid "Tile"
+msgstr "Tlakuj"
+
+#: ../plug-ins/script-fu/scripts/ripply-anim.scm:129
+msgid "Wrap"
+msgstr "Ovij"
+
+#: ../plug-ins/script-fu/scripts/spyrogimp.scm:323
+msgid "Spyrograph"
+msgstr "Spirograf"
+
+#: ../plug-ins/script-fu/scripts/spyrogimp.scm:326
+msgid "Circle"
+msgstr "Krog"
+
+#: ../plug-ins/script-fu/scripts/spyrogimp.scm:342
+msgid "Pencil"
+msgstr "Svinčnik"
+
+#: ../plug-ins/script-fu/scripts/spyrogimp.scm:347
+msgid "Solid Color"
+msgstr "Enakomerna barva"
+
+#: ../plug-ins/script-fu/scripts/textured-logo.scm:127
+#: ../plug-ins/script-fu/scripts/textured-logo.scm:169
+msgid "Squares"
+msgstr "Kvadrati"
+
+#: ../plug-ins/script-fu/scripts/tileblur.scm:79
+msgid "IIR"
+msgstr "IIR"
