@@ -1,0 +1,234 @@
+cursor_bad
+  ./cursor-bad.png
+cursor_bad_bw
+  ./cursor-bad-bw.png
+cursor_color_picker
+  ./cursor-color-picker.png
+cursor_color_picker_bw
+  ./cursor-color-picker-bw.png
+cursor_corner_bottom_left
+  ./cursor-corner-bottom-left.png
+cursor_corner_bottom_left_bw
+  ./cursor-corner-bottom-left-bw.png
+cursor_corner_bottom_right
+  ./cursor-corner-bottom-right.png
+cursor_corner_bottom_right_bw
+  ./cursor-corner-bottom-right-bw.png
+cursor_corner_top_left
+  ./cursor-corner-top-left.png
+cursor_corner_top_left_bw
+  ./cursor-corner-top-left-bw.png
+cursor_corner_top_right
+  ./cursor-corner-top-right.png
+cursor_corner_top_right_bw
+  ./cursor-corner-top-right-bw.png
+cursor_crosshair
+  ./cursor-crosshair.png
+cursor_crosshair_bw
+  ./cursor-crosshair-bw.png
+cursor_crosshair_small
+  ./cursor-crosshair-small.png
+cursor_crosshair_small_bw
+  ./cursor-crosshair-small-bw.png
+cursor_mouse
+  ./cursor-mouse.png
+cursor_mouse_bw
+  ./cursor-mouse-bw.png
+cursor_move
+  ./cursor-move.png
+cursor_move_bw
+  ./cursor-move-bw.png
+cursor_none
+  ./cursor-none.png
+cursor_none_bw
+  ./cursor-none-bw.png
+cursor_side_bottom
+  ./cursor-side-bottom.png
+cursor_side_bottom_bw
+  ./cursor-side-bottom-bw.png
+cursor_side_left
+  ./cursor-side-left.png
+cursor_side_left_bw
+  ./cursor-side-left-bw.png
+cursor_side_right
+  ./cursor-side-right.png
+cursor_side_right_bw
+  ./cursor-side-right-bw.png
+cursor_side_top
+  ./cursor-side-top.png
+cursor_side_top_bw
+  ./cursor-side-top-bw.png
+cursor_zoom
+  ./cursor-zoom.png
+cursor_zoom_bw
+  ./cursor-zoom-bw.png
+modifier_anchor
+  ./modifier-anchor.png
+modifier_bad
+  ./modifier-bad.png
+modifier_background
+  ./modifier-background.png
+modifier_control
+  ./modifier-control.png
+modifier_foreground
+  ./modifier-foreground.png
+modifier_intersect
+  ./modifier-intersect.png
+modifier_join
+  ./modifier-join.png
+modifier_minus
+  ./modifier-minus.png
+modifier_move
+  ./modifier-move.png
+modifier_pattern
+  ./modifier-pattern.png
+modifier_plus
+  ./modifier-plus.png
+modifier_resize
+  ./modifier-resize.png
+modifier_select
+  ./modifier-select.png
+tool_airbrush
+  ./tool-airbrush.png
+tool_airbrush_bw
+  ./tool-airbrush-bw.png
+tool_blend
+  ./tool-blend.png
+tool_blend_bw
+  ./tool-blend-bw.png
+tool_blur
+  ./tool-blur.png
+tool_blur_bw
+  ./tool-blur-bw.png
+tool_bucket_fill
+  ./tool-bucket-fill.png
+tool_bucket_fill_bw
+  ./tool-bucket-fill-bw.png
+tool_burn
+  ./tool-burn.png
+tool_burn_bw
+  ./tool-burn-bw.png
+tool_clone
+  ./tool-clone.png
+tool_clone_bw
+  ./tool-clone-bw.png
+tool_color_picker
+  ./tool-color-picker.png
+tool_color_picker_bw
+  ./tool-color-picker-bw.png
+tool_crop
+  ./tool-crop.png
+tool_crop_bw
+  ./tool-crop-bw.png
+tool_dodge
+  ./tool-dodge.png
+tool_dodge_bw
+  ./tool-dodge-bw.png
+tool_ellipse_select
+  ./tool-ellipse-select.png
+tool_ellipse_select_bw
+  ./tool-ellipse-select-bw.png
+tool_eraser
+  ./tool-eraser.png
+tool_eraser_bw
+  ./tool-eraser-bw.png
+tool_flip_horizontal
+  ./tool-flip-horizontal.png
+tool_flip_horizontal_bw
+  ./tool-flip-horizontal-bw.png
+tool_flip_vertical
+  ./tool-flip-vertical.png
+tool_flip_vertical_bw
+  ./tool-flip-vertical-bw.png
+tool_free_select
+  ./tool-free-select.png
+tool_free_select_bw
+  ./tool-free-select-bw.png
+tool_fuzzy_select
+  ./tool-fuzzy-select.png
+tool_fuzzy_select_bw
+  ./tool-fuzzy-select-bw.png
+tool_hand
+  ./tool-hand.png
+tool_hand_bw
+  ./tool-hand-bw.png
+tool_heal
+  ./tool-heal.png
+tool_heal_bw
+  ./tool-heal-bw.png
+tool_ink
+  ./tool-ink.png
+tool_ink_bw
+  ./tool-ink-bw.png
+tool_iscissors
+  ./tool-iscissors.png
+tool_iscissors_bw
+  ./tool-iscissors-bw.png
+tool_measure
+  ./tool-measure.png
+tool_measure_bw
+  ./tool-measure-bw.png
+tool_move
+  ./tool-move.png
+tool_move_bw
+  ./tool-move-bw.png
+tool_paintbrush
+  ./tool-paintbrush.png
+tool_paintbrush_bw
+  ./tool-paintbrush-bw.png
+tool_paths
+  ./tool-paths.png
+tool_paths_bw
+  ./tool-paths-bw.png
+tool_paths_anchor
+  ./tool-paths-anchor.png
+tool_paths_anchor_bw
+  ./tool-paths-anchor-bw.png
+tool_paths_control
+  ./tool-paths-control.png
+tool_paths_control_bw
+  ./tool-paths-control-bw.png
+tool_paths_segment
+  ./tool-paths-segment.png
+tool_paths_segment_bw
+  ./tool-paths-segment-bw.png
+tool_pencil
+  ./tool-pencil.png
+tool_pencil_bw
+  ./tool-pencil-bw.png
+tool_perspective
+  ./tool-perspective.png
+tool_perspective_bw
+  ./tool-perspective-bw.png
+tool_polygon_select
+  ./tool-polygon-select.png
+tool_polygon_select_bw
+  ./tool-polygon-select-bw.png
+tool_rect_select
+  ./tool-rect-select.png
+tool_rect_select_bw
+  ./tool-rect-select-bw.png
+tool_resize
+  ./tool-resize.png
+tool_resize_bw
+  ./tool-resize-bw.png
+tool_rotate
+  ./tool-rotate.png
+tool_rotate_bw
+  ./tool-rotate-bw.png
+tool_shear
+  ./tool-shear.png
+tool_shear_bw
+  ./tool-shear-bw.png
+tool_smudge
+  ./tool-smudge.png
+tool_smudge_bw
+  ./tool-smudge-bw.png
+tool_text
+  ./tool-text.png
+tool_text_bw
+  ./tool-text-bw.png
+tool_zoom
+  ./tool-zoom.png
+tool_zoom_bw
+  ./tool-zoom-bw.png

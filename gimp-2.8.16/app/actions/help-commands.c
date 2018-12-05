@@ -52,3 +52,15 @@ help_context_help_cmd_callback (GtkAction *action,
 
   gimp_context_help (widget);
 }
+
+void
+help_twitter_cmd_callback (GtkAction *action,
+                        gpointer   data)
+{
+  Gimp        *gimp;
+  GimpDisplay *display;
+  return_if_no_gimp (gimp, data);
+  return_if_no_display (display, data);
+
+  gimp_help_show (gimp, GIMP_PROGRESS (display), NULL, NULL);
+}

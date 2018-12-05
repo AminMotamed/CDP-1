@@ -641,6 +641,8 @@
     <menu action="help-menu" name="Help">
       <menuitem action="help-help" />
       <menuitem action="help-context-help" />
+      <menuitem action="help-twitter"/>
+      <menuitem action="dialogs-twitter"/>
       <menuitem action="dialogs-tips" />
       <menuitem action="dialogs-about" />
       <separator />

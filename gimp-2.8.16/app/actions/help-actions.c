@@ -42,6 +42,13 @@ static const GimpActionEntry help_actions[] =
     G_CALLBACK (help_help_cmd_callback),
     GIMP_HELP_HELP },
 
+  // Modification : ajout d'un élément dans Help 
+  { "help-twitter", GTK_STOCK_HELP,
+    NC_("help-action", "_Twitter"), "F1",
+    NC_("help-action", "Open Twitter"),
+    G_CALLBACK (help_help_cmd_callback),
+    GIMP_HELP_TWITTER },
+
   { "help-context-help", GTK_STOCK_HELP,
     NC_("help-action", "_Context Help"), "<shift>F1",
     NC_("help-action", "Show the help for a specific user interface item"),
