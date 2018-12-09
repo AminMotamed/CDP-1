@@ -1314,7 +1314,7 @@
   <menuitem action="dialogs-templates"/>
   <menuitem action="dialogs-error-console"/>
 
-      </menu>
+    </menu>
       <menuitem action="dialogs-toolbox"/>
       <separator/>
       <placeholder name="Images"/>

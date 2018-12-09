@@ -114,7 +114,6 @@ struct _GimpStringActionEntry
   const gchar *accelerator;
   const gchar *tooltip;
   const gchar *value;
-
   const gchar *help_id;
 };
 
