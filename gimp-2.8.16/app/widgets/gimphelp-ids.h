@@ -488,8 +488,6 @@
 #define GIMP_HELP_DOCK_VIEW_AS_GRID               "gimp-dock-view-as-grid"
 #define GIMP_HELP_DOCK_SHOW_BUTTON_BAR            "gimp-dock-show-button-bar"
 
-// Modification : ajout d'un identifiant pour boite de dialogue
-#define GIMP_HELP_TWITTER_DIALOG				  "gimp-twitter-dialog"
 #define GIMP_HELP_ABOUT_DIALOG                    "gimp-about-dialog"
 #define GIMP_HELP_COLOR_DIALOG                    "gimp-color-dialog"
 #define GIMP_HELP_DEVICE_STATUS_DIALOG            "gimp-device-status-dialog"
@@ -501,6 +499,7 @@
 #define GIMP_HELP_TEXT_EDITOR_DIALOG              "gimp-text-editor-dialog"
 #define GIMP_HELP_TIPS_DIALOG                     "gimp-tips-dialog"
 #define GIMP_HELP_UNDO_DIALOG                     "gimp-undo-dialog"
+#define GIMP_HELP_TWITTER_DIALOG				  "gimp-twitter-dialog"
 
 #define GIMP_HELP_EXPORT_DIALOG                   "gimp-export-dialog"
 #define GIMP_HELP_EXPORT_CONFIRM_DIALOG           "gimp-export-confirm-dialog"
@@ -511,11 +510,10 @@
 #define GIMP_HELP_WINDOWS_USE_SINGLE_WINDOW_MODE  "gimp-windows-use-single-window-mode"
 #define GIMP_HELP_WINDOWS_OPEN_RECENT_DOCK        "gimp-windows-open-recent-dock"
 
-// Modification : ajout d'un identifiant pour redirection d'un lien
-#define GIMP_HELP_TWITTER 						  "gimp-twitter"
 #define GIMP_HELP_HELP                            "gimp-help"
 #define GIMP_HELP_HELP_CONTEXT                    "gimp-help-context"
-
+// Modification : ajout d'un identifiant pour redirection d'un lien
+#define GIMP_HELP_TWITTER 						  "gimp-twitter"
 
 #define GIMP_HELP_COLORDISPLAY_COLORBLIND         "gimp-colordisplay-colorblind"
 #define GIMP_HELP_COLORDISPLAY_CONTRAST           "gimp-colordisplay-contrast"

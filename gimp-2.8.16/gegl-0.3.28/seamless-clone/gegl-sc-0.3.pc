@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/sc
+
+Name: GEGL Seamless Cloning
+Description: Seamless Cloning Library Based on GEGL
+Version: 0.3.28
+Requires: gobject-2.0 gmodule-2.0 gio-2.0 json-glib-1.0 gio-unix-2.0 babl  gegl-0.3
+Libs: -L${libdir} -lgegl-sc-0.3
+Cflags: -I${includedir}/gegl-0.3/sc

@@ -1,3 +1,4 @@
+	../[encoding: UTF-8] \
 	../app/about.h \
 	../app/app.c \
 	../app/batch.c \

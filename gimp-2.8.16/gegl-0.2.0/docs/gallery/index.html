@@ -1,0 +1,304 @@
+<html><head><title>GEGL gallery</title><style type='text/css'>@import url(../gegl.css);</style><link rel='shortcut icon' href='../images/gegl.ico'/></head><body><div id='toc'><ul><li><a href='../index.html'>GEGL</a></li><li>&nbsp;</li><li><a href='#'>Gallery</a></li>
+<li><a href='#./clones.xml'>&nbsp;&nbsp;./clones</a></li>
+<li><a href='#./OpenRaster-00.xml'>&nbsp;&nbsp;./OpenRaster 00</a></li>
+<li><a href='#./OpenRaster-01.xml'>&nbsp;&nbsp;./OpenRaster 01</a></li>
+<li><a href='#./OpenRaster-04.xml'>&nbsp;&nbsp;./OpenRaster 04</a></li>
+</ul></div><div class='paper'><div class='content'>
+<p>This gallery shows samples of GEGL output it is used to both document current capabilities, and help spot regressions.</p>
+<div style='margin-bottom:3em;clear:both;'><a name='./clones.xml'></a>
+<h3>clones</h3>
+<p><a href='./clones.xml'>xml</a> | <a href='clones-graph.png'>graph</a> | <a href='clones.txt'>time usage</a>
+: 2.239s&nbsp;&nbsp;
+<span style='color:red'></span>
+</p>
+<a href='clones.png'><img src='clones.png' style='border:0;float:right; max-width: 22em;padding-left:1em;padding-bottom: 1em;'></a>
+<form><textarea rows='14' cols='30' readonly='readonly'>
+&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+&lt;gegl&gt;
+  &lt;node operation='gegl:over'&gt;
+      &lt;node operation='gegl:translate'&gt;
+          &lt;params&gt;
+            &lt;param name='x'&gt;10.000000&lt;/param>
+            &lt;param name='y'&gt;280.000000&lt;/param>
+          &lt;/params&gt;
+      &lt;/node&gt;
+      &lt;node operation='gegl:scale'&gt;
+          &lt;params&gt;
+            &lt;param name='origin-x'&gt;0.000000&lt;/param>
+            &lt;param name='origin-y'&gt;0.000000&lt;/param>
+            &lt;param name='filter'&gt;linear&lt;/param>
+            &lt;param name='hard-edges'&gt;false&lt;/param>
+            &lt;param name='x'&gt;0.200000&lt;/param>
+            &lt;param name='y'&gt;0.200000&lt;/param>
+          &lt;/params&gt;
+      &lt;/node&gt;
+      &lt;node operation='gegl:box-blur'&gt;
+          &lt;params&gt;
+            &lt;param name='radius'&gt;5.000000&lt;/param>
+          &lt;/params&gt;
+      &lt;/node&gt;
+      &lt;node operation='gegl:load' id='clone0'&gt;
+          &lt;params&gt;
+            &lt;param name='path'&gt;data/car-stack.jpg&lt;/param>
+          &lt;/params&gt;
+      &lt;/node&gt;
+  &lt;/node&gt;
+  &lt;node operation='gegl:over'&gt;
+      &lt;node operation='gegl:translate'&gt;
+          &lt;params&gt;
+            &lt;param name='x'&gt;10.000000&lt;/param>
+            &lt;param name='y'&gt;190.000000&lt;/param>
+          &lt;/params&gt;
+      &lt;/node&gt;
+      &lt;node operation='gegl:gamma'&gt;
+          &lt;params&gt;
+            &lt;param name='value'&gt;2.500000&lt;/param>
+          &lt;/params&gt;
+      &lt;/node&gt;
+      &lt;node operation='gegl:scale'&gt;
+          &lt;params&gt;
+            &lt;param name='origin-x'&gt;0.000000&lt;/param>
+            &lt;param name='origin-y'&gt;0.000000&lt;/param>
+            &lt;param name='filter'&gt;linear&lt;/param>
+            &lt;param name='hard-edges'&gt;false&lt;/param>
+            &lt;param name='x'&gt;0.200000&lt;/param>
+            &lt;param name='y'&gt;0.200000&lt;/param>
+          &lt;/params&gt;
+      &lt;/node&gt;
+      &lt;clone ref='clone0'/&gt;
+  &lt;/node&gt;
+  &lt;node operation='gegl:over'&gt;
+      &lt;node operation='gegl:translate'&gt;
+          &lt;params&gt;
+            &lt;param name='x'&gt;10.000000&lt;/param>
+            &lt;param name='y'&gt;100.000000&lt;/param>
+          &lt;/params&gt;
+      &lt;/node&gt;
+      &lt;node operation='gegl:invert'&gt;
+      &lt;/node&gt;
+      &lt;node operation='gegl:scale'&gt;
+          &lt;params&gt;
+            &lt;param name='origin-x'&gt;0.000000&lt;/param>
+            &lt;param name='origin-y'&gt;0.000000&lt;/param>
+            &lt;param name='filter'&gt;linear&lt;/param>
+            &lt;param name='hard-edges'&gt;false&lt;/param>
+            &lt;param name='x'&gt;0.200000&lt;/param>
+            &lt;param name='y'&gt;0.200000&lt;/param>
+          &lt;/params&gt;
+      &lt;/node&gt;
+      &lt;clone ref='clone0'/&gt;
+  &lt;/node&gt;
+  &lt;node operation='gegl:over'&gt;
+      &lt;node operation='gegl:translate'&gt;
+          &lt;params&gt;
+            &lt;param name='x'&gt;10.000000&lt;/param>
+            &lt;param name='y'&gt;10.000000&lt;/param>
+          &lt;/params&gt;
+      &lt;/node&gt;
+      &lt;node operation='gegl:threshold'&gt;
+          &lt;params&gt;
+            &lt;param name='value'&gt;0.500000&lt;/param>
+          &lt;/params&gt;
+      &lt;/node&gt;
+      &lt;node operation='gegl:scale'&gt;
+          &lt;params&gt;
+            &lt;param name='origin-x'&gt;0.000000&lt;/param>
+            &lt;param name='origin-y'&gt;0.000000&lt;/param>
+            &lt;param name='filter'&gt;linear&lt;/param>
+            &lt;param name='hard-edges'&gt;false&lt;/param>
+            &lt;param name='x'&gt;0.200000&lt;/param>
+            &lt;param name='y'&gt;0.200000&lt;/param>
+          &lt;/params&gt;
+      &lt;/node&gt;
+      &lt;clone ref='clone0'/&gt;
+  &lt;/node&gt;
+  &lt;node operation='gegl:over'&gt;
+      &lt;node operation='gegl:translate'&gt;
+          &lt;params&gt;
+            &lt;param name='x'&gt;335.000000&lt;/param>
+            &lt;param name='y'&gt;210.000000&lt;/param>
+          &lt;/params&gt;
+      &lt;/node&gt;
+      &lt;node operation='gegl:over'&gt;
+          &lt;node operation='gegl:translate'&gt;
+              &lt;params&gt;
+                &lt;param name='x'&gt;-10.000000&lt;/param>
+                &lt;param name='y'&gt;120.000000&lt;/param>
+              &lt;/params&gt;
+          &lt;/node&gt;
+          &lt;node operation='gegl:opacity'&gt;
+              &lt;params&gt;
+                &lt;param name='value'&gt;0.600000&lt;/param>
+              &lt;/params&gt;
+          &lt;/node&gt;
+          &lt;node operation='gegl:dst-over'&gt;
+              &lt;node operation='gegl:opacity'&gt;
+                  &lt;params&gt;
+                    &lt;param name='value'&gt;2.000000&lt;/param>
+                  &lt;/params&gt;
+              &lt;/node&gt;
+              &lt;node operation='gegl:translate'&gt;
+                  &lt;params&gt;
+                    &lt;param name='x'&gt;0.000000&lt;/param>
+                    &lt;param name='y'&gt;0.000000&lt;/param>
+                  &lt;/params&gt;
+              &lt;/node&gt;
+              &lt;node operation='gegl:box-blur'&gt;
+                  &lt;params&gt;
+                    &lt;param name='radius'&gt;4.000000&lt;/param>
+                  &lt;/params&gt;
+              &lt;/node&gt;
+              &lt;node operation='gegl:brightness-contrast'&gt;
+                  &lt;params&gt;
+                    &lt;param name='contrast'&gt;1.000000&lt;/param>
+                    &lt;param name='brightness'&gt;-1.000000&lt;/param>
+                  &lt;/params&gt;
+              &lt;/node&gt;
+              &lt;node operation='gegl:text' id='clone1'&gt;
+                  &lt;params&gt;
+                    &lt;param name='string'&gt;warming up&lt;/param>
+                    &lt;param name='font'&gt;Sans&lt;/param>
+                    &lt;param name='size'&gt;30.000000&lt;/param>
+                    &lt;param name='color'&gt;rgb(1.0000, 1.0000, 1.0000)&lt;/param>
+                    &lt;param name='wrap'&gt;-1&lt;/param>
+                    &lt;param name='alignment'&gt;0&lt;/param>
+                    &lt;param name='width'&gt;177&lt;/param>
+                    &lt;param name='height'&gt;36&lt;/param>
+                  &lt;/params&gt;
+              &lt;/node&gt;
+          &lt;/node&gt;
+          &lt;clone ref='clone1'/&gt;
+      &lt;/node&gt;
+      &lt;node operation='gegl:scale'&gt;
+          &lt;params&gt;
+            &lt;param name='origin-x'&gt;0.000000&lt;/param>
+            &lt;param name='origin-y'&gt;0.000000&lt;/param>
+            &lt;param name='filter'&gt;linear&lt;/param>
+            &lt;param name='hard-edges'&gt;false&lt;/param>
+            &lt;param name='x'&gt;0.500000&lt;/param>
+            &lt;param name='y'&gt;0.500000&lt;/param>
+          &lt;/params&gt;
+      &lt;/node&gt;
+      &lt;node operation='gegl:dst-over' id='clone2'&gt;
+          &lt;node operation='gegl:opacity'&gt;
+              &lt;params&gt;
+                &lt;param name='value'&gt;0.800000&lt;/param>
+              &lt;/params&gt;
+          &lt;/node&gt;
+          &lt;node operation='gegl:translate'&gt;
+              &lt;params&gt;
+                &lt;param name='x'&gt;5.000000&lt;/param>
+                &lt;param name='y'&gt;-2.000000&lt;/param>
+              &lt;/params&gt;
+          &lt;/node&gt;
+          &lt;node operation='gegl:add'&gt;
+              &lt;params&gt;
+                &lt;param name='value'&gt;0.500000&lt;/param>
+              &lt;/params&gt;
+          &lt;/node&gt;
+          &lt;node operation='gegl:gaussian-blur'&gt;
+              &lt;params&gt;
+                &lt;param name='std-dev-x'&gt;5.000000&lt;/param>
+                &lt;param name='std-dev-y'&gt;5.000000&lt;/param>
+              &lt;/params&gt;
+          &lt;/node&gt;
+          &lt;node operation='gegl:load' id='clone3'&gt;
+              &lt;params&gt;
+                &lt;param name='path'&gt;data/gegl.png&lt;/param>
+              &lt;/params&gt;
+          &lt;/node&gt;
+      &lt;/node&gt;
+      &lt;clone ref='clone3'/&gt;
+  &lt;/node&gt;
+  &lt;node operation='gegl:over'&gt;
+      &lt;node operation='gegl:translate'&gt;
+          &lt;params&gt;
+            &lt;param name='x'&gt;90.000000&lt;/param>
+            &lt;param name='y'&gt;90.000000&lt;/param>
+          &lt;/params&gt;
+      &lt;/node&gt;
+      &lt;node operation='gegl:opacity'&gt;
+          &lt;params&gt;
+            &lt;param name='value'&gt;-0.500000&lt;/param>
+          &lt;/params&gt;
+      &lt;/node&gt;
+      &lt;node operation='gegl:box-blur'&gt;
+          &lt;params&gt;
+            &lt;param name='radius'&gt;15.000000&lt;/param>
+          &lt;/params&gt;
+      &lt;/node&gt;
+      &lt;clone ref='clone2'/&gt;
+  &lt;/node&gt;
+  &lt;clone ref='clone0'/&gt;
+&lt;/gegl&gt;
+</textarea></form>
+</div>
+<div style='margin-bottom:3em;clear:both;'><a name='./OpenRaster-00.xml'></a>
+<h3>OpenRaster-00</h3>
+<p><a href='./OpenRaster-00.xml'>xml</a> | <a href='OpenRaster-00-graph.png'>graph</a> | <a href='OpenRaster-00.txt'>time usage</a>
+: 1.166s&nbsp;&nbsp;
+<span style='color:red'></span>
+</p>
+<a href='OpenRaster-00.png'><img src='OpenRaster-00.png' style='border:0;float:right; max-width: 22em;padding-left:1em;padding-bottom: 1em;'></a>
+<form><textarea rows='14' cols='30' readonly='readonly'>
+&lt;!-- Minimal OpenRaster test,
+     a single JPG layer --&gt;
+&lt;image&gt;
+  &lt;stack&gt;
+      &lt;layer src='data/romedalen.jpg'/&gt;
+  &lt;/stack&gt;
+&lt;/image&gt;
+</textarea></form>
+</div>
+<div style='margin-bottom:3em;clear:both;'><a name='./OpenRaster-01.xml'></a>
+<h3>OpenRaster-01</h3>
+<p><a href='./OpenRaster-01.xml'>xml</a> | <a href='OpenRaster-01-graph.png'>graph</a> | <a href='OpenRaster-01.txt'>time usage</a>
+: 0.357s&nbsp;&nbsp;
+<span style='color:red'></span>
+</p>
+<a href='OpenRaster-01.png'><img src='OpenRaster-01.png' style='border:0;float:right; max-width: 22em;padding-left:1em;padding-bottom: 1em;'></a>
+<form><textarea rows='14' cols='30' readonly='readonly'>
+&lt;!-- A background layer and two
+layers composited on top --&gt;
+
+&lt;image&gt;
+  &lt;stack&gt;
+     &lt;layer src='data/OpenRaster.png'
+            x='10'
+            y='40'
+            opacity='0.4'/&gt;
+     &lt;layer src='data/OpenRaster.png'
+            x='72'
+            y='8'/&gt;
+     &lt;layer src='data/romedalen.jpg'/&gt;
+  &lt;/stack&gt;
+&lt;/image&gt;
+</textarea></form>
+</div>
+<div style='margin-bottom:3em;clear:both;'><a name='./OpenRaster-04.xml'></a>
+<h3>OpenRaster-04</h3>
+<p><a href='./OpenRaster-04.xml'>xml</a> | <a href='OpenRaster-04-graph.png'>graph</a> | <a href='OpenRaster-04.txt'>time usage</a>
+: 0.865s&nbsp;&nbsp;
+<span style='color:red'></span>
+</p>
+<a href='OpenRaster-04.png'><img src='OpenRaster-04.png' style='border:0;float:right; max-width: 22em;padding-left:1em;padding-bottom: 1em;'></a>
+<form><textarea rows='14' cols='30' readonly='readonly'>
+&lt;image&gt;
+  &lt;stack&gt;
+      &lt;filter type='gegl:brightness-contrast'&gt;
+         &lt;params&gt;
+              &lt;param name='contrast'&gt;1.4&lt;/param>
+         &lt;/params&gt;
+      &lt;/filter&gt;
+      &lt;filter type='gegl:unsharp-mask'&gt;
+          &lt;params&gt;
+              &lt;param name='std-dev'&gt;4.8&lt;/param>
+              &lt;param name='scale'&gt;2.0&lt;/param>
+          &lt;/params&gt;
+      &lt;/filter&gt;
+      &lt;layer src='data/romedalen.jpg'/&gt;
+  &lt;/stack&gt;
+&lt;/image&gt;
+</textarea></form>
+</div>
+</div></div></div></body></html>

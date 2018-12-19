@@ -1,0 +1,27 @@
+<html><head><title>gegl:gegl</title>
+<style>@import url(../gegl.css); .categories{ clear:right;text-align: justify; line-height: 1.6em; float:right; padding-left: 1em; padding-bottom: 1em ;width: 14em; } .categories a, .category {color:black; background:#eef; padding: 0.1em; padding-left0.2em; padding-right: 0.2em; border: 1px solid gray;} .description{margin-bottom:1em;};body { margin: 1em 5% 1em 5%; }</style></head><body><div id='content'>
+<div class='operation'><h2 style='clear:both;'>GEGL graph</h2>
+<img style='clear: both; padding-left: 1em; float: right; ' src='images/gegl-gegl.png' />
+<div class='description'>Do a chain of operations, with key=value pairs after each operation name to set properties. And aux=[ source filter ] for specifying a chain with a source as something connected to an aux pad.</div>
+<div style='margin-bottom:1em;'><div class='properties'>
+<div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+pipeline</div>
+<div>[op [property=value] [property=value]] [[op] [property=value]</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>string
+<b>type:&nbsp;</b>string
+  <b>default:</b>&nbsp;gaussian-blur std-dev-x=0.3rel std-dev-y=0.3rel 
+<b>multiline</b>:true
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Eeeeeek</div>
+<div>There is a problem in the syntax or in the application of parsed property values. Things might mostly work nevertheless.</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>error
+<b>type:&nbsp;</b>string
+  <b>default:</b>&nbsp; 
+<b>error</b>:true
+</div></div></div></div><b>name:</b>&nbspgegl:gegl<br/><b>pads:</b>
+input
+output
+<br/><b>parent-class:</b>&nbsp;<a href='GeglOperationMeta.html'>GeglOperationMeta</a><br/>
+<b>categories:</b> <a class='category' style='color:black' href='generic.html'>generic</a> <br/>
+<b>source:</b>&nbsp;<a href='https://git.gnome.org/browse/gegl/tree/operations/common/gegl.c'>operations/common/gegl.c</a><br/>
+</dl></div><div style='margin-top:3em;'><a href='../index.html'><img src='../images/GEGL.png' alt='GEGL' style='height: 4.0em;float:left; padding-right:0.5em;'/></a> This page is part of the online GEGL Documentation, GEGL is a data flow based image processing library/framework, made to fuel <a href='https://www.gimp.org/'>GIMPs</a> high-bit depth non-destructive editing future.</div></body></html>

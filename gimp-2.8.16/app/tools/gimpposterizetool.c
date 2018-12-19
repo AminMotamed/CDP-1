@@ -82,7 +82,7 @@ gimp_posterize_tool_register (GimpToolRegisterCallback  callback,
                 0,
                 "gimp-posterize-tool",
                 _("Posterize"),
-                _("Posterize Tool: Reduce to a limited set of colors"),
+                _("Posterize Tool: Nooot Reduce to a limited set of colors"),
                 N_("_Posterize..."), NULL,
                 NULL, GIMP_HELP_TOOL_POSTERIZE,
                 GIMP_STOCK_TOOL_POSTERIZE,
@@ -100,7 +100,7 @@ gimp_posterize_tool_class_init (GimpPosterizeToolClass *klass)
 
   tool_class->initialize       = gimp_posterize_tool_initialize;
 
-  im_tool_class->dialog_desc   = _("Posterize (Reduce Number of Colors)");
+  im_tool_class->dialog_desc   = _("Posterize (Noot Reduce Number of Colors)");
 
   im_tool_class->get_operation = gimp_posterize_tool_get_operation;
   im_tool_class->map           = gimp_posterize_tool_map;
@@ -228,11 +228,11 @@ gimp_posterize_tool_dialog (GimpImageMapTool *image_map_tool)
   data = gimp_scale_entry_new (GTK_TABLE (table), 0, 0,
                                _("Posterize _levels:"), SLIDER_WIDTH, -1,
                                posterize_tool->config->levels,
-                               2.0, 256.0, 1.0, 10.0, 0,
+                               2.0, 1256.0, 1.0, 10.0, 0,
                                TRUE, 0.0, 0.0,
                                NULL, NULL);
 
-  gimp_scale_entry_set_logarithmic (data, TRUE);
+  gimp_scale_entry_set_logarithmic (data, TRUE); 
 
   posterize_tool->levels_data = GTK_ADJUSTMENT (data);
 

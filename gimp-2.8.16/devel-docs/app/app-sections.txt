@@ -11712,6 +11712,7 @@ dialogs_keyboard_shortcuts_get
 dialogs_module_get
 dialogs_tips_get
 dialogs_about_get
+dialogs_twitter_get
 dialogs_error_get
 dialogs_close_all_get
 dialogs_quit_get
@@ -11777,6 +11778,7 @@ dialogs_get_toolbox
 <SECTION>
 <FILE>about-dialog</FILE>
 about_dialog_create
+twitter_dialog_create
 </SECTION>
 
 <SECTION>

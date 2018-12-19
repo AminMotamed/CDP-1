@@ -1,0 +1,400 @@
+<html><head><title>gegl:convolution-matrix</title>
+<style>@import url(../gegl.css); .categories{ clear:right;text-align: justify; line-height: 1.6em; float:right; padding-left: 1em; padding-bottom: 1em ;width: 14em; } .categories a, .category {color:black; background:#eef; padding: 0.1em; padding-left0.2em; padding-right: 0.2em; border: 1px solid gray;} .description{margin-bottom:1em;};body { margin: 1em 5% 1em 5%; }</style></head><body><div id='content'>
+<div class='operation'><h2 style='clear:both;'>Convolution Matrix</h2>
+<img style='clear: both; padding-left: 1em; float: right; ' src='images/gegl-convolution-matrix.png' />
+<div class='description'>Apply a generic 5x5 convolution matrix</div>
+<div style='margin-bottom:1em;'><div class='properties'>
+<div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(1,1)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>a1
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(1,2)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>a2
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(1,3)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>a3
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(1,4)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>a4
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(1,5)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>a5
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(2,1)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>b1
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(2,2)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>b2
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(2,3)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>b3
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(2,4)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>b4
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(2,5)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>b5
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(3,1)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>c1
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(3,2)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>c2
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(3,3)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>c3
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;1.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(3,4)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>c4
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(3,5)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>c5
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(4,1)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>d1
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(4,2)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>d2
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(4,3)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>d3
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(4,4)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>d4
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(4,5)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>d5
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(5,1)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>e1
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(5,2)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>e2
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(5,3)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>e3
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(5,4)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>e4
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+(5,5)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>e5
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Divisor</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>divisor
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;1.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-1000.00 
+<b>ui-maximum:</b>&nbsp;1000.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;100.00 
+<b>ui-digits:</b>&nbsp;1 
+<b>sensitive</b>:! normalize
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Offset</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>offset
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-1.00 
+<b>maximum:</b>&nbsp;1.00 
+<b>ui-minimum:</b>&nbsp;-1.00 
+<b>ui-maximum:</b>&nbsp;1.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+<b>sensitive</b>:! normalize
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Red channel</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>red
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;True 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Green channel</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>green
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;True 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Blue channel</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>blue
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;True 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Alpha channel</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>alpha
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;True 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Normalize</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>normalize
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;True 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Alpha-weighting</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>alpha-weight
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;True 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Border</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>border
+<b>type:&nbsp;</b>enum
+</div></div></div></div><b>name:</b>&nbspgegl:convolution-matrix<br/><b>pads:</b>
+input
+output
+<br/><b>parent-class:</b>&nbsp;<a href='GeglOperationAreaFilter.html'>GeglOperationAreaFilter</a><br/>
+<b>categories:</b> <a class='category' style='color:black' href='generic.html'>generic</a> <br/>
+<b>source:</b>&nbsp;<a href='https://git.gnome.org/browse/gegl/tree/operations/common/convolution-matrix.c'>operations/common/convolution-matrix.c</a><br/>
+</dl></div><div style='margin-top:3em;'><a href='../index.html'><img src='../images/GEGL.png' alt='GEGL' style='height: 4.0em;float:left; padding-right:0.5em;'/></a> This page is part of the online GEGL Documentation, GEGL is a data flow based image processing library/framework, made to fuel <a href='https://www.gimp.org/'>GIMPs</a> high-bit depth non-destructive editing future.</div></body></html>

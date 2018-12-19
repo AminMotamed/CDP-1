@@ -1,0 +1,42 @@
+<html><head><title>gegl:unsharp-mask</title>
+<style>@import url(../gegl.css); .categories{ clear:right;text-align: justify; line-height: 1.6em; float:right; padding-left: 1em; padding-bottom: 1em ;width: 14em; } .categories a, .category {color:black; background:#eef; padding: 0.1em; padding-left0.2em; padding-right: 0.2em; border: 1px solid gray;} .description{margin-bottom:1em;};body { margin: 1em 5% 1em 5%; }</style></head><body><div id='content'>
+<div class='operation'><h2 style='clear:both;'>Unsharp Mask</h2>
+<img style='clear: both; padding-left: 1em; float: right; ' src='images/gegl-unsharp-mask.png' />
+<div class='description'>Sharpen image, by adding difference to blurred image, a technique for sharpening originally used in darkrooms.</div>
+<div style='margin-bottom:1em;'><div class='properties'>
+<div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Standard Deviation</div>
+<div>Standard deviation (spatial scale factor)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>std-dev
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.55 
+<b>minimum:</b>&nbsp;0.20 
+<b>maximum:</b>&nbsp;300.00 
+<b>ui-minimum:</b>&nbsp;0.20 
+<b>ui-maximum:</b>&nbsp;40.00 
+<b>ui-gamma:</b>&nbsp;3.00 
+<b>ui-step-small:</b>&nbsp;0.01 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;3 
+<b>unit</b>:pixel-distance
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Scale</div>
+<div>Scale, strength of effect</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>scale
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;4.00 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;300.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;10.00 
+<b>ui-gamma:</b>&nbsp;3.00 
+<b>ui-step-small:</b>&nbsp;0.01 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;3 
+</div></div></div></div><b>name:</b>&nbspgegl:unsharp-mask<br/><b>pads:</b>
+input
+output
+<br/><b>parent-class:</b>&nbsp;<a href='GeglOperationMeta.html'>GeglOperationMeta</a><br/>
+<b>categories:</b> <a class='category' style='color:black' href='enhance.html'>enhance</a> <a class='category' style='color:black' href='sharpen.html'>sharpen</a> <br/>
+<b>source:</b>&nbsp;<a href='https://git.gnome.org/browse/gegl/tree/operations/common/unsharp-mask.c'>operations/common/unsharp-mask.c</a><br/>
+</dl></div><div style='margin-top:3em;'><a href='../index.html'><img src='../images/GEGL.png' alt='GEGL' style='height: 4.0em;float:left; padding-right:0.5em;'/></a> This page is part of the online GEGL Documentation, GEGL is a data flow based image processing library/framework, made to fuel <a href='https://www.gimp.org/'>GIMPs</a> high-bit depth non-destructive editing future.</div></body></html>

@@ -1,0 +1,100 @@
+<html><head><title>gegl:shadows-highlights-correction</title>
+<style>@import url(../gegl.css); .categories{ clear:right;text-align: justify; line-height: 1.6em; float:right; padding-left: 1em; padding-bottom: 1em ;width: 14em; } .categories a, .category {color:black; background:#eef; padding: 0.1em; padding-left0.2em; padding-right: 0.2em; border: 1px solid gray;} .description{margin-bottom:1em;};body { margin: 1em 5% 1em 5%; }</style></head><body><div id='content'>
+<div class='operation'><h2 style='clear:both;'>gegl:shadows-highlights-correction</h2>
+<img style='clear: both; padding-left: 1em; float: right; ' src='images/gegl-shadows-highlights-correction.png' />
+<div class='description'>Lighten shadows and darken highlights</div>
+<div style='margin-bottom:1em;'><div class='properties'>
+<div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Shadows</div>
+<div>Adjust exposure of shadows</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>shadows
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-100.00 
+<b>maximum:</b>&nbsp;100.00 
+<b>ui-minimum:</b>&nbsp;-100.00 
+<b>ui-maximum:</b>&nbsp;100.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;10.00 
+<b>ui-digits:</b>&nbsp;2 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Highlights</div>
+<div>Adjust exposure of highlights</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>highlights
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-100.00 
+<b>maximum:</b>&nbsp;100.00 
+<b>ui-minimum:</b>&nbsp;-100.00 
+<b>ui-maximum:</b>&nbsp;100.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;10.00 
+<b>ui-digits:</b>&nbsp;2 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+White point adjustment</div>
+<div>Shift white point</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>whitepoint
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-10.00 
+<b>maximum:</b>&nbsp;10.00 
+<b>ui-minimum:</b>&nbsp;-10.00 
+<b>ui-maximum:</b>&nbsp;10.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.01 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Compress</div>
+<div>Compress the effect on shadows\/highlights and preserve midtones</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>compress
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;50.00 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;100.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;100.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;10.00 
+<b>ui-digits:</b>&nbsp;2 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Shadows color adjustment</div>
+<div>Adjust saturation of shadows</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>shadows-ccorrect
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;100.00 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;100.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;100.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;10.00 
+<b>ui-digits:</b>&nbsp;2 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Highlights color adjustment</div>
+<div>Adjust saturation of highlights</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>highlights-ccorrect
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;50.00 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;100.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;100.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;10.00 
+<b>ui-digits:</b>&nbsp;2 
+</div></div></div></div><b>name:</b>&nbspgegl:shadows-highlights-correction<br/><b>pads:</b>
+aux
+input
+output
+<br/><b>parent-class:</b>&nbsp;<a href='GeglOperationPointComposer.html'>GeglOperationPointComposer</a><br/>
+<b>categories:</b> <a class='category' style='color:black' href='hidden.html'>hidden</a> <br/>
+<b>OpenCL</b><br/>
+<b>source:</b>&nbsp;<a href='https://git.gnome.org/browse/gegl/tree/operations/common-gpl3+/shadows-highlights-correction.c'>operations/common-gpl3+/shadows-highlights-correction.c</a><br/>
+<b>license:</b>&nbsp;GPL3+<br/>
+</dl></div><div style='margin-top:3em;'><a href='../index.html'><img src='../images/GEGL.png' alt='GEGL' style='height: 4.0em;float:left; padding-right:0.5em;'/></a> This page is part of the online GEGL Documentation, GEGL is a data flow based image processing library/framework, made to fuel <a href='https://www.gimp.org/'>GIMPs</a> high-bit depth non-destructive editing future.</div></body></html>

@@ -1,0 +1,1333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.10" />
+<title></title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+pre {
+  white-space: pre-wrap;
+}
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; vertical-align: text-bottom; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+      li>p {
+          display: inline;
+      }
+      body {
+        padding: 0;
+        background-color: #fff;
+	color: black;
+      }
+      div.paper {
+        background-color: #fff;
+	color: black;
+        margin: 1em;
+        /*margin-left: 12.5em;*/
+      }
+      iframe {
+        background-color: #aaa;
+      }
+      img {max-width: 100%}
+      div.content {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1em;
+        padding-right: 3em;
+        padding-left: 2em;
+        max-width: 45em;
+      }
+      p {
+        line-height: 1.2em;
+      }
+      h1 {
+        margin-top: 0em;
+        }
+      h1, h2, h3, h4{
+        color: #112266;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+      h3 {
+        font-size: 1.2em;
+      }
+      h4 {
+        font-size: 1.0em;
+      }
+      dl {
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+
+      div.expander {
+        border: 1px solid #bbb;
+      }
+      div.expander_title {
+        /*border-bottom: 0px solid #aaa;*/
+      }
+      div.expander_content {
+        margin-left: 2em;
+        display: none;
+        padding-bottom: 1em;
+      }
+      div.expander_content dl{
+        margin: 0;
+        padding: 0;
+      }
+
+
+      table th {
+        font-weight: normal;
+        background-color: #ccc;
+        text-align: left;
+      }
+      span.component {
+        background-color: #060;
+        padding-left: 0.5em;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+        display: block;
+        float: left;
+        overflow: hidden;
+        width: 4em;
+        color: white;
+        border: 1px solid gray;
+        border: 1px solid white;
+        clear: both;
+      }
+      span.type {
+        display: block;
+        background-color: #006;
+        padding-left: 0.5em;
+        clear: both;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+        float: left;
+        overflow: hidden;
+        width: 4em;
+        color: white;
+        border: 1px solid white;
+      }
+
+      .nopad {
+        margin :0;
+        padding:0;
+      }
+
+      td.component {
+        background-color: #060;
+        padding-left: 0.5em;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+        overflow: hidden;
+        width: 4em;
+        color: white;
+        border: 1px solid white;
+      }
+      td.type {
+        background-color: #006;
+        padding-left: 0.5em;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+        overflow: hidden;
+        width: 4em;
+        color: white;
+        border: 1px solid white;
+      }
+      span.spacer {
+        float: left;
+        display: block;
+        overflow: hidden;
+        width: 0.2em;
+      }
+      span.name {
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        border-top: 1px solid #ccc;
+      }
+      span.string {
+        color: #060;
+      }
+      span.function {
+        color: #006;
+      }
+      span.paren {
+        color: #555;
+      }
+      span.NULL {
+        color: #555;
+      }
+      pre.authors {
+        font-size: 100%;
+        font-family: FreeSans, Verdana, sans-serif;
+        position: relative;
+        top: -2em;
+      }
+      img.BablFish {
+         float: right;
+         position: relative;
+         top: -8px;
+         border: none;
+      }
+      td.op_name {
+          padding-top: 2.5em;
+          padding-bottom: 1.0em;
+          font-weight: bold;
+          font-size: 120%;
+      }
+      td.op_description {
+          padding-bottom: 1em;
+      }
+      td.prop_type {
+          color: gray;
+          font-style: italic;
+      }
+      td.prop_name {
+          font-weight: bold;
+      }
+      td.prop_blurb {
+          padding-bottom: 0.5em;
+      }
+      @media screen {
+        body {
+          font-family: FreeSans, Verdana, sans-serif;
+          max-width: 45em;
+        }
+        a {
+          text-decoration: none;
+        }
+        pre {
+          overflow: auto;
+        }
+        h1 {
+            display: none;
+        }
+
+        div#toc {
+          background-color: #333;
+          /*position: absolute;
+          position: fixed;*/
+          width: 12em;
+          top: 0;
+          right: 0;
+          z-index: 2;
+          height: 100%;
+          overflow: auto;
+          float: right;
+          padding-top: 0.5em;
+        }
+        div#toc ul {
+          padding-top: 0em;
+          padding-left: 0em;
+          margin: 0;
+        }
+        div#toc li {
+          display: block;
+          padding-right: 1em;
+        }
+        div#toc li a,
+        div#toc div a{
+          display: block;
+          padding-left: 1em;
+          padding-right: 1em;
+          color: #fff;
+        }
+        div#toc li a:hover,
+        div#toc div a:hover{
+          color: #fff;
+          background-color: #445;
+        }
+        div#toc li a:active,
+        div#toc div a:active{
+          color: #000;
+          background-color: #445;
+        }
+        div#toc .toclevel1 {
+          padding-top: 0.5em;
+          padding-left: 0em;
+        }
+        div#toc .toclevel2 {
+          padding-left: 1em;
+        }
+        #toctitle {
+            display: none;
+        }
+        div.paper {
+          max-width: 45em;
+          -moz-border-radius: 1em;
+        }
+        div.content {
+        }
+        div.print {
+          display: none;
+        }
+        ul.crucible {margin:0; padding:0}
+        ul.crucible li{display: inline;}
+      }
+
+      h2#gegl {
+          display: none;
+      }
+
+      @media print {
+        body {
+          background-color: none;
+          font-family: FreeSans, Verdana, sans-serif;
+        }
+        a, em {
+          /* XXX: work-around for rendering bug, should investigate whether
+           * this issue is fixed in the latest gecko
+           */
+          padding-right: 3em;
+          padding-left: 1em;
+        }
+        a {
+          text-decoration: none;
+        }
+
+        div#toc ul {
+          padding-left: 0em;
+          float: right;
+          margin: 0;
+        }
+        div#toc li {
+          display: block;
+          padding-right: 1em;
+        }
+        div#toc li a{
+          display: block;
+          padding-left: 1em;
+          padding-right: 1em;
+          color: #fff;
+        }
+        div#toc li a:hover {
+          color: #fff;
+          background-color: #333;
+        }
+        div#toc ul {
+          padding-left: 0em;
+          float: none;
+          margin: 0;
+          margin-left: 1em;
+        }
+        div#toc {
+          position: absolute;
+          width: 200px;
+          top: 0;
+          left: 2em;
+          padding-top: 2em;
+          z-index: 2;
+        }
+        div#toc ul {
+          margin-left: 0;
+        }
+        div#toc li a {
+          color : #000;
+        }
+        div#toc h2 {
+          margin: 0;
+          padding: 0;
+        }
+        h1 {
+          margin-left: -0.75em;
+        }
+        h2 {
+          padding-top: 4em;
+          margin-left: -1em;
+        }
+        h3 {
+          padding-top: 4em;
+          margin-left: -1em;
+        }
+        span.component {
+          background-color: #7f7;
+          color: black;
+        }
+        span.type {
+          background-color: #aaf;
+          color: black;
+        }
+        table th {
+          font-weight: bold;
+        }
+        div.print_title {
+          position: absolute;
+          top: 3em;
+          padding-left: 2em;
+          margin-left: 280px;
+        }
+        div.paper {
+          padding-top: 4em;
+        }
+        div.graphic {
+          display: none;
+          background-color: #bbf;
+          height: 100%;
+        }
+        div.graphic img {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+        div.screen {
+          display: none;
+        }
+      }
+
+      a{color:#44f;}
+      a:visited{color:#44f;}
+
+
+
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph"><p>Journal / transaction log</p></div>
+<div class="paragraph"><p>The journal stores the changes done to a GEGL graph as a set of transactions.
+This journal can be used as a syncronization point for multiple users of
+a GEGL graph, and can be stored as a file. This file can be embedded into
+a higher level file format to persist undo/redo history across saves/loads
+of a document.
+A program using GEGL may use several independent GEGL graphs, and thus several
+independent journals.</p></div>
+<div class="sect1">
+<h2 id="_usecases">Usecases</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Base for undo/redo stacks in GEGL based applications
+</p>
+</li>
+<li>
+<p>
+Automated testing of GEGL graph manipulation API and interactive view widgets
+</p>
+</li>
+<li>
+<p>
+Sharing and manipulation of a GEGL graph between multiple programs
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_operations">Operations</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Add node. int parent_node_id, int new_node_id
+</p>
+</li>
+<li>
+<p>
+Remove node. int node_id, int previous_parent_node_id
+</p>
+</li>
+<li>
+<p>
+Link pads. int sink_node_id, char *input_pad_name, int source_node_id, char *output_pad_name
+</p>
+</li>
+<li>
+<p>
+Unlink pads. int sink_node_id, char *input_pad_name, int source_node_id, char *output_pad_name
+</p>
+</li>
+<li>
+<p>
+Change property. int node_id, char *key, char *value, char *previous_value
+</p>
+</li>
+<li>
+<p>
+Change operation. int node_id, char *new_operation_name, char *previous_operation_name
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Each operation is stored such that the inverse operation can be created
+from the stored information alone. This avoids the need to rewind and replay
+parts of the journal when undoing.
+Property values are stored using property-type specific serialization.</p></div>
+<div class="paragraph"><p>Node references/identifiers:
+- GEGL to maintain an (graph) unique identifier for each node: Add an integer identifier to node when added to the graph.
+- The identifier must be be maintained when changing operations.
+- This identifier should be hidden from applications: could be done by making the property read-only in public interface.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_transactions">Transactions</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The operations are grouped in transactions. Applications can decide the start and end of a transaction.
+If no transaction is explicitly opened, an implicit transaction for the duration of the operation is created.</p></div>
+<div class="paragraph"><p>After a add node operation, one or more change property and change operation operations must follow.</p></div>
+<div class="paragraph"><p>Transaction operation:
+- Recall state. int block_no, int previous_transaction_block_no
+  The block_no must be for a transaction start
+  Sets the graph state back to that of the given transaction</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_file_format">File format</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Append only file format consisting of a series of entries.</p></div>
+<div class="paragraph"><p>Entries can span a number of blocks, except for transaction end which must
+consist of one block, and file header which must consist of 4 blocks (?)</p></div>
+<div class="paragraph"><p>Entry format:
+Each block entry has has a size of X times Y block. An integer in the start
+of the entry specifies how many blocks the entry consists of.
+Each entry has a integer type, denoting what kind of entry it is.</p></div>
+<div class="paragraph"><p>Each entry has an integer entry_size denoting number of blocks the entry consists of.
+Integer precision: 32 bit?
+Block size: 32 bytes?</p></div>
+<div class="paragraph"><p>File Header:
+- Stores a lock with PID for the active process.
+The lock is taken when a transaction starts, and released on transaction end.
+Other applications can check whether the PID is for an alive process.
+The header is not subject to the append-only rule.</p></div>
+<div class="paragraph"><p>Transaction start:
+- Stores a human string description of the change
+? maybe a transaction size in blocks (can be used to quickly traverse forward)</p></div>
+<div class="paragraph"><p>Transaction end:
+Contains a pointer to the start of transaction, as an integer of the transaction start entry.
+If the pointer ever points to a non-transaction start entry, the journal is inconsistent.</p></div>
+<div class="paragraph"><p>Operation entries:
+Each entry (see above list) has a format depending on its type.</p></div>
+<div class="sect2">
+<h3 id="_example">Example</h3>
+<div class="literalblock">
+<div class="content">
+<pre><code>---------------------
+| file header       |
+---------------------
+| transaction start |
+---------------------
+| add node          |
+---------------------
+| set property      |
+---------------------
+| set property      |
+---------------------
+| link pads         |
+---------------------
+| transaction end   |
+---------------------
+| transaction start |
+---------------------
+| remove node       |
+---------------------
+| transaction end   |
+---------------------</code></pre>
+</div></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_public_api">Public API</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>void gegl_graph_transaction_start(GeglGraph *graph, const char *description);
+ Start a graph journal transaction.
+ Any graph change after this and before transaction_end will be recorded
+ as part of the transaction.
+ @graph: top-level node in a GEGL graph
+ @description a human readable description of the change. UTF-8 encoded</p></div>
+<div class="paragraph"><p>void gegl_graph_transaction_end(GeglGraph *graph);
+ End the current graph journal transaction.
+ @graph: top-level node in a GEGL graph</p></div>
+<div class="paragraph"><p>int gegl_graph_transaction_previous(GeglGraph *graph, int block_no);
+ Return the block number of the transaction before the specified transaction. Does not change graph state.
+ @graph: top-level node in a GEGL graph
+ @block_no &#8656; 0 means end of journal. Only block numbers for transaction start entries are valid
+ @return -1 on invalid block_no, else the block number of the previous transaction</p></div>
+<div class="paragraph"><p>int gegl_graph_transaction_recall(GeglGraph *graph, int block_no);
+ Recall a previous state of the graph.
+ @graph: top-level node in a GEGL graph
+ @block_no &#8656; 0 means end of journal. Only block numbers for transaction start entries are valid
+ @return -1 on invalid block_no, else the block number of the new transaction.</p></div>
+<div class="paragraph"><p>char *gegl_graph_transaction_get_description(GeglGraph *graph, int block_no);
+ Return the human readable description for a given transaction.
+ @graph: top-level node in a GEGL graph
+ @block_no Only block numbers for transaction start entries are valid
+ @return NULL on invalid block_no, else the human readable description passed to transaction_start</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_implementation_notes">Implementation notes</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The implementation could be based on the GeglBuffer file format implementation.
+It is suggested to keep the implementations separate, to risk avoid introducing
+regressions in exist code and because it is possible that GeglBuffer will be
+moved to a separate library at some point.</p></div>
+<div class="paragraph"><p>Before writing a transaction into the log, the transaction should be compacted
+such that no superficial operations are stored. For example if a property
+was first changed from 1.0 to 2.0 and then to 3.0, only one operation should
+be recorded.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ideas">Ideas</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Allow to peek at other versions of the graph in the journal?
+</p>
+</li>
+<li>
+<p>
+Add API for compacting the journal (to avoid it growing without bounds).
+</p>
+</li>
+<li>
+<p>
+Add a non-blocking version of transactions.
+Note: not guaranteed to succeed. Applications must gracefully handle the transaction being rejected.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>void gegl_graph_transaction_open(GeglGraph *graph, const char *description);
+gboolean gegl_graph_transaction_commit(GeglGraph *graph);</code></pre>
+</div></div>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated
+ 2017-09-21 21:11:00 CEST
+</div>
+</div>
+</body>
+</html>

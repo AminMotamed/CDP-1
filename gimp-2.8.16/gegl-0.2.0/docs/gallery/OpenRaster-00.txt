@@ -1,0 +1,46 @@
+
+Total time: 1.166s
+gegl                         100.0% ██████████████████████████████████████████ 
+  gegl_init                   24.4% ██████████▏
+    babl_init                 81.0% ████████▍
+    load modules              18.9% ██
+    other                      0.0%  
+
+  gegl_parse_xml               3.6% █▋
+  process                      0.3%  
+    gegl:jpg-load             88.8%  
+      defined-region          16.6%  
+      prepare                  0.6%  
+      other                    0.2%  
+
+    gegl:nop                  29.9%  
+      prepare                 98.8%  
+      defined-region           0.4%  
+      other                    0.0%  
+
+    gegl:translate             4.1%  
+      prepare                 46.4%  
+      defined-region          27.1%  
+      other                    0.0%  
+
+    gegl:scale                 3.9%  
+      defined-region          71.8%  
+      prepare                 20.6%  
+      other                    0.0%  
+
+    gegl:opacity               0.8%  
+      prepare                 57.7%  
+      defined-region          19.2%  
+      other                    0.0%  
+
+    svg:src-over               0.6%  
+      prepare                 55.0%  
+      defined-region          10.0%  
+      other                    0.0%  
+
+    gegl:text                  0.1%  
+      prepare                100.0%  
+
+  gegl_exit                    0.2%  
+  other                       71.4% ██████████████████████████████
+

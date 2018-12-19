@@ -1,0 +1,215 @@
+<html><head><title>gegl:diffraction-patterns</title>
+<style>@import url(../gegl.css); .categories{ clear:right;text-align: justify; line-height: 1.6em; float:right; padding-left: 1em; padding-bottom: 1em ;width: 14em; } .categories a, .category {color:black; background:#eef; padding: 0.1em; padding-left0.2em; padding-right: 0.2em; border: 1px solid gray;} .description{margin-bottom:1em;};body { margin: 1em 5% 1em 5%; }</style></head><body><div id='content'>
+<div class='operation'><h2 style='clear:both;'>Diffraction Patterns</h2>
+<img style='clear: both; padding-left: 1em; float: right; ' src='images/gegl-diffraction-patterns.png' />
+<div class='description'>Generate diffraction patterns</div>
+<div style='margin-bottom:1em;'><div class='properties'>
+<div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Red frequency</div>
+<div>Light frequency (red)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>red-frequency
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.81 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;20.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;20.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.01 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Green frequency</div>
+<div>Light frequency (green)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>green-frequency
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;1.22 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;20.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;20.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.01 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Blue frequency</div>
+<div>Light frequency (blue)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>blue-frequency
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;1.12 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;20.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;20.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.01 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Red contours</div>
+<div>Number of contours (red)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>red-contours
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.82 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;10.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;10.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.01 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Green contours</div>
+<div>Number of contours (green)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>green-contours
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.82 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;10.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;10.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.01 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Blue contours</div>
+<div>Number of contours (blue)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>blue-contours
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.97 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;10.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;10.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.01 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Red sharp edges</div>
+<div>Number of sharp edges (red)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>red-sedges
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.61 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;1.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;1.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Green sharp edges</div>
+<div>Number of sharp edges (green)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>green-sedges
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.68 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;1.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;1.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Blue sharp edges</div>
+<div>Number of sharp edges (blue)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>blue-sedges
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.64 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;1.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;1.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Brightness</div>
+<div>Brightness and shifting\/fattening of contours</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>brightness
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.07 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;1.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;1.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Scattering</div>
+<div>Scattering (speed vs. quality)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>scattering
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;37.13 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;100.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;100.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;10.00 
+<b>ui-digits:</b>&nbsp;2 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Polarization</div>
+<div>Polarization</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>polarization
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;-0.47 
+<b>minimum:</b>&nbsp;-1.00 
+<b>maximum:</b>&nbsp;1.00 
+<b>ui-minimum:</b>&nbsp;-1.00 
+<b>ui-maximum:</b>&nbsp;1.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Width</div>
+<div>Width of the generated buffer</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>width
+<b>type:&nbsp;</b>int
+<b>default:</b>&nbsp;200 
+<b>minimum:</b>&nbsp;0 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;0 
+<b>ui-maximum:</b>&nbsp;4096 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1 
+<b>ui-step-big:</b>&nbsp;100 
+<b>role</b>:output-extent
+<b>unit</b>:pixel-distance
+<b>axis</b>:x
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Height</div>
+<div>Height of the generated buffer</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>height
+<b>type:&nbsp;</b>int
+<b>default:</b>&nbsp;200 
+<b>minimum:</b>&nbsp;0 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;0 
+<b>ui-maximum:</b>&nbsp;4096 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1 
+<b>ui-step-big:</b>&nbsp;100 
+<b>role</b>:output-extent
+<b>unit</b>:pixel-distance
+<b>axis</b>:y
+</div></div></div></div><b>name:</b>&nbspgegl:diffraction-patterns<br/><b>pads:</b>
+output
+<br/><b>parent-class:</b>&nbsp;<a href='GeglOperationPointRender.html'>GeglOperationPointRender</a><br/>
+<b>categories:</b> <a class='category' style='color:black' href='render.html'>render</a> <br/>
+<b>OpenCL</b><br/>
+<b>source:</b>&nbsp;<a href='https://git.gnome.org/browse/gegl/tree/operations/common-gpl3+/diffraction-patterns.c'>operations/common-gpl3+/diffraction-patterns.c</a><br/>
+<b>position-dependent:</b>&nbsp;true<br/>
+<b>license:</b>&nbsp;GPL3+<br/>
+</dl></div><div style='margin-top:3em;'><a href='../index.html'><img src='../images/GEGL.png' alt='GEGL' style='height: 4.0em;float:left; padding-right:0.5em;'/></a> This page is part of the online GEGL Documentation, GEGL is a data flow based image processing library/framework, made to fuel <a href='https://www.gimp.org/'>GIMPs</a> high-bit depth non-destructive editing future.</div></body></html>

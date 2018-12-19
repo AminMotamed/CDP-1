@@ -1,0 +1,63 @@
+<html><head><title>gegl:seamless-clone</title>
+<style>@import url(../gegl.css); .categories{ clear:right;text-align: justify; line-height: 1.6em; float:right; padding-left: 1em; padding-bottom: 1em ;width: 14em; } .categories a, .category {color:black; background:#eef; padding: 0.1em; padding-left0.2em; padding-right: 0.2em; border: 1px solid gray;} .description{margin-bottom:1em;};body { margin: 1em 5% 1em 5%; }</style></head><body><div id='content'>
+<div class='operation'><h2 style='clear:both;'>gegl:seamless-clone</h2>
+<div class='description'>Seamless cloning operation</div>
+<div style='margin-bottom:1em;'><div class='properties'>
+<div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Refinement scale</div>
+<div>Maximal scale of refinement points to be used for the interpolation mesh</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>max-refine-scale
+<b>type:&nbsp;</b>int
+<b>default:</b>&nbsp;5 
+<b>minimum:</b>&nbsp;0 
+<b>maximum:</b>&nbsp;100000 
+<b>ui-minimum:</b>&nbsp;0 
+<b>ui-maximum:</b>&nbsp;100000 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1 
+<b>ui-step-big:</b>&nbsp;5 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Offset X</div>
+<div>How much horizontal offset should applied to the paste</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>xoff
+<b>type:&nbsp;</b>int
+<b>default:</b>&nbsp;0 
+<b>minimum:</b>&nbsp;-100000 
+<b>maximum:</b>&nbsp;100000 
+<b>ui-minimum:</b>&nbsp;-100000 
+<b>ui-maximum:</b>&nbsp;100000 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1 
+<b>ui-step-big:</b>&nbsp;5 
+<b>unit</b>:pixel-coordinate
+<b>axis</b>:x
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Offset Y</div>
+<div>How much horizontal offset should applied to the paste</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>yoff
+<b>type:&nbsp;</b>int
+<b>default:</b>&nbsp;0 
+<b>minimum:</b>&nbsp;-100000 
+<b>maximum:</b>&nbsp;100000 
+<b>ui-minimum:</b>&nbsp;-100000 
+<b>ui-maximum:</b>&nbsp;100000 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1 
+<b>ui-step-big:</b>&nbsp;5 
+<b>unit</b>:pixel-coordinate
+<b>axis</b>:y
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Error message</div>
+<div>An error message in case of a failure</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>error-msg
+<b>type:&nbsp;</b>string
+  <b>default:</b>&nbsp; 
+</div></div></div></div><b>name:</b>&nbspgegl:seamless-clone<br/><b>pads:</b>
+aux
+input
+output
+<br/><b>parent-class:</b>&nbsp;<a href='GeglOperationComposer.html'>GeglOperationComposer</a><br/>
+<b>categories:</b> <a class='category' style='color:black' href='blend.html'>blend</a> <br/>
+<b>source:</b>&nbsp;<a href='https://git.gnome.org/browse/gegl/tree/operations/seamless-clone/seamless-clone.c'>operations/seamless-clone/seamless-clone.c</a><br/>
+<b>license:</b>&nbsp;GPL3+<br/>
+</dl></div><div style='margin-top:3em;'><a href='../index.html'><img src='../images/GEGL.png' alt='GEGL' style='height: 4.0em;float:left; padding-right:0.5em;'/></a> This page is part of the online GEGL Documentation, GEGL is a data flow based image processing library/framework, made to fuel <a href='https://www.gimp.org/'>GIMPs</a> high-bit depth non-destructive editing future.</div></body></html>

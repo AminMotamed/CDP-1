@@ -1,0 +1,126 @@
+<html><head><title>gegl:text</title>
+<style>@import url(../gegl.css); .categories{ clear:right;text-align: justify; line-height: 1.6em; float:right; padding-left: 1em; padding-bottom: 1em ;width: 14em; } .categories a, .category {color:black; background:#eef; padding: 0.1em; padding-left0.2em; padding-right: 0.2em; border: 1px solid gray;} .description{margin-bottom:1em;};body { margin: 1em 5% 1em 5%; }</style></head><body><div id='content'>
+<div class='operation'><h2 style='clear:both;'>Render Text</h2>
+<img style='clear: both; padding-left: 1em; float: right; ' src='images/gegl-text.png' />
+<div class='description'>Display a string of text using pango and cairo.</div>
+<div style='margin-bottom:1em;'><div class='properties'>
+<div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Text</div>
+<div>String to display (utf8)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>string
+<b>type:&nbsp;</b>string
+  <b>default:</b>&nbsp;Hello 
+<b>multiline</b>:true
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Font family</div>
+<div>Font family (utf8)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>font
+<b>type:&nbsp;</b>string
+  <b>default:</b>&nbsp;Sans 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Size</div>
+<div>Font size in pixels.</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>size
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;10.00 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;2048.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;2048.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;100.00 
+<b>ui-digits:</b>&nbsp;1 
+<b>unit</b>:pixel-distance
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Color</div>
+<div>Color for the text (defaults to 'black')</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>color
+<b>type:&nbsp;</b>color
+<b>default:</b>&nbsp;rgb(0.0000, 0.0000, 0.0000) 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Wrap width</div>
+<div>Sets the width in pixels at which long lines will wrap. Use -1 for no wrapping.</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>wrap
+<b>type:&nbsp;</b>int
+<b>default:</b>&nbsp;-1 
+<b>minimum:</b>&nbsp;-1 
+<b>maximum:</b>&nbsp;1000000 
+<b>ui-minimum:</b>&nbsp;-1 
+<b>ui-maximum:</b>&nbsp;1000000 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1 
+<b>ui-step-big:</b>&nbsp;5 
+<b>unit</b>:pixel-distance
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Wrap height</div>
+<div>Sets the height in pixels according to which the text is vertically justified. Use -1 for no vertical justification.</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>vertical-wrap
+<b>type:&nbsp;</b>int
+<b>default:</b>&nbsp;0 
+<b>minimum:</b>&nbsp;-1 
+<b>maximum:</b>&nbsp;1000000 
+<b>ui-minimum:</b>&nbsp;-1 
+<b>ui-maximum:</b>&nbsp;1000000 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1 
+<b>ui-step-big:</b>&nbsp;5 
+<b>unit</b>:pixel-distance
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Justification</div>
+<div>Alignment for multi-line text (0=Left, 1=Center, 2=Right)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>alignment
+<b>type:&nbsp;</b>int
+<b>default:</b>&nbsp;0 
+<b>minimum:</b>&nbsp;0 
+<b>maximum:</b>&nbsp;2 
+<b>ui-minimum:</b>&nbsp;0 
+<b>ui-maximum:</b>&nbsp;2 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1 
+<b>ui-step-big:</b>&nbsp;2 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Vertical justification</div>
+<div>Vertical text alignment (0=Top, 1=Middle, 2=Bottom)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>vertical-alignment
+<b>type:&nbsp;</b>int
+<b>default:</b>&nbsp;0 
+<b>minimum:</b>&nbsp;0 
+<b>maximum:</b>&nbsp;2 
+<b>ui-minimum:</b>&nbsp;0 
+<b>ui-maximum:</b>&nbsp;2 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1 
+<b>ui-step-big:</b>&nbsp;2 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Width</div>
+<div>Rendered width in pixels. (read only)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>width
+<b>type:&nbsp;</b>int
+<b>default:</b>&nbsp;0 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1 
+<b>ui-step-big:</b>&nbsp;5 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Height</div>
+<div>Rendered height in pixels. (read only)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>height
+<b>type:&nbsp;</b>int
+<b>default:</b>&nbsp;0 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+<b>ui-minimum:</b>&nbsp;-inf 
+<b>ui-maximum:</b>&nbsp;+inf 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1 
+<b>ui-step-big:</b>&nbsp;5 
+</div></div></div></div><b>name:</b>&nbspgegl:text<br/><b>pads:</b>
+output
+<br/><b>parent-class:</b>&nbsp;<a href='GeglOperationSource.html'>GeglOperationSource</a><br/>
+<b>categories:</b> <a class='category' style='color:black' href='render.html'>render</a> <br/>
+<b>source:</b>&nbsp;<a href='https://git.gnome.org/browse/gegl/tree/operations/external/text.c'>operations/external/text.c</a><br/>
+</dl></div><div style='margin-top:3em;'><a href='../index.html'><img src='../images/GEGL.png' alt='GEGL' style='height: 4.0em;float:left; padding-right:0.5em;'/></a> This page is part of the online GEGL Documentation, GEGL is a data flow based image processing library/framework, made to fuel <a href='https://www.gimp.org/'>GIMPs</a> high-bit depth non-destructive editing future.</div></body></html>

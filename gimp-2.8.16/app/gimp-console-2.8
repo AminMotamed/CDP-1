@@ -31,7 +31,7 @@ DUALCASE=1; export DUALCASE # for MKS sh
 # if CDPATH is set.
 (unset CDPATH) >/dev/null 2>&1 && unset CDPATH
 
-relink_command=""
+relink_command="(cd /home/gaston/Downloads/gimp-2.8.16/app; { test -z \"\${LIBRARY_PATH+set}\" || unset LIBRARY_PATH || { LIBRARY_PATH=; export LIBRARY_PATH; }; }; { test -z \"\${COMPILER_PATH+set}\" || unset COMPILER_PATH || { COMPILER_PATH=; export COMPILER_PATH; }; }; { test -z \"\${GCC_EXEC_PREFIX+set}\" || unset GCC_EXEC_PREFIX || { GCC_EXEC_PREFIX=; export GCC_EXEC_PREFIX; }; }; { test -z \"\${LD_RUN_PATH+set}\" || unset LD_RUN_PATH || { LD_RUN_PATH=; export LD_RUN_PATH; }; }; { test -z \"\${LD_LIBRARY_PATH+set}\" || unset LD_LIBRARY_PATH || { LD_LIBRARY_PATH=; export LD_LIBRARY_PATH; }; }; PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin; export PATH; gcc -g -O2 -Wall -Wdeclaration-after-statement -Wmissing-prototypes -Werror=missing-prototypes -Wstrict-prototypes -Wmissing-declarations -Winit-self -Wpointer-arith -Wold-style-definition -Wmissing-format-attribute -Wformat-security -fno-common -fdiagnostics-show-option -u gimp_vectors_undo_get_type -u gimp_vectors_mod_undo_get_type -u gimp_vectors_prop_undo_get_type -u gimp_curve_map_pixels -u xcf_init -u internal_procs_init -u gimp_plug_in_manager_restore -u gimp_pdb_compat_param_spec -u plug_in_icc_profile_apply_rgb -u gimp_image_map_config_get_type -o \$progdir/\$file gimp_console_2_8-app.o gimp_console_2_8-batch.o gimp_console_2_8-errors.o gimp_console_2_8-language.o gimp_console_2_8-sanity.o gimp_console_2_8-signals.o gimp_console_2_8-tests.o gimp_console_2_8-unique.o gimp_console_2_8-units.o gimp_console_2_8-version.o gimp_console_2_8-gimp-debug.o gimp_console_2_8-gimp-log.o gimp_console_2_8-main.o -Wl,--export-dynamic -pthread -pthread  xcf/libappxcf.a pdb/libappinternal-procs.a pdb/libapppdb.a plug-in/libappplug-in.a vectors/libappvectors.a core/libappcore.a file/libappfile.a text/libapptext.a paint/libapppaint.a composite/libappcomposite.a gegl/libappgegl.a config/libappconfig.a paint-funcs/libapppaint-funcs.a base/libappbase.a ../libgimpconfig/.libs/libgimpconfig-2.0.so ../libgimpmath/.libs/libgimpmath-2.0.so ../libgimpthumb/.libs/libgimpthumb-2.0.so ../libgimpcolor/.libs/libgimpcolor-2.0.so ../libgimpmodule/.libs/libgimpmodule-2.0.so ../libgimpbase/.libs/libgimpbase-2.0.so -lgdk_pixbuf-2.0 -lpangocairo-1.0 -lpangoft2-1.0 -lpango-1.0 -lfontconfig /usr/lib/x86_64-linux-gnu/libfreetype.so -lcairo -L/usr/local/lib /usr/local/lib/libgegl-0.2.so -lgmodule-2.0 -lgio-2.0 /usr/local/lib/libbabl-0.1.so -lgobject-2.0 -lgthread-2.0 -lglib-2.0 -lm -pthread -Wl,-rpath -Wl,/home/gaston/Downloads/gimp-2.8.16/libgimpconfig/.libs -Wl,-rpath -Wl,/home/gaston/Downloads/gimp-2.8.16/libgimpmath/.libs -Wl,-rpath -Wl,/home/gaston/Downloads/gimp-2.8.16/libgimpthumb/.libs -Wl,-rpath -Wl,/home/gaston/Downloads/gimp-2.8.16/libgimpcolor/.libs -Wl,-rpath -Wl,/home/gaston/Downloads/gimp-2.8.16/libgimpmodule/.libs -Wl,-rpath -Wl,/home/gaston/Downloads/gimp-2.8.16/libgimpbase/.libs)"
 
 # This environment variable determines our operation mode.
 if test "$libtool_install_magic" = "%%%MAGIC variable%%%"; then
@@ -182,20 +182,38 @@ func_exec_program ()
   absdir=`cd "$thisdir" && pwd`
   test -n "$absdir" && thisdir="$absdir"
 
-  program='gimp-console-2.8'
+  program=lt-'gimp-console-2.8'
   progdir="$thisdir/.libs"
 
+  if test ! -f "$progdir/$program" ||
+     { file=`ls -1dt "$progdir/$program" "$progdir/../$program" 2>/dev/null | /bin/sed 1q`; \
+       test "X$file" != "X$progdir/$program"; }; then
+
+    file="$$-$program"
+
+    if test ! -d "$progdir"; then
+      mkdir "$progdir"
+    else
+      rm -f "$progdir/$file"
+    fi
+
+    # relink executable if necessary
+    if test -n "$relink_command"; then
+      if relink_command_output=`eval $relink_command 2>&1`; then :
+      else
+	printf %s\n "$relink_command_output" >&2
+	rm -f "$progdir/$file"
+	exit 1
+      fi
+    fi
+
+    mv -f "$progdir/$file" "$progdir/$program" 2>/dev/null ||
+    { rm -f "$progdir/$program";
+      mv -f "$progdir/$file" "$progdir/$program"; }
+    rm -f "$progdir/$file"
+  fi
 
   if test -f "$progdir/$program"; then
-    # Add our own library path to LD_LIBRARY_PATH
-    LD_LIBRARY_PATH="/home/xkali/Documents/Informatique/CDP/ggg/gimp-2.8.16/libgimpconfig/.libs:/home/xkali/Documents/Informatique/CDP/ggg/gimp-2.8.16/libgimpmath/.libs:/home/xkali/Documents/Informatique/CDP/ggg/gimp-2.8.16/libgimpthumb/.libs:/home/xkali/Documents/Informatique/CDP/ggg/gimp-2.8.16/libgimpcolor/.libs:/home/xkali/Documents/Informatique/CDP/ggg/gimp-2.8.16/libgimpmodule/.libs:/home/xkali/Documents/Informatique/CDP/ggg/gimp-2.8.16/libgimpbase/.libs:/usr/lib/x86_64-linux-gnu:/usr/local/lib:$LD_LIBRARY_PATH"
-
-    # Some systems cannot cope with colon-terminated LD_LIBRARY_PATH
-    # The second colon is a workaround for a bug in BeOS R4 sed
-    LD_LIBRARY_PATH=`$ECHO "$LD_LIBRARY_PATH" | /bin/sed 's/::*$//'`
-
-    export LD_LIBRARY_PATH
-
     if test "$libtool_execute_magic" != "%%%MAGIC variable%%%"; then
       # Run the actual program with our arguments.
       func_exec_program ${1+"$@"}

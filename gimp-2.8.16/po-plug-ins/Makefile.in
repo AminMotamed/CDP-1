@@ -38,7 +38,7 @@ libdir = ${exec_prefix}/lib
 DATADIRNAME = share
 itlocaledir = $(prefix)/$(DATADIRNAME)/locale
 subdir = po-plug-ins
-install_sh = ${SHELL} /home/xkali/Documents/Informatique/CDP/ggg/gimp-2.8.16/install-sh
+install_sh = ${SHELL} /home/gaston/Downloads/gimp-2.8.16/install-sh
 # Automake >= 1.8 provides $(MKDIR_P).
 # Until it can be supposed, use the safe fallback:
 mkdir_p = $(install_sh) -d

@@ -1,0 +1,81 @@
+<html><head><title>gegl:npd</title>
+<style>@import url(../gegl.css); .categories{ clear:right;text-align: justify; line-height: 1.6em; float:right; padding-left: 1em; padding-bottom: 1em ;width: 14em; } .categories a, .category {color:black; background:#eef; padding: 0.1em; padding-left0.2em; padding-right: 0.2em; border: 1px solid gray;} .description{margin-bottom:1em;};body { margin: 1em 5% 1em 5%; }</style></head><body><div id='content'>
+<div class='operation'><h2 style='clear:both;'>gegl:npd</h2>
+<img style='clear: both; padding-left: 1em; float: right; ' src='images/gegl-npd.png' />
+<div class='description'>Performs n-point image deformation</div>
+<div style='margin-bottom:1em;'><div class='properties'>
+<div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Model</div>
+<div>Model - basic element we operate on</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>model
+<b>type:&nbsp;</b>pointer
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Square Size</div>
+<div>Size of an edge of square the mesh consists of</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>square-size
+<b>type:&nbsp;</b>int
+<b>default:</b>&nbsp;20 
+<b>minimum:</b>&nbsp;5 
+<b>maximum:</b>&nbsp;1000 
+<b>ui-minimum:</b>&nbsp;5 
+<b>ui-maximum:</b>&nbsp;1000 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1 
+<b>ui-step-big:</b>&nbsp;100 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Rigidity</div>
+<div>The number of deformation iterations</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>rigidity
+<b>type:&nbsp;</b>int
+<b>default:</b>&nbsp;100 
+<b>minimum:</b>&nbsp;0 
+<b>maximum:</b>&nbsp;10000 
+<b>ui-minimum:</b>&nbsp;0 
+<b>ui-maximum:</b>&nbsp;10000 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1 
+<b>ui-step-big:</b>&nbsp;5 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+ASAP Deformation</div>
+<div>ASAP deformation is performed when TRUE, ARAP deformation otherwise</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>asap-deformation
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;False 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+MLS Weights</div>
+<div>Use MLS weights</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>mls-weights
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;False 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+MLS Weights Alpha</div>
+<div>Alpha parameter of MLS weights</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>mls-weights-alpha
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;1.00 
+<b>minimum:</b>&nbsp;0.10 
+<b>maximum:</b>&nbsp;2.00 
+<b>ui-minimum:</b>&nbsp;0.10 
+<b>ui-maximum:</b>&nbsp;2.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Preserve Model</div>
+<div>When TRUE the model will not be freed</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>preserve-model
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;False 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Sampler</div>
+<div>Sampler used internally</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>sampler-type
+<b>type:&nbsp;</b>enum
+</div></div></div></div><b>name:</b>&nbspgegl:npd<br/><b>pads:</b>
+input
+output
+<br/><b>parent-class:</b>&nbsp;<a href='GeglOperationFilter.html'>GeglOperationFilter</a><br/>
+<b>categories:</b> <a class='category' style='color:black' href='transform.html'>transform</a> <br/>
+<b>source:</b>&nbsp;<a href='https://git.gnome.org/browse/gegl/tree/operations/external/npd.c'>operations/external/npd.c</a><br/>
+</dl></div><div style='margin-top:3em;'><a href='../index.html'><img src='../images/GEGL.png' alt='GEGL' style='height: 4.0em;float:left; padding-right:0.5em;'/></a> This page is part of the online GEGL Documentation, GEGL is a data flow based image processing library/framework, made to fuel <a href='https://www.gimp.org/'>GIMPs</a> high-bit depth non-destructive editing future.</div></body></html>

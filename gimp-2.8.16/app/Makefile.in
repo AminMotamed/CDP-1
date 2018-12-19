@@ -161,7 +161,7 @@ am__v_lt_1 =
 gimp_2_8_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
 	$(gimp_2_8_LDFLAGS) $(LDFLAGS) -o $@
-am__gimp_console_2_8_SOURCES_DIST = about.h app.c app.h batch.c \
+am__gimp_console_2_8_SOURCES_DIST = about.h twitter.h app.c app.h batch.c \
 	batch.h errors.c errors.h language.c language.h sanity.c \
 	sanity.h signals.c signals.h tests.c tests.h unique.c unique.h \
 	units.c units.h version.c version.h gimp-debug.c gimp-debug.h \
@@ -670,6 +670,7 @@ SUBDIRS = \
 noinst_LIBRARIES = libapp.a
 libapp_sources = \
 	about.h		\
+	twitter.h	\
 	app.c		\
 	app.h		\
 	batch.c		\

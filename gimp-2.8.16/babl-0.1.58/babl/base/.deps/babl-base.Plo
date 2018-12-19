@@ -1,0 +1,8 @@
+babl-base.lo: babl-base.c /usr/include/stdc-predef.h ../../config.h \
+ babl-base.h
+
+/usr/include/stdc-predef.h:
+
+../../config.h:
+
+babl-base.h:

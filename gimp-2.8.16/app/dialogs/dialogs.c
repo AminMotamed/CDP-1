@@ -274,12 +274,13 @@ static const GimpDialogFactoryEntry entries[] =
             dialogs_tips_get,               TRUE, FALSE, FALSE),
   TOPLEVEL ("gimp-about-dialog",
             dialogs_about_get,              TRUE, FALSE, FALSE),
-  
-  // Modification : Ajout d'une nouvelle boîte de dialogue (Twitter)
+    // Modification : Ajout d'une nouvelle boîte de dialogue (Twitter)
   TOPLEVEL ("gimp-twitter-dialog",
-            dialogs_about_get,              TRUE, FALSE, FALSE),
+            dialogs_twitter_get,              TRUE, FALSE, FALSE),
+
   TOPLEVEL ("gimp-error-dialog",
             dialogs_error_get,              TRUE, FALSE, FALSE),
+  
   TOPLEVEL ("gimp-close-all-dialog",
             dialogs_close_all_get,          TRUE, FALSE, FALSE),
   TOPLEVEL ("gimp-quit-dialog",

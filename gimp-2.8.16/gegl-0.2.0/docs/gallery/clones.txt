@@ -1,0 +1,98 @@
+
+Total time: 2.239s
+gegl                         100.0% ██████████████████████████████████████████ 
+  process                     58.4% ████████████████████████▋
+    gegl:box-blur             45.8% ███████████▏
+      prepare                  0.0%  
+      defined-region           0.0%  
+      other                   26.8% ███████████▏
+
+    gegl:gaussian-blur        22.6% █████▋
+      prepare                  0.0%  
+      defined-region           0.0%  
+      other                   13.2% █████▋
+
+    gegl:text                  8.0% ██
+      defined-region          33.8% ▊
+      prepare                  0.0%  
+      other                    3.1% █▍
+
+    gegl:scale                 7.6% ██
+      defined-region           0.5%  
+      prepare                  0.2%  
+      other                    4.4% █▉
+
+    svg:src-over               6.8% █▊
+      prepare                  0.0%  
+      defined-region           0.0%  
+      other                    4.0% █▊
+
+    gegl:threshold             4.6% █ 
+      prepare                  0.0%  
+      defined-region           0.0%  
+      other                    2.7% █ 
+
+    gegl:gamma                 2.8% ▊
+      prepare                  0.0%  
+      defined-region           0.0%  
+      other                    1.7% ▊
+
+    gegl:translate             1.3% ▍
+      defined-region           2.9%  
+      prepare                  0.8%  
+      other                    0.7% ▍
+
+    gegl:jpg-load              0.9% ▏
+      defined-region           3.5%  
+      prepare                  0.1%  
+      other                    0.5% ▏
+
+    svg:dst-over               0.7% ▏
+      prepare                  0.2%  
+      defined-region           0.0%  
+      other                    0.4% ▏
+
+    gegl:opacity               0.6% ▏
+      prepare                  0.6%  
+      defined-region           0.2%  
+      other                    0.4% ▏
+
+    gegl:png-load              0.4%  
+      defined-region           6.9%  
+      prepare                  0.2%  
+      other                    0.2%  
+
+    gegl:add                   0.3%  
+      prepare                  0.4%  
+      defined-region           0.1%  
+      other                    0.2%  
+
+    gegl:nop                   0.1%  
+      prepare                 95.8%  
+      defined-region           1.3%  
+      other                    0.0%  
+
+    gegl:invert                0.0%  
+      prepare                  2.0%  
+      defined-region           0.4%  
+      other                    0.0%  
+
+    gegl:brightness-contrast   0.0%  
+      prepare                  3.8%  
+      defined-region           0.7%  
+      other                    0.0%  
+
+    gegl:clone                 0.0%  
+      defined-region          20.6%  
+      prepare                 37.1%  
+      other                    0.0%  
+
+  gegl_init                   12.8% █████▍
+    babl_init                 80.6% ████▍
+    load modules              19.2% █ 
+    other                      0.0%  
+
+  gegl_parse_xml               3.9% █▊
+  gegl_exit                    0.3% ▏
+  other                       24.5% ██████████▍
+

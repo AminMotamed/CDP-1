@@ -1,0 +1,148 @@
+<html><head><title>gegl:alien-map</title>
+<style>@import url(../gegl.css); .categories{ clear:right;text-align: justify; line-height: 1.6em; float:right; padding-left: 1em; padding-bottom: 1em ;width: 14em; } .categories a, .category {color:black; background:#eef; padding: 0.1em; padding-left0.2em; padding-right: 0.2em; border: 1px solid gray;} .description{margin-bottom:1em;};body { margin: 1em 5% 1em 5%; }</style></head><body><div id='content'>
+<div class='operation'><h2 style='clear:both;'>Alien Map</h2>
+<img style='clear: both; padding-left: 1em; float: right; ' src='images/gegl-alien-map.png' />
+<div class='description'>Heavily distort images colors by applying trigonometric functions to map color values.</div>
+<div style='margin-bottom:1em;'><div class='properties'>
+<div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Color model</div>
+<div>What color model used for the transformation</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>color-model
+<b>type:&nbsp;</b>enum
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Component 1 frequency</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>cpn-1-frequency
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;1.00 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;20.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;20.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.01 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;3 
+<b>label</b>:[color-model {rgb} : rgb-label, color-model {hsl} : hsl-label]
+<b>hsl-label</b>:Hue frequency
+<b>sensitive</b>:! cpn-1-keep
+<b>rgb-label</b>:Red frequency
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Component 2 frequency</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>cpn-2-frequency
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;1.00 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;20.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;20.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.01 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;3 
+<b>label</b>:[color-model {rgb} : rgb-label, color-model {hsl} : hsl-label]
+<b>hsl-label</b>:Saturation frequency
+<b>sensitive</b>:! cpn-2-keep
+<b>rgb-label</b>:Green frequency
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Component 3 frequency</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>cpn-3-frequency
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;1.00 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;20.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;20.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.01 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;3 
+<b>label</b>:[color-model {rgb} : rgb-label, color-model {hsl} : hsl-label]
+<b>hsl-label</b>:Lightness frequency
+<b>sensitive</b>:! cpn-3-keep
+<b>rgb-label</b>:Blue frequency
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Component 1 phase shift</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>cpn-1-phaseshift
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;360.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;360.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;15.00 
+<b>ui-digits:</b>&nbsp;2 
+<b>label</b>:[color-model {rgb} : rgb-label, color-model {hsl} : hsl-label]
+<b>unit</b>:degree
+<b>hsl-label</b>:Hue phase shift
+<b>sensitive</b>:! cpn-1-keep
+<b>rgb-label</b>:Red phase shift
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Component 2 phase shift</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>cpn-2-phaseshift
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;360.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;360.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;15.00 
+<b>ui-digits:</b>&nbsp;2 
+<b>label</b>:[color-model {rgb} : rgb-label, color-model {hsl} : hsl-label]
+<b>unit</b>:degree
+<b>hsl-label</b>:Saturation phase shift
+<b>sensitive</b>:! cpn-2-keep
+<b>rgb-label</b>:Green phase shift
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Component 3 phase shift</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>cpn-3-phaseshift
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;360.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;360.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;15.00 
+<b>ui-digits:</b>&nbsp;2 
+<b>label</b>:[color-model {rgb} : rgb-label, color-model {hsl} : hsl-label]
+<b>unit</b>:degree
+<b>hsl-label</b>:Lightness phase shift
+<b>sensitive</b>:! cpn-3-keep
+<b>rgb-label</b>:Blue phase shift
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Keep component 1</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>cpn-1-keep
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;False 
+<b>label</b>:[color-model {rgb} : rgb-label, color-model {hsl} : hsl-label]
+<b>hsl-label</b>:Keep hue component
+<b>rgb-label</b>:Keep red component
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Keep component 2</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>cpn-2-keep
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;False 
+<b>label</b>:[color-model {rgb} : rgb-label, color-model {hsl} : hsl-label]
+<b>hsl-label</b>:Keep saturation component
+<b>rgb-label</b>:Keep green component
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Keep component 3</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>cpn-3-keep
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;False 
+<b>label</b>:[color-model {rgb} : rgb-label, color-model {hsl} : hsl-label]
+<b>hsl-label</b>:Keep lightness component
+<b>rgb-label</b>:Keep blue component
+</div></div></div></div><b>name:</b>&nbspgegl:alien-map<br/><b>pads:</b>
+input
+output
+<br/><b>parent-class:</b>&nbsp;<a href='GeglOperationPointFilter.html'>GeglOperationPointFilter</a><br/>
+<b>categories:</b> <a class='category' style='color:black' href='artistic.html'>artistic</a> <br/>
+<b>OpenCL</b><br/>
+<b>source:</b>&nbsp;<a href='https://git.gnome.org/browse/gegl/tree/operations/common/alien-map.c'>operations/common/alien-map.c</a><br/>
+</dl></div><div style='margin-top:3em;'><a href='../index.html'><img src='../images/GEGL.png' alt='GEGL' style='height: 4.0em;float:left; padding-right:0.5em;'/></a> This page is part of the online GEGL Documentation, GEGL is a data flow based image processing library/framework, made to fuel <a href='https://www.gimp.org/'>GIMPs</a> high-bit depth non-destructive editing future.</div></body></html>

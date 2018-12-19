@@ -134,8 +134,8 @@ am__objects_2 = dialogs.$(OBJEXT) dialogs-constructors.$(OBJEXT) \
 	resize-dialog.$(OBJEXT) resolution-calibrate-dialog.$(OBJEXT) \
 	scale-dialog.$(OBJEXT) stroke-dialog.$(OBJEXT) \
 	template-options-dialog.$(OBJEXT) tips-dialog.$(OBJEXT) \
-	tips-parser.$(OBJEXT) user-install-dialog.$(OBJEXT) \
-	vectors-export-dialog.$(OBJEXT) \
+	twitter-dialog.$(OBJEXT) tips-parser.$(OBJEXT) \
+	user-install-dialog.$(OBJEXT) vectors-export-dialog.$(OBJEXT) \
 	vectors-import-dialog.$(OBJEXT) \
 	vectors-options-dialog.$(OBJEXT)
 am_libappdialogs_a_OBJECTS = $(am__objects_1) $(am__objects_2)
@@ -621,6 +621,8 @@ libappdialogs_a_sources = \
 	template-options-dialog.h	\
 	tips-dialog.c			\
 	tips-dialog.h			\
+	twitter-dialog.c	        \
+	twitter-dialog.h	        \
 	tips-parser.c			\
 	tips-parser.h			\
 	user-install-dialog.c		\
@@ -635,6 +637,8 @@ libappdialogs_a_sources = \
 libappdialogs_a_built_sources = \
 	authors.h
 
+
+# Modification :: Fichiers twitter
 libappdialogs_a_SOURCES = \
 	$(libappdialogs_a_built_sources) $(libappdialogs_a_sources)
 
@@ -721,6 +725,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/template-options-dialog.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tips-dialog.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tips-parser.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/twitter-dialog.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/user-install-dialog.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/vectors-export-dialog.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/vectors-import-dialog.Po@am__quote@

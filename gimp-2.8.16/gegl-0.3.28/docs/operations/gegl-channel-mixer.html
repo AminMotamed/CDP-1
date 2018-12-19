@@ -1,0 +1,146 @@
+<html><head><title>gegl:channel-mixer</title>
+<style>@import url(../gegl.css); .categories{ clear:right;text-align: justify; line-height: 1.6em; float:right; padding-left: 1em; padding-bottom: 1em ;width: 14em; } .categories a, .category {color:black; background:#eef; padding: 0.1em; padding-left0.2em; padding-right: 0.2em; border: 1px solid gray;} .description{margin-bottom:1em;};body { margin: 1em 5% 1em 5%; }</style></head><body><div id='content'>
+<div class='operation'><h2 style='clear:both;'>Channel Mixer</h2>
+<img style='clear: both; padding-left: 1em; float: right; ' src='images/gegl-channel-mixer.png' />
+<div class='description'>Remix colors; by defining relative contributions from source components.</div>
+<div style='margin-bottom:1em;'><div class='properties'>
+<div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Preserve luminosity</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>preserve-luminosity
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;False 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Red in Red channel</div>
+<div>Set the red amount for the red channel</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>rr-gain
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;1.00 
+<b>minimum:</b>&nbsp;-2.00 
+<b>maximum:</b>&nbsp;2.00 
+<b>ui-minimum:</b>&nbsp;-2.00 
+<b>ui-maximum:</b>&nbsp;2.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Green in Red channel</div>
+<div>Set the green amount for the red channel</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>rg-gain
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-2.00 
+<b>maximum:</b>&nbsp;2.00 
+<b>ui-minimum:</b>&nbsp;-2.00 
+<b>ui-maximum:</b>&nbsp;2.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Blue in Red channel</div>
+<div>Set the blue amount for the red channel</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>rb-gain
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-2.00 
+<b>maximum:</b>&nbsp;2.00 
+<b>ui-minimum:</b>&nbsp;-2.00 
+<b>ui-maximum:</b>&nbsp;2.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Red in Green channel</div>
+<div>Set the red amount for the green channel</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>gr-gain
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-2.00 
+<b>maximum:</b>&nbsp;2.00 
+<b>ui-minimum:</b>&nbsp;-2.00 
+<b>ui-maximum:</b>&nbsp;2.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Green for Green channel</div>
+<div>Set the green amount for the green channel</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>gg-gain
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;1.00 
+<b>minimum:</b>&nbsp;-2.00 
+<b>maximum:</b>&nbsp;2.00 
+<b>ui-minimum:</b>&nbsp;-2.00 
+<b>ui-maximum:</b>&nbsp;2.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Blue in Green channel</div>
+<div>Set the blue amount for the green channel</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>gb-gain
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-2.00 
+<b>maximum:</b>&nbsp;2.00 
+<b>ui-minimum:</b>&nbsp;-2.00 
+<b>ui-maximum:</b>&nbsp;2.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Red in Blue channel</div>
+<div>Set the red amount for the blue channel</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>br-gain
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-2.00 
+<b>maximum:</b>&nbsp;2.00 
+<b>ui-minimum:</b>&nbsp;-2.00 
+<b>ui-maximum:</b>&nbsp;2.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Green in Blue channel</div>
+<div>Set the green amount for the blue channel</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>bg-gain
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-2.00 
+<b>maximum:</b>&nbsp;2.00 
+<b>ui-minimum:</b>&nbsp;-2.00 
+<b>ui-maximum:</b>&nbsp;2.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Blue in Blue channel</div>
+<div>Set the blue amount for the blue channel</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>bb-gain
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;1.00 
+<b>minimum:</b>&nbsp;-2.00 
+<b>maximum:</b>&nbsp;2.00 
+<b>ui-minimum:</b>&nbsp;-2.00 
+<b>ui-maximum:</b>&nbsp;2.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div></div></div><b>name:</b>&nbspgegl:channel-mixer<br/><b>pads:</b>
+input
+output
+<br/><b>parent-class:</b>&nbsp;<a href='GeglOperationPointFilter.html'>GeglOperationPointFilter</a><br/>
+<b>categories:</b> <a class='category' style='color:black' href='color.html'>color</a> <br/>
+<b>OpenCL</b><br/>
+<b>source:</b>&nbsp;<a href='https://git.gnome.org/browse/gegl/tree/operations/common-gpl3+/channel-mixer.c'>operations/common-gpl3+/channel-mixer.c</a><br/>
+<b>license:</b>&nbsp;GPL3+<br/>
+</dl></div><div style='margin-top:3em;'><a href='../index.html'><img src='../images/GEGL.png' alt='GEGL' style='height: 4.0em;float:left; padding-right:0.5em;'/></a> This page is part of the online GEGL Documentation, GEGL is a data flow based image processing library/framework, made to fuel <a href='https://www.gimp.org/'>GIMPs</a> high-bit depth non-destructive editing future.</div></body></html>

@@ -161,6 +161,12 @@
 
 ;; Links to GIMP related web sites
 
+;; Modification :: Création d'une nouvelle redirection vers un lien,
+;; en l'occurence vers le twitter de GIMP
+(define (gimp-online-twitter-web-site)
+  (plug-in-web-browser "https://twitter.com/gimp_official")
+)
+
 (define (gimp-online-main-web-site)
   (plug-in-web-browser "http://www.gimp.org/")
 )
@@ -173,6 +179,17 @@
   (plug-in-web-browser "http://registry.gimp.org/")
 )
 
+;; Modification :: Ajout d'un élément dans le menu qui récupérera 
+;; l'identifiant créé ci-dessus et les détails visibles par 
+;; l'utilisateur (nom, description)
+(script-fu-register "gimp-online-twitter-web-site"
+   _"Twitter"
+   _"Bookmark to the official Twitter account of GIMP"
+    "Henrik Brix Andersen <brix@gimp.org>"
+    "Henrik Brix Andersen <brix@gimp.org>"
+    "2003"
+    ""
+)
 
 (script-fu-register "gimp-online-main-web-site"
    _"_Main Web Site"
@@ -184,6 +201,11 @@
 )
 
 (script-fu-menu-register "gimp-online-main-web-site"
+                         "<Image>/Help/GIMP Online")
+
+;; Modification :: Placement de l'élément crée ci-dessus dans l'emplacement
+;; Help-GIMP Online
+(script-fu-menu-register "gimp-online-twitter-web-site"
                          "<Image>/Help/GIMP Online")
 
 

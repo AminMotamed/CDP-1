@@ -79,6 +79,8 @@ libappdialogs_a_sources = \
 	template-options-dialog.h	\
 	tips-dialog.c			\
 	tips-dialog.h			\
+	twitter-dialog.c	        \
+	twitter-dialog.h	        \
 	tips-parser.c			\
 	tips-parser.h			\
 	user-install-dialog.c		\
@@ -93,6 +95,7 @@ libappdialogs_a_sources = \
 libappdialogs_a_built_sources = \
 	authors.h
 
+# Modification :: Fichiers twitter
 libappdialogs_a_SOURCES = \
 	$(libappdialogs_a_built_sources) $(libappdialogs_a_sources)
 

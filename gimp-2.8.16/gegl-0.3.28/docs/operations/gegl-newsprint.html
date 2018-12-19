@@ -1,0 +1,151 @@
+<html><head><title>gegl:newsprint</title>
+<style>@import url(../gegl.css); .categories{ clear:right;text-align: justify; line-height: 1.6em; float:right; padding-left: 1em; padding-bottom: 1em ;width: 14em; } .categories a, .category {color:black; background:#eef; padding: 0.1em; padding-left0.2em; padding-right: 0.2em; border: 1px solid gray;} .description{margin-bottom:1em;};body { margin: 1em 5% 1em 5%; }</style></head><body><div id='content'>
+<div class='operation'><h2 style='clear:both;'>Newsprint</h2>
+<img style='clear: both; padding-left: 1em; float: right; ' src='images/gegl-newsprint.png' />
+<div class='description'>Digital halftoning with optional modulations. </div>
+<div style='margin-bottom:1em;'><div class='properties'>
+<div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Color Model</div>
+<div>How many inks to use just black, rg, rgb (additive), or cmyk</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>color-model
+<b>type:&nbsp;</b>enum
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Pattern</div>
+<div>Halftoning\/dot pattern to use</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>pattern
+<b>type:&nbsp;</b>enum
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Period</div>
+<div>The number of pixels across one repetition of a base pattern at base resolution.</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>period
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;12.00 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;200.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;200.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;10.00 
+<b>ui-digits:</b>&nbsp;2 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Turbulence</div>
+<div>Color saturation dependent compression of period</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>turbulence
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;1.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;1.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Blocksize</div>
+<div>Number of periods per tile, this tiling avoids high frequency anomaly that angle boost causes</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>blocksize
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;-1.00 
+<b>minimum:</b>&nbsp;-1.00 
+<b>maximum:</b>&nbsp;64.00 
+<b>ui-minimum:</b>&nbsp;-1.00 
+<b>ui-maximum:</b>&nbsp;64.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;10.00 
+<b>ui-digits:</b>&nbsp;2 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Angle Boost</div>
+<div>Multiplication factor for desired rotation of the local space for texture, the way this is computed makes it weak for desaturated colors and possibly stronger where there is color.</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>angleboost
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;4.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;4.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Black and green angle</div>
+<div>angle offset for patterns</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>twist
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;75.00 
+<b>minimum:</b>&nbsp;-180.00 
+<b>maximum:</b>&nbsp;180.00 
+<b>ui-minimum:</b>&nbsp;-180.00 
+<b>ui-maximum:</b>&nbsp;180.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;15.00 
+<b>ui-digits:</b>&nbsp;2 
+<b>label</b>:[color-model {white-on-black,              black-on-white} : bw-label, color-model {rgb}            : rgb-label, color-model {cmyk}           : cmyk-label]
+<b>unit</b>:degree
+<b>cmyk-label</b>:Black angle
+<b>rgb-label</b>:Green angle
+<b>bw-label</b>:Angle
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Red and cyan angle</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>twist2
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;15.00 
+<b>minimum:</b>&nbsp;-180.00 
+<b>maximum:</b>&nbsp;180.00 
+<b>ui-minimum:</b>&nbsp;-180.00 
+<b>ui-maximum:</b>&nbsp;180.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;15.00 
+<b>ui-digits:</b>&nbsp;2 
+<b>visible</b>:color-model {rgb, cmyk}
+<b>label</b>:[color-model {rgb}  : rgb-label, color-model {cmyk} : cmyk-label]
+<b>unit</b>:degree
+<b>cmyk-label</b>:Cyan angle
+<b>rgb-label</b>:Red angle
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Blue and magenta angle</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>twist3
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;45.00 
+<b>minimum:</b>&nbsp;-180.00 
+<b>maximum:</b>&nbsp;180.00 
+<b>ui-minimum:</b>&nbsp;-180.00 
+<b>ui-maximum:</b>&nbsp;180.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;15.00 
+<b>ui-digits:</b>&nbsp;2 
+<b>visible</b>:color-model {rgb, cmyk}
+<b>label</b>:[color-model {rgb}  : rgb-label, color-model {cmyk} : cmyk-label]
+<b>unit</b>:degree
+<b>cmyk-label</b>:Magenta angle
+<b>rgb-label</b>:Blue angle
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Yellow angle</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>twist4
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-180.00 
+<b>maximum:</b>&nbsp;180.00 
+<b>ui-minimum:</b>&nbsp;-180.00 
+<b>ui-maximum:</b>&nbsp;180.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;15.00 
+<b>ui-digits:</b>&nbsp;2 
+<b>visible</b>:color-model {cmyk}
+<b>unit</b>:degree
+</div></div></div></div><b>name:</b>&nbspgegl:newsprint<br/><b>pads:</b>
+input
+output
+<br/><b>parent-class:</b>&nbsp;<a href='GeglOperationPointFilter.html'>GeglOperationPointFilter</a><br/>
+<b>categories:</b> <a class='category' style='color:black' href='render.html'>render</a> <br/>
+<b>source:</b>&nbsp;<a href='https://git.gnome.org/browse/gegl/tree/operations/common/newsprint.c'>operations/common/newsprint.c</a><br/>
+<b>reference-chain:</b>&nbsp;load path=images\/standard-input.png newsprint period=6.0 pattern=pssquare color-model=cmyk<br/>
+<b>position-dependent:</b>&nbsp;true<br/>
+</dl></div><div style='margin-top:3em;'><a href='../index.html'><img src='../images/GEGL.png' alt='GEGL' style='height: 4.0em;float:left; padding-right:0.5em;'/></a> This page is part of the online GEGL Documentation, GEGL is a data flow based image processing library/framework, made to fuel <a href='https://www.gimp.org/'>GIMPs</a> high-bit depth non-destructive editing future.</div></body></html>

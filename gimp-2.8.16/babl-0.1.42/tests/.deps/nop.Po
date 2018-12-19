@@ -1,0 +1,14 @@
+nop.o: nop.c /usr/include/stdc-predef.h ../config.h ../babl/babl.h \
+ ../babl/babl-macros.h ../babl/babl-types.h ../babl/babl-version.h
+
+/usr/include/stdc-predef.h:
+
+../config.h:
+
+../babl/babl.h:
+
+../babl/babl-macros.h:
+
+../babl/babl-types.h:
+
+../babl/babl-version.h:

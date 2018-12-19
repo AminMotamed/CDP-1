@@ -1,0 +1,144 @@
+<html><head><title>gegl:exp-combine</title>
+<style>@import url(../gegl.css); .categories{ clear:right;text-align: justify; line-height: 1.6em; float:right; padding-left: 1em; padding-bottom: 1em ;width: 14em; } .categories a, .category {color:black; background:#eef; padding: 0.1em; padding-left0.2em; padding-right: 0.2em; border: 1px solid gray;} .description{margin-bottom:1em;};body { margin: 1em 5% 1em 5%; }</style></head><body><div id='content'>
+<div class='operation'><h2 style='clear:both;'>Combine Exposures</h2>
+<div class='description'>Combine multiple scene exposures into one high dynamic range image.</div>
+<div style='margin-bottom:1em;'><div class='properties'>
+<div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Exposure values</div>
+<div>Relative brightness of each exposure in EV</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>exposures
+<b>type:&nbsp;</b>string
+  <b>default:</b>&nbsp; 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Discretization bits</div>
+<div>Log2 of source's discretization steps</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>steps
+<b>type:&nbsp;</b>int
+<b>default:</b>&nbsp;13 
+<b>minimum:</b>&nbsp;8 
+<b>maximum:</b>&nbsp;32 
+<b>ui-minimum:</b>&nbsp;8 
+<b>ui-maximum:</b>&nbsp;32 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1 
+<b>ui-step-big:</b>&nbsp;5 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Weight sigma</div>
+<div>Weight distribution sigma controlling response contributions</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>sigma
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;8.00 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;32.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;32.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.01 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;3 
+</div></div></div></div><b>name:</b>&nbspgegl:exp-combine<br/><b>pads:</b>
+exposure-99
+exposure-98
+exposure-97
+exposure-96
+exposure-95
+exposure-94
+exposure-93
+exposure-92
+exposure-91
+exposure-90
+exposure-89
+exposure-88
+exposure-87
+exposure-86
+exposure-85
+exposure-84
+exposure-83
+exposure-82
+exposure-81
+exposure-80
+exposure-79
+exposure-78
+exposure-77
+exposure-76
+exposure-75
+exposure-74
+exposure-73
+exposure-72
+exposure-71
+exposure-70
+exposure-69
+exposure-68
+exposure-67
+exposure-66
+exposure-65
+exposure-64
+exposure-63
+exposure-62
+exposure-61
+exposure-60
+exposure-59
+exposure-58
+exposure-57
+exposure-56
+exposure-55
+exposure-54
+exposure-53
+exposure-52
+exposure-51
+exposure-50
+exposure-49
+exposure-48
+exposure-47
+exposure-46
+exposure-45
+exposure-44
+exposure-43
+exposure-42
+exposure-41
+exposure-40
+exposure-39
+exposure-38
+exposure-37
+exposure-36
+exposure-35
+exposure-34
+exposure-33
+exposure-32
+exposure-31
+exposure-30
+exposure-29
+exposure-28
+exposure-27
+exposure-26
+exposure-25
+exposure-24
+exposure-23
+exposure-22
+exposure-21
+exposure-20
+exposure-19
+exposure-18
+exposure-17
+exposure-16
+exposure-15
+exposure-14
+exposure-13
+exposure-12
+exposure-11
+exposure-10
+exposure-9
+exposure-8
+exposure-7
+exposure-6
+exposure-5
+exposure-4
+exposure-3
+exposure-2
+exposure-1
+exposure-0
+output
+<br/><b>parent-class:</b>&nbsp;<a href='GeglOperationFilter.html'>GeglOperationFilter</a><br/>
+<b>categories:</b> <a class='category' style='color:black' href='compositors.html'>compositors</a> <br/>
+<b>source:</b>&nbsp;<a href='https://git.gnome.org/browse/gegl/tree/operations/common/exp-combine.c'>operations/common/exp-combine.c</a><br/>
+</dl></div><div style='margin-top:3em;'><a href='../index.html'><img src='../images/GEGL.png' alt='GEGL' style='height: 4.0em;float:left; padding-right:0.5em;'/></a> This page is part of the online GEGL Documentation, GEGL is a data flow based image processing library/framework, made to fuel <a href='https://www.gimp.org/'>GIMPs</a> high-bit depth non-destructive editing future.</div></body></html>

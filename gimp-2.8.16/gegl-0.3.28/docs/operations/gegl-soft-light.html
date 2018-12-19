@@ -1,0 +1,20 @@
+<html><head><title>gegl:soft-light</title>
+<style>@import url(../gegl.css); .categories{ clear:right;text-align: justify; line-height: 1.6em; float:right; padding-left: 1em; padding-bottom: 1em ;width: 14em; } .categories a, .category {color:black; background:#eef; padding: 0.1em; padding-left0.2em; padding-right: 0.2em; border: 1px solid gray;} .description{margin-bottom:1em;};body { margin: 1em 5% 1em 5%; }</style></head><body><div id='content'>
+<div class='operation'><h2 style='clear:both;'>Soft-light</h2>
+<img style='clear: both; padding-left: 1em; float: right; ' src='images/gegl-soft-light.png' />
+<div class='description'>SVG blend operation soft-light (&lt;code&gt;if 2 * cA &lt; aA: d = cB * (aA - (aB == 0 ? 1 : 1 - cB / aB) * (2 * cA - aA)) + cA * (1 - aB) + cB * (1 - aA); if 8 * cB &lt;= aB: d = cB * (aA - (aB == 0 ? 1 : 1 - cB / aB) * (2 * cA - aA) * (aB == 0 ? 3 : 3 - 8 * cB / aB)) + cA * (1 - aB) + cB * (1 - aA); otherwise: d = (aA * cB + (aB == 0 ? 0 : sqrt (cB / aB) * aB - cB) * (2 * cA - aA)) + cA * (1 - aB) + cB * (1 - aA)&lt;/code&gt;)</div>
+<div style='margin-bottom:1em;'><div class='properties'>
+<div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+sRGB</div>
+<div>Use sRGB gamma instead of linear</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>srgb
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;False 
+</div></div></div></div><b>name:</b>&nbspgegl:soft-light<br/><b>pads:</b>
+aux
+input
+output
+<br/><b>parent-class:</b>&nbsp;<a href='GeglOperationPointComposer.html'>GeglOperationPointComposer</a><br/>
+<b>categories:</b> <a class='category' style='color:black' href='compositors.html'>compositors</a> <a class='category' style='color:black' href='svgfilter.html'>svgfilter</a> <br/>
+<b>source:</b>&nbsp;<a href='https://git.gnome.org/browse/gegl/tree/operations/generated/soft-light.c'>operations/generated/soft-light.c</a><br/>
+</dl></div><div style='margin-top:3em;'><a href='../index.html'><img src='../images/GEGL.png' alt='GEGL' style='height: 4.0em;float:left; padding-right:0.5em;'/></a> This page is part of the online GEGL Documentation, GEGL is a data flow based image processing library/framework, made to fuel <a href='https://www.gimp.org/'>GIMPs</a> high-bit depth non-destructive editing future.</div></body></html>

@@ -78,6 +78,7 @@
 #include "preferences-dialog.h"
 #include "quit-dialog.h"
 #include "tips-dialog.h"
+#include "twitter-dialog.h"
 
 #include "gimp-intl.h"
 
@@ -194,6 +195,15 @@ dialogs_about_get (GimpDialogFactory *factory,
   return about_dialog_create (context);
 }
 
+GtkWidget *
+dialogs_twitter_get (GimpDialogFactory *factory,
+                     GimpContext       *context,
+                     GimpUIManager     *ui_manager,
+                     gint               view_size)
+{
+  return twitter_dialog_create (context);
+}
+ 
 GtkWidget *
 dialogs_error_get (GimpDialogFactory *factory,
                    GimpContext       *context,

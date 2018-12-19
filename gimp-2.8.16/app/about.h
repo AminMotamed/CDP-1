@@ -28,10 +28,10 @@
 /* The year of the last commit (UTC) will be inserted into this string. */
 #define GIMP_COPYRIGHT \
   _("Copyright © 1995-%s\n" \
-    "Spencer Kimball, Peter Mattis and the GIMP Development Team")
+    "Spencer Kimball, Peter Mattis, Ghouibi Ghassen and the GIMP Development Team")
 
 #define GIMP_LICENSE \
-  _("GIMP is free software: you can redistribute it and/or modify it "   \
+  _("GIMP is a free software: you can redistribute it and/or modify it "   \
     "under the terms of the GNU General Public License as published by " \
     "the Free Software Foundation; either version 3 of the License, or " \
     "(at your option) any later version."                                \

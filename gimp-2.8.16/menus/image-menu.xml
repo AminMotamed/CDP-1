@@ -660,10 +660,9 @@
     </menu>
 
     <menu action="help-menu" name="Help">
+      <menuitem action="dialogs-twitter"/>
       <menuitem action="help-help"/>
       <menuitem action="help-context-help"/>
-      <menuitem action="help-twitter"/>
-      <menuitem action="dialogs-twitter"/>
       <menuitem action="dialogs-tips"/>
       <menuitem action="dialogs-about"/>
       <separator/>
@@ -1314,7 +1313,7 @@
   <menuitem action="dialogs-templates"/>
   <menuitem action="dialogs-error-console"/>
 
-    </menu>
+      </menu>
       <menuitem action="dialogs-toolbox"/>
       <separator/>
       <placeholder name="Images"/>
@@ -1328,14 +1327,13 @@
     </menu>
 
     <menu action="help-menu" name="Help">
-      <menuitem action="help-help"/>
-      <menuitem action="help-context-help"/>
-      <menuitem action="help-twitter"/>
-      <menuitem action="dialogs-twitter"/>
-      <menuitem action="dialogs-tips"/>
-      <menuitem action="dialogs-about"/>
-      <separator/>
-      <placeholder name="Programming"/>
+	<menuitem action="dialogs-twitter"/>
+	<menuitem action="help-help"/>
+	<menuitem action="help-context-help"/>
+	<menuitem action="dialogs-tips"/>
+	<menuitem action="dialogs-about"/>
+	<separator/>
+	<placeholder name="Programming"/>
       <separator/>
     </menu>
 

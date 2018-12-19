@@ -253,22 +253,19 @@ static const GimpStringActionEntry dialogs_toplevel_actions[] =
     NC_("dialogs-action", "Open the module manager dialog"),
     "gimp-module-dialog",
     GIMP_HELP_MODULE_DIALOG },
-  
-  //  Modification : Ajout d'un nouvel element dans Help
+
+    //  Modification : Ajout d'un nouvel element dans Help
   { "dialogs-twitter", GIMP_STOCK_INFO,
     NC_("dialogs-action", "Twitter"), NULL,
     NC_("dialogs-action", "Redirect to Twitter"),
-    "gimp-tips-dialog",
-    GIMP_HELP_TWITTER_DIALOG},
-  
+    "gimp-twitter-dialog",
+     GIMP_HELP_TIPS_DIALOG },
+
   { "dialogs-tips", GIMP_STOCK_INFO,
     NC_("dialogs-action", "_Tip of the Day"), NULL,
     NC_("dialogs-action", "Show some helpful tips on using GIMP"),
     "gimp-tips-dialog",
     GIMP_HELP_TIPS_DIALOG },
-
-  
-
 
   { "dialogs-about", GTK_STOCK_ABOUT,
 #if defined (G_OS_WIN32)

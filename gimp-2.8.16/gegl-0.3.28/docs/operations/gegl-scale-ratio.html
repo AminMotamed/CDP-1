@@ -1,0 +1,69 @@
+<html><head><title>gegl:scale-ratio</title>
+<style>@import url(../gegl.css); .categories{ clear:right;text-align: justify; line-height: 1.6em; float:right; padding-left: 1em; padding-bottom: 1em ;width: 14em; } .categories a, .category {color:black; background:#eef; padding: 0.1em; padding-left0.2em; padding-right: 0.2em; border: 1px solid gray;} .description{margin-bottom:1em;};body { margin: 1em 5% 1em 5%; }</style></head><body><div id='content'>
+<div class='operation'><h2 style='clear:both;'>Scale ratio</h2>
+<img style='clear: both; padding-left: 1em; float: right; ' src='images/gegl-scale-ratio.png' />
+<div class='description'>Scales the buffer according to a ratio.</div>
+<div style='margin-bottom:1em;'><div class='properties'>
+<div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Origin-x</div>
+<div>X coordinate of origin</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>origin-x
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Origin-y</div>
+<div>Y coordinate of origin</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>origin-y
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-inf 
+<b>maximum:</b>&nbsp;+inf 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Sampler</div>
+<div>Sampler used internally</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>sampler
+<b>type:&nbsp;</b>enum
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Clip to input</div>
+<div>Force output bounding box to be input bounding box.</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>clip-to-input
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;False 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+X</div>
+<div>Horizontal scale factor</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>x
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-9000.00 
+<b>maximum:</b>&nbsp;9000.00 
+<b>ui-minimum:</b>&nbsp;-9000.00 
+<b>ui-maximum:</b>&nbsp;9000.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Y</div>
+<div>Vertical scale factor</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>y
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.00 
+<b>minimum:</b>&nbsp;-9000.00 
+<b>maximum:</b>&nbsp;9000.00 
+<b>ui-minimum:</b>&nbsp;-9000.00 
+<b>ui-maximum:</b>&nbsp;9000.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.10 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;1 
+</div></div></div></div><b>name:</b>&nbspgegl:scale-ratio<br/><b>pads:</b>
+input
+output
+<br/><b>parent-class:</b>&nbsp;<a href='GeglOpPlugIn-transform-core.html'>GeglOpPlugIn-transform-core</a><br/>
+<b>categories:</b> <a class='category' style='color:black' href='transform.html'>transform</a> <br/>
+<b>source:</b>&nbsp;<a href='https://git.gnome.org/browse/gegl/tree/operations/transform/scale-ratio.c'>operations/transform/scale-ratio.c</a><br/>
+<b>reference-chain:</b>&nbsp;load path=images\/standard-input.png scale-ratio x=2.0 y=2.0 clip-to-input=true origin-x=100 origin-y=100<br/>
+</dl></div><div style='margin-top:3em;'><a href='../index.html'><img src='../images/GEGL.png' alt='GEGL' style='height: 4.0em;float:left; padding-right:0.5em;'/></a> This page is part of the online GEGL Documentation, GEGL is a data flow based image processing library/framework, made to fuel <a href='https://www.gimp.org/'>GIMPs</a> high-bit depth non-destructive editing future.</div></body></html>

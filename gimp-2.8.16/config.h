@@ -47,7 +47,7 @@
 #define HAVE_ALLOCA_H 1
 
 /* Define to 1 if alsa is available */
-#define HAVE_ALSA 1
+/* #undef HAVE_ALSA */
 
 /* Define to 1 if you have the <altivec.h> header file. */
 /* #undef HAVE_ALTIVEC_H */
@@ -125,7 +125,7 @@
 #define HAVE_LC_MESSAGES 1
 
 /* Define to 1 if you have the `asound' library (-lasound). */
-#define HAVE_LIBASOUND 1
+/* #undef HAVE_LIBASOUND */
 
 /* Define to 1 if you have the `execinfo' library (-lexecinfo). */
 /* #undef HAVE_LIBEXECINFO */
@@ -258,7 +258,7 @@
 /* #undef PLATFORM_OSX */
 
 /* The MTA used by the mail plug-in. */
-#define SENDMAIL "/usr/sbin/sendmail"
+/* #undef SENDMAIL */
 
 /* If using the C implementation of alloca, define if you know the
    direction of stack growth for your system; otherwise it will be

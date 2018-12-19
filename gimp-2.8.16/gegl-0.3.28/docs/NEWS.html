@@ -1,0 +1,3074 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.10" />
+<title></title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+pre {
+  white-space: pre-wrap;
+}
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; vertical-align: text-bottom; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+      li>p {
+          display: inline;
+      }
+      body {
+        padding: 0;
+        background-color: #fff;
+	color: black;
+      }
+      div.paper {
+        background-color: #fff;
+	color: black;
+        margin: 1em;
+        /*margin-left: 12.5em;*/
+      }
+      iframe {
+        background-color: #aaa;
+      }
+      img {max-width: 100%}
+      div.content {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1em;
+        padding-right: 3em;
+        padding-left: 2em;
+        max-width: 45em;
+      }
+      p {
+        line-height: 1.2em;
+      }
+      h1 {
+        margin-top: 0em;
+        }
+      h1, h2, h3, h4{
+        color: #112266;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+      h3 {
+        font-size: 1.2em;
+      }
+      h4 {
+        font-size: 1.0em;
+      }
+      dl {
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+
+      div.expander {
+        border: 1px solid #bbb;
+      }
+      div.expander_title {
+        /*border-bottom: 0px solid #aaa;*/
+      }
+      div.expander_content {
+        margin-left: 2em;
+        display: none;
+        padding-bottom: 1em;
+      }
+      div.expander_content dl{
+        margin: 0;
+        padding: 0;
+      }
+
+
+      table th {
+        font-weight: normal;
+        background-color: #ccc;
+        text-align: left;
+      }
+      span.component {
+        background-color: #060;
+        padding-left: 0.5em;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+        display: block;
+        float: left;
+        overflow: hidden;
+        width: 4em;
+        color: white;
+        border: 1px solid gray;
+        border: 1px solid white;
+        clear: both;
+      }
+      span.type {
+        display: block;
+        background-color: #006;
+        padding-left: 0.5em;
+        clear: both;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+        float: left;
+        overflow: hidden;
+        width: 4em;
+        color: white;
+        border: 1px solid white;
+      }
+
+      .nopad {
+        margin :0;
+        padding:0;
+      }
+
+      td.component {
+        background-color: #060;
+        padding-left: 0.5em;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+        overflow: hidden;
+        width: 4em;
+        color: white;
+        border: 1px solid white;
+      }
+      td.type {
+        background-color: #006;
+        padding-left: 0.5em;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+        overflow: hidden;
+        width: 4em;
+        color: white;
+        border: 1px solid white;
+      }
+      span.spacer {
+        float: left;
+        display: block;
+        overflow: hidden;
+        width: 0.2em;
+      }
+      span.name {
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        border-top: 1px solid #ccc;
+      }
+      span.string {
+        color: #060;
+      }
+      span.function {
+        color: #006;
+      }
+      span.paren {
+        color: #555;
+      }
+      span.NULL {
+        color: #555;
+      }
+      pre.authors {
+        font-size: 100%;
+        font-family: FreeSans, Verdana, sans-serif;
+        position: relative;
+        top: -2em;
+      }
+      img.BablFish {
+         float: right;
+         position: relative;
+         top: -8px;
+         border: none;
+      }
+      td.op_name {
+          padding-top: 2.5em;
+          padding-bottom: 1.0em;
+          font-weight: bold;
+          font-size: 120%;
+      }
+      td.op_description {
+          padding-bottom: 1em;
+      }
+      td.prop_type {
+          color: gray;
+          font-style: italic;
+      }
+      td.prop_name {
+          font-weight: bold;
+      }
+      td.prop_blurb {
+          padding-bottom: 0.5em;
+      }
+      @media screen {
+        body {
+          font-family: FreeSans, Verdana, sans-serif;
+          max-width: 45em;
+        }
+        a {
+          text-decoration: none;
+        }
+        pre {
+          overflow: auto;
+        }
+        h1 {
+            display: none;
+        }
+
+        div#toc {
+          background-color: #333;
+          /*position: absolute;
+          position: fixed;*/
+          width: 12em;
+          top: 0;
+          right: 0;
+          z-index: 2;
+          height: 100%;
+          overflow: auto;
+          float: right;
+          padding-top: 0.5em;
+        }
+        div#toc ul {
+          padding-top: 0em;
+          padding-left: 0em;
+          margin: 0;
+        }
+        div#toc li {
+          display: block;
+          padding-right: 1em;
+        }
+        div#toc li a,
+        div#toc div a{
+          display: block;
+          padding-left: 1em;
+          padding-right: 1em;
+          color: #fff;
+        }
+        div#toc li a:hover,
+        div#toc div a:hover{
+          color: #fff;
+          background-color: #445;
+        }
+        div#toc li a:active,
+        div#toc div a:active{
+          color: #000;
+          background-color: #445;
+        }
+        div#toc .toclevel1 {
+          padding-top: 0.5em;
+          padding-left: 0em;
+        }
+        div#toc .toclevel2 {
+          padding-left: 1em;
+        }
+        #toctitle {
+            display: none;
+        }
+        div.paper {
+          max-width: 45em;
+          -moz-border-radius: 1em;
+        }
+        div.content {
+        }
+        div.print {
+          display: none;
+        }
+        ul.crucible {margin:0; padding:0}
+        ul.crucible li{display: inline;}
+      }
+
+      h2#gegl {
+          display: none;
+      }
+
+      @media print {
+        body {
+          background-color: none;
+          font-family: FreeSans, Verdana, sans-serif;
+        }
+        a, em {
+          /* XXX: work-around for rendering bug, should investigate whether
+           * this issue is fixed in the latest gecko
+           */
+          padding-right: 3em;
+          padding-left: 1em;
+        }
+        a {
+          text-decoration: none;
+        }
+
+        div#toc ul {
+          padding-left: 0em;
+          float: right;
+          margin: 0;
+        }
+        div#toc li {
+          display: block;
+          padding-right: 1em;
+        }
+        div#toc li a{
+          display: block;
+          padding-left: 1em;
+          padding-right: 1em;
+          color: #fff;
+        }
+        div#toc li a:hover {
+          color: #fff;
+          background-color: #333;
+        }
+        div#toc ul {
+          padding-left: 0em;
+          float: none;
+          margin: 0;
+          margin-left: 1em;
+        }
+        div#toc {
+          position: absolute;
+          width: 200px;
+          top: 0;
+          left: 2em;
+          padding-top: 2em;
+          z-index: 2;
+        }
+        div#toc ul {
+          margin-left: 0;
+        }
+        div#toc li a {
+          color : #000;
+        }
+        div#toc h2 {
+          margin: 0;
+          padding: 0;
+        }
+        h1 {
+          margin-left: -0.75em;
+        }
+        h2 {
+          padding-top: 4em;
+          margin-left: -1em;
+        }
+        h3 {
+          padding-top: 4em;
+          margin-left: -1em;
+        }
+        span.component {
+          background-color: #7f7;
+          color: black;
+        }
+        span.type {
+          background-color: #aaf;
+          color: black;
+        }
+        table th {
+          font-weight: bold;
+        }
+        div.print_title {
+          position: absolute;
+          top: 3em;
+          padding-left: 2em;
+          margin-left: 280px;
+        }
+        div.paper {
+          padding-top: 4em;
+        }
+        div.graphic {
+          display: none;
+          background-color: #bbf;
+          height: 100%;
+        }
+        div.graphic img {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+        div.screen {
+          display: none;
+        }
+      }
+
+      a{color:#44f;}
+      a:visited{color:#44f;}
+
+
+
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_gegl_0_3_28_2018_01_23">GEGL-0.3.28 2018-01-23</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_core">Core</h3>
+<div class="literalblock">
+<div class="content">
+<pre><code>A new GeglStats object, which provides realtime statistics/profiling for use
+in UIs.  Automatically copy-on-write clone input buffers for auto-threading of
+operations.</code></pre>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_buffer">Buffer</h3>
+<div class="literalblock">
+<div class="content">
+<pre><code>Many significant optimizations as well as a correctness improvement,
+mipmap scaling and rendering is now done correctly in linear space,
+thus GIMP will not only produce the right results but also avoid gamma
+errors in thumbnails and viewport.</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>Among the signifcant performance boosters are per buffer-instance tile queues,
+adaptive sampler pre-fetch caching and dedicated code paths for fetching
+columns of pixels. Along with many multi-threadedness improvements due to
+more significant testing.</code></pre>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_operations">Operations</h3>
+<div class="literalblock">
+<div class="content">
+<pre><code>Mipmap tuning and performance improvements to gaussian blur
+added dedicated code paths for nearest sampler in transform ops.
+more generic RGBE file handling
+ff-load: permit decoding audio files as well as video files.
+various code cleanups</code></pre>
+</div></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_3_26_2017_12_14">GEGL-0.3.26 2017-12-14</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_core_2">Core</h3>
+<div class="paragraph"><p>Make gegl-chain parser more robust wrt parsing babl formats, and improved -
+translatable - error handling.</p></div>
+<div class="paragraph"><p>Add capabilitity to use per thread input buffers for multi-threaded
+filter/composer/composer3 ops, this reduces contention over the buffer tile
+locks and improves multi-threaded performance in some cases without reducing it
+for the majority of cases.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_buffer_2">Buffer</h3>
+<div class="paragraph"><p>Threads no longer blocked while locking tiles, and fixes to gegL_buffer_copy.
+Better clone accounting in tile cache.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_operations_2">Operations</h3>
+<div class="literalblock">
+<div class="content">
+<pre><code>  exp-combine: code cleanup/simplification
+  libraw: make bounding box handling consistent with rest of code.
+  transform ops: re-enabled multi-threading, reduced some format
+conversions and added wiggle-room in required/invalidated calculations.</code></pre>
+</div></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_3_24_2017_11_24">GEGL-0.3.24 2017-11-24</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_core_3">Core</h3>
+<div class="paragraph"><p>Flush opencl side buffers before multi threaded iteration for point ops, making
+multi threading + opencl work.</p></div>
+<div class="paragraph"><p>Add meta-op graph case to gegl_operation_get_source_node</p></div>
+<div class="paragraph"><p>Versioning of installed .mo files restored.</p></div>
+<div class="paragraph"><p>Enable multi-threaded processes by default.</p></div>
+<div class="paragraph"><p>Stop enabling opencl by default, performance with beignet is worse than
+multi-threading, and with nvidia blank results are being observed in GIMP;
+maybe improved opencl kernels would make it competetive with multi threaded
+cpu?</p></div>
+<div class="paragraph"><p>Deprecate gegl_operation_context_get_source, replace usage with
+gegl_operation_context_get_object.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_buffer_3">Buffer</h3>
+<div class="paragraph"><p>More multi-thread proofing.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_operations_3">Operations</h3>
+<div class="paragraph"><p>median-blur: now op coming out of the GEGL workshop.</p></div>
+<div class="paragraph"><p>exposure: increase old lingering constant enabling larger range of valid inputs.</p></div>
+<div class="paragraph"><p>transform: turn off multi-threading, it was currently degrading overall
+performance.</p></div>
+<div class="paragraph"><p>ppm-load: fix file-loader registration.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_contributors">Contributors</h3>
+<div class="paragraph"><p>Debarshi Ray, Ell, Jordi Mas, Øyvind Kolås, Richard Kreckel, Thomas Manni,
+Marco Ciampa, Alexandre Prokoudine and Piotr Drąg.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_3_22_2017_11_12">GEGL-0.3.22 2017-11-12</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_core_4">Core</h3>
+<div class="paragraph"><p>Refactored graph traversals to use topological sorts.</p></div>
+<div class="paragraph"><p>Completely avoid loading plug-ins .so with -gpl3 in filename unless the
+application using GEGL explicitly has enabled GPL3 operations.</p></div>
+<div class="paragraph"><p>Replace custom property redirection for meta-ops with GBinding.</p></div>
+<div class="paragraph"><p>Reduced temporary buffer allocation overhead in mipmap downscaling.</p></div>
+<div class="paragraph"><p>Do divide and conquer on higher level in point filter/composer op
+base-classes.</p></div>
+<div class="paragraph"><p>Migrated from intltool to GNU gettext</p></div>
+</div>
+<div class="sect2">
+<h3 id="_buffer_4">Buffer</h3>
+<div class="paragraph"><p>Tweak nohalo and lohalo samplers to be orders of magnitude faster for scale
+factors &gt; ~3% while also removing possible hangs.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_operations_4">Operations</h3>
+<div class="paragraph"><p>Improved threading awareness/capabilities of gegl:copy-buffer, gegl:wind,
+gegl:color-enhance, gegl:photocopy, gegl:matting-levin, npd, contrast-curve,
+noise-spread, noise-pick, noise- slur, transform ops.</p></div>
+<div class="paragraph"><p>Use of more modern GLib APIs like g_clear_ and make use of the fact that g_free
+is already NULL safe.</p></div>
+<div class="paragraph"><p>Fixed grayscale behavior of gegl:noise-hurl.
+OpenCL vs CPU consistency fix for gegl:threshold, and optimization of
+gegl:wavelet-blur by decomposing to two 1d passes.
+median-blur, perform binning in a more perceptual space.
+hue-chroma: added OpenCL support
+threshold: make opencl match cpu
+wavelet-blur: decompose for performance
+illusion: performance improvement permitting partial result computation
+grey: add fast path for alpha-less input buffers.</p></div>
+<div class="paragraph"><p>new ops in workshop: spherize, color-to-alpha-plus, shadows-highlights</p></div>
+</div>
+<div class="sect2">
+<h3 id="_with_contributions_from">With contributions from:</h3>
+<div class="paragraph"><p>Debarshi Ray, Ell, Jehan, Jordi Mas, Marco Ciampa, Massimo, Nicolas Robidoux,
+Niels De Graef, Øyvind Kolås, Piotr Drąg and Thomas Manni.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_3_20_2017_08_15">GEGL-0.3.20 2017-08-15</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_core_5">Core</h3>
+<div class="paragraph"><p>Increased max thread limit to 64 threads, and improvements to both buffer and
+progress reporting thread safety, point sized buffers are handled better and
+COW-tiles are now lock free. Serialization and parsing has been made more
+robust.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_operations_5">Operations</h3>
+<div class="paragraph"><p>Improved property meta data for many opertions, two new operations gegl:spiral and gegl:mix.</p></div>
+<div class="paragraph"><p>ff-load/ff-save: make audio frame handling more generic.</p></div>
+<div class="paragraph"><p>c2g, avoid possible infinite loop on transparent areas.</p></div>
+<div class="paragraph"><p>Fixes to gaussian-blur and ops core for multi-threaded blurring.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_new_binary">New binary</h3>
+<div class="paragraph"><p>gcut, a video editing engine for GEGL has also been added to the repo. It
+permits reusing image filters written as GEGL operations for video, and basic
+motion graphics. The engines data model is currently fully functional for
+text-file based input and offline rendering, an experimental user interface for
+this video editing system is also currently being worked on.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_contributors_2">Contributors</h3>
+<div class="paragraph"><p>Øyvind Kolås, Michael Natterer, Jehan, Dimitris Spingos, Piotr Drąg, Alexandre
+Prokoudine, Eugene Hopkinson, Ell, Thomas Manni, Jordi Mas, Edward E, Jan
+Vesely, Arfrever Frehtes Taifersar Arahesis.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_3_18_2017_05_31">GEGL-0.3.18 2017-05-31</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_operations_6">Operations</h3>
+<div class="paragraph"><p>warp: performance improvements
+displace, map-absolute, map-relative: abyss handling and more
+buffer-source: improved invalidation signalling
+text,path: use endian agnostic cairo pixel formats
+opencl implementations of: noise-hsv, diffraction-patterns,
+gaussian-blur-selective and motion-blur-linear.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_core_6">Core</h3>
+<div class="paragraph"><p>rerrange connection handling for nodes when changing operation.
+gegl-path: improvements for corner cases found in warp
+add validation of roi in gegl_operation_get_bounding_box</p></div>
+</div>
+<div class="sect2">
+<h3 id="_contributors_3">Contributors</h3>
+<div class="paragraph"><p>Ell, Anton Gorenko, Øyvind Kolås, Piotr Drąg, Mario Blättermann</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_3_16_2017_05_15">GEGL-0.3.16 2017-05-15</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_core_7">Core</h3>
+<div class="paragraph"><p>Improvements to gegl-chain serialization and documentation.
+Remove remnants of deprecated gegl-graph syntactic sugar for C</p></div>
+</div>
+<div class="sect2">
+<h3 id="_buffer_5">Buffer</h3>
+<div class="paragraph"><p>Avoid choking on 0x0 rectangles, handle implicit mipmap generation for 15bpc
+and half precision float pixelformate.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_operations_7">Operations</h3>
+<div class="paragraph"><p>Many operations have gotten an additiona meta-ui description layer sprinkled on
+top. And The C source code of the operations is no longer kept as a meta-data
+key on the binary, with a shrink of ~10mb it might even impact startup time.</p></div>
+<div class="paragraph"><p>New operations: newsprint/spachrotyzer.
+Moved out of workshop: unpremultiply
+New in workshop: spiral
+drop-shadow: improve edge mode of blur, to work on tiny radiuses.
+transform-ops: ported to the new chanting system
+ff-load: readjust frame accurate mp4 seeking for newer ffmpeg.
+file-loading ops: stop some crashes happening due to invalid/lacking properties.
+npy-save, jpg-save, png-save: port to GIO.
+raw-load: rotate bounding box based on image meta-data.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_tests">Tests</h3>
+<div class="paragraph"><p>Improve testing by using hashes of autogenerated reference images for
+regression testing, thus causing fewer manual steps to add an op with its
+tests. Some XML based tests removed as they were fully superceded by new
+automated tests.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_documentation">Documentation</h3>
+<div class="paragraph"><p>Replaced dynamic client side js content with static operation gallery,
+incremental improvements to website content. This includes updates to the
+meta-data in the .C files of operations.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_contributors_4">Contributors</h3>
+<div class="paragraph"><p>Daniel Mustieles, Debarshi Ray, Dimitris Spingos (Δημήτρης Σπίγγος), Ell, Jan
+Vesely, Jean-Baptiste Mayer, Marco Ciampa, Mario Blättermann, Martin Blanchard,
+Michael Natterer, nick black, Øyvind Kolås, Piotr Drąg, Thomas Manni,</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_3_14_2017_02_27">GEGL-0.3.14 2017-02-27</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_buffer_6">Buffer</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+changed gegl_buffer_set to accept mipmap level scaled rectangles, similar to
+  gegl_buffer_get and gegl_buffer_iterator_new/_add
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_operations_8">Operations</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+made mipmap preview rendering capable: gblur-1d/gaussian blur, sinus,
+  transform (rotate, scale, perspective etc), snn-mean
+</p>
+</li>
+<li>
+<p>
+noise-perlin: remove unused random seed property
+</p>
+</li>
+<li>
+<p>
+exposure: remove gamma property
+</p>
+</li>
+<li>
+<p>
+save-pixbuf: allocate less temporary memory
+</p>
+</li>
+<li>
+<p>
+load-pixbuf: fix rowstride related crasher
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_translations">Translations</h3>
+<div class="paragraph"><p>Slovenian, Russian, Greek, Polish and Catalan translations updated.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_contributors_5">Contributors</h3>
+<div class="paragraph"><p>Alexandre Prokoudine, Debarshi Ray, Dimitris Spingos (Δημήτρης Σπίγγος), Jordi
+Mas, Martin Srebotnjak, Øyvind Kolås</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_3_12_2017_02_13">GEGL-0.3.12 2017-02-13</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_operations_9">Operations</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+new ops: edge-neon, image-gradient, slic, wavelet-blur, waterpixels, watershed
+</p>
+</li>
+<li>
+<p>
+moved from workshop to common: color-warp, component-extract
+</p>
+</li>
+<li>
+<p>
+text: remove now unneeded work-around, ability to control vertical
+   positioning, permit &lt;1.0 font-sizes, handle text-color alpha, other
+   improvements.
+</p>
+</li>
+<li>
+<p>
+lens-distortion: default to transparent background
+</p>
+</li>
+<li>
+<p>
+crop: bounding box computation simplifications
+</p>
+</li>
+<li>
+<p>
+noise-rgb: add gamma and distribution properties
+</p>
+</li>
+<li>
+<p>
+dither: renamed from color-reduction and improved ui/property controls.
+</p>
+</li>
+<li>
+<p>
+high-pass: do inversion, over and contrast in non-linear RGB
+</p>
+</li>
+<li>
+<p>
+noise-rgb: new linear and gaussian properties
+</p>
+</li>
+<li>
+<p>
+transform: added a clip-to-input property
+</p>
+</li>
+<li>
+<p>
+raw-load: improvements to handling of Sony&#8217;s ARW files
+</p>
+</li>
+<li>
+<p>
+exposure: replaced offset with black-level
+</p>
+</li>
+<li>
+<p>
+moved from common to workshop: bilateral-filter-fast
+</p>
+</li>
+<li>
+<p>
+new workshop ops: bayer-matrix, linear-sinusoid,
+ shadows-highlights, integral-image, segment-kmeans,
+</p>
+</li>
+<li>
+<p>
+removed ops: gaussian-blur-old
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_core_8">Core</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+less locale dependent serializations/parameters
+</p>
+</li>
+<li>
+<p>
+fix local raw file detection of ARW and CR2 files
+</p>
+</li>
+<li>
+<p>
+gegl_memset_pattern performance improvement
+</p>
+</li>
+<li>
+<p>
+clean up the way we drop references and free memory
+</p>
+</li>
+<li>
+<p>
+static caching of some frequently used babl formats/types.
+</p>
+</li>
+<li>
+<p>
+mipmap preview render code fixes for the following subset of operations: point
+   operations (filter, and composer subclasses), integer translate, crop.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_translations_2">Translations</h3>
+<div class="paragraph"><p>Catalan, German, Greek, Italian, Polish, Portuguese, Slovenian, Swedish translations updated</p></div>
+</div>
+<div class="sect2">
+<h3 id="_contributors_6">Contributors</h3>
+<div class="paragraph"><p>Piotr Drąg, Marco Ciampa, Sergey "Shnatsel" Davidoff, Ell, Øyvind Kolås, Anders
+Jonsson, Thomas Manni, Jordi Mas, Michael Natterer, Peter O&#8217;Regan, Jehan Pagès,
+Sebastian Rasmussen, Debarshi Ray, Dimitris Spingos (Δημήτρης Σπίγγος),
+Martin Srebotnjak,Miroslav Talasek.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_3_10_2016_11_06">GEGL-0.3.10 2016-11-06</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_buffer_7">buffer</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+stop caching tiles in a singly-linked list; use a hash table only
+</p>
+</li>
+<li>
+<p>
+adjust box filtering threshold of linear/cubic samplers
+</p>
+</li>
+<li>
+<p>
+add const qualifier to input rect parameter of gegl_tile_backend_set_extent()
+</p>
+</li>
+<li>
+<p>
+don&#8217;t acquire tile storage lock in NN sampler when not using multithreading
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_operations_10">operations</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+rgbe-load: add image/x-hdr mimetype
+</p>
+</li>
+<li>
+<p>
+map-relative: sample from the pixel centers for integer vectors
+</p>
+</li>
+<li>
+<p>
+warp: fix and rework the operation, now matches more closely the iWarp behaviour
+</p>
+</li>
+<li>
+<p>
+color-reduction: add arithmetic dithers; inline for loop for each different method
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_binary">binary</h3>
+<div class="paragraph"><p>speed up some commands by not intializing opencl</p></div>
+</div>
+<div class="sect2">
+<h3 id="_json">json</h3>
+<div class="paragraph"><p>make bundleable</p></div>
+</div>
+<div class="sect2">
+<h3 id="_translations_3">translations</h3>
+<div class="paragraph"><p>German, Greek, Italian, Occiatan, Polish, Portuguese, Russian, Serbian, Slovenian, Spanish updated</p></div>
+</div>
+<div class="sect2">
+<h3 id="_contributors_7">Contributors</h3>
+<div class="paragraph"><p>Simon Budig, Marco Ciampa, Piotr Drąg, Ell, Øyvind Kolås, Roman
+Lebedev, Daniel Mustieles, Michael Natterer, Jehan Pagès, Martin
+Pelikán, Yolanda Álvarez Pérez, Alexandre Prokoudine, Tiago Santos,
+Dimitris Spingos, Martin Srebotnjak, Cédric Valmary, Милош Поповић.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_3_8_2016_06_14">GEGL-0.3.8 2016-06-14</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_buffer_8">Buffer</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+add box filtering downsampling paths to linear and cubic resamplers to improve default results
+</p>
+</li>
+<li>
+<p>
+clear hot tile when removing a tile from the cache
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_operations_11">operations</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+added: vhsfix (workshop), gegl-gegl (commandline syntax)
+</p>
+</li>
+<li>
+<p>
+exr-save: port from deprecated chanting system
+</p>
+</li>
+<li>
+<p>
+ff-save: increase max output packet size from 200kb to 1mb
+</p>
+</li>
+<li>
+<p>
+gegl-path: add ability to compute y coordinate for a given x
+</p>
+</li>
+<li>
+<p>
+transform: treat infinite and empty rectangles correctly
+</p>
+</li>
+<li>
+<p>
+webp: port webp-save to GIO for URI handling
+</p>
+</li>
+<li>
+<p>
+ops progress:
+</p>
+</li>
+<li>
+<p>
+add gegl_operation_progress function to report processing progress
+</p>
+</li>
+<li>
+<p>
+use the new function in cartoon and distance-transform ops
+</p>
+</li>
+<li>
+<p>
+ops metadata:
+</p>
+</li>
+<li>
+<p>
+remove custom multiline paramspec
+</p>
+</li>
+<li>
+<p>
+set multiline ui_meta on more ops
+</p>
+</li>
+<li>
+<p>
+add reference meta and use it in various ops
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_gegl_binary">gegl-binary</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+add simple video filtering
+</p>
+</li>
+<li>
+<p>
+encode audio with video
+</p>
+</li>
+<li>
+<p>
+permit dragging and zooming in more ui states
+</p>
+</li>
+<li>
+<p>
+deal correctly with integers in ui
+</p>
+</li>
+<li>
+<p>
+show prop editor for operation if op chain passed at commmandline
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_core_9">core</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+gegl-chain
+</p>
+</li>
+<li>
+<p>
+implement keyframing of strings
+</p>
+</li>
+<li>
+<p>
+suggest possible ops in warninge/errors
+</p>
+</li>
+<li>
+<p>
+gegl-node: relay property change notifies from operation to node
+</p>
+</li>
+<li>
+<p>
+gegl-serialize:
+</p>
+</li>
+<li>
+<p>
+improve error handling for parsing of properties
+</p>
+</li>
+<li>
+<p>
+start handling relative coordinates
+</p>
+</li>
+<li>
+<p>
+use path instead of curve
+</p>
+</li>
+<li>
+<p>
+json: misc improvements and fixes
+</p>
+</li>
+<li>
+<p>
+opencl: fix RGB luminance constants
+</p>
+</li>
+<li>
+<p>
+docs: fixes, update some info in directory overview
+</p>
+</li>
+<li>
+<p>
+handlers:
+</p>
+</li>
+<li>
+<p>
+allow registration of operations by MIME type
+</p>
+</li>
+<li>
+<p>
+register MIME types for loaders
+</p>
+</li>
+<li>
+<p>
+guess file types by sniffing content
+</p>
+</li>
+<li>
+<p>
+build: fix luajit detection
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_contributors_8">Contributors</h3>
+<div class="paragraph"><p>Timm Bäder, Martin Blanchard, Mario Blättermann, Ell, Piotr Drąg,
+Michael Henning, Øyvind Kolås, Hartmut Kuhse, Michael Natterer,
+Nils Philippsen, Alexandre Prokoudine, Debarshi Ray, Kristian Rietveld,
+Dimitris Spingos, Martin Srebotnjak, Pino Toscano, Cédric Valmary,
+Jan Vesely</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_3_6_2016_03_12">GEGL-0.3.6 2016-03-12</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_buffer_9">buffer</h3>
+<div class="paragraph"><p>COW (Copy on Write) handling for gegl_buffer_clear.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_operations_12">operations</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+added: saturation, gaussian-blur-selective
+</p>
+</li>
+<li>
+<p>
+ff-load/ ff-save: updated to work with ffmpeg-3.0,configuration of
+      codec/format.  misc code cleanup, and meta data improvements, gio
+      (url loading) support in more loaders.
+</p>
+</li>
+<li>
+<p>
+convolve-generic: optimized paths for common parameters and 3x3 size.
+</p>
+</li>
+<li>
+<p>
+removed: dcraw-load
+</p>
+</li>
+<li>
+<p>
+jp2, webp, svg::
+        make use of GIO for URI handling
+</p>
+</li>
+<li>
+<p>
+XML: permit serializing a segment/chain of the graph
+</p>
+</li>
+<li>
+<p>
+gegl-binary:
+</p>
+</li>
+<li>
+<p>
+permit setting properties of commandline passed ops, as well as
+      connecting buffers to aux and other input pads.
+</p>
+</li>
+<li>
+<p>
+zoom in/out at cursor position on scroll wheel events.
+</p>
+</li>
+<li>
+<p>
+processing: improvements to meta-ops
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_contributors_9">Contributors</h3>
+<div class="paragraph"><p>Øyvind Kolås, Thomas Manni, Michael Natterer, Nils Philippsen, Debarshi
+Ray, Martin Blanchard, Justin Lecher, Massimo Valentini, Jonathan Tait,
+Mukund Sivaraman, Alexandre Prokoudine, Piotr Drąg, Nanley Chery, Colin
+Waters</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_3_4_2015_11_24">GEGL-0.3.4 2015-11-24</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+build: do not install examples in path
+</p>
+</li>
+<li>
+<p>
+ff-save fully store all in-flight codec contexts before closing files
+</p>
+</li>
+<li>
+<p>
+ff-load improvements to seeking accuracy
+</p>
+</li>
+<li>
+<p>
+transform: make fast paths skip pixel format conversions
+</p>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_contributors_10">Contributors</h3>
+<div class="paragraph"><p>Øyvind Kolås, Debarshi Ray and Nils Philippsen</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_3_2_2015_11_22">GEGL 0.3.2 2015-11-22</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_operations_13">Operations</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+new operations: libraw based raw loading op, tiff-save and tif-load, maze, sepia
+</p>
+</li>
+<li>
+<p>
+ff-load and ff-save revived, with support from thegrid.io
+</p>
+</li>
+<li>
+<p>
+apply-lens uses less memory, higher precision computation.
+</p>
+</li>
+<li>
+<p>
+disable automatic threading on many ops where it fails
+</p>
+</li>
+<li>
+<p>
+force more operations to prefer operating on linear RGB data for more
+accurate/physical processing.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_buffer_10">Buffer:</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+implement abyss paremeter on gegl_buffer_copy and gegl_buffer_blit
+</p>
+</li>
+<li>
+<p>
+Added start of a microraptor gui based image viewer/non destructive editor.
+</p>
+</li>
+<li>
+<p>
+Optimizations to scaled blitting (speeds up most GEGL UIs a bit)
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_contributiors">Contributiors</h3>
+<div class="paragraph"><p>Alexandre Prokoudine, André Tupinambá, Claude Paroz, Daniel Mustieles,
+Debarshi Ray, Dimitris Spingos, Elle Stone, Jehan, Jordi Mas, Marco Ciampa,
+Martin Blanchard, Martin Srebotnjak, Massimo Valentini, Michael Henning,
+Michael Natterer, Necdet Yücel, Pedro Albuquerque, Piotr Drąg, Roman Lebedev,
+Sven Neummann, Thomas Manni, Vilson Vieira, akash akya and Øyvind Kolås.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_3_0_2015_06_03">GEGL-0.3.0 2015-06-03</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Improvements to thread safety and parallelism.
+</p>
+</li>
+<li>
+<p>
+Lower overhead graph travesal due from rewrite of visitors
+</p>
+</li>
+<li>
+<p>
+OpenCL support now enabled by default when detected.
+</p>
+</li>
+<li>
+<p>
+Experimental multithreading, enable by setting GEGL_THREADS=&lt;number of threads&gt; in the environment.
+</p>
+</li>
+<li>
+<p>
+Experimental mipmap rendering, which permits transparent rendering of previews on smaller sized versions, enable by setting GEGL_MIPMAP_RENDERING=true in the environment.
+</p>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_operations_14">Operations</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+new operations: alien-map, antialias, apply-lens, bilateral-filter,
+     bump.map, cartoon, channel-mixer, color-enhance, color-exchange,
+     color-reduction, color-rotate, convolution-matrix, copy-buffer, cubism,
+     deinterlace, diffraction-patterns, distance-transform, displace, edge,
+     emboss, engrave, exposure, fractal-trace, high-pass, image-compare,
+     illusion, invert-gamma, lens-flare, linear, linear-gradient, mosaic,
+     motion-blur-circular, motion-blur-zoom, noise-cell noise-cie-lch,
+     noise-hsv, noise-hurl, noise-pick, noise-rgb, noise-simplex, noise-spread,
+     n-point deformation ops, oilify, panorama-projection, photocopy, plasma,
+     radial-gradient, red-eye-removal, scale-size-keep-aspect, softglow,
+     stretch-contrast, texturize-canvas, tile-glass, tile-seamless, tile-paper,
+     tile, warp, whirl-pinch, wind, cache, cast-format, lcms-from-profile,
+     npy-save, webp-load, webp-save, scale-ratio, scale-size, seamless-clone,
+     sinus, supernova, value-propagate, video-degradation
+</p>
+</li>
+<li>
+<p>
+reimplementation of gaussian-blur faster and more accurate
+</p>
+</li>
+<li>
+<p>
+support for using URIs in image loaders
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_buffer_11">Buffer</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+New default tile backend, doing disk writes in a separate thread.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_contributors_11">Contributors</h3>
+<div class="paragraph"><p>Albert F, Alexandre Prokoudine, Alexia Death, Akash Akya, Anders Jonsson,
+Andika Triwidada, Andreas Fischer, Angh, Awaw Fumin, Barak Itkin, Bruce
+Cowan, Carlos Zubieta, Cédric Valmary, Chris Leonard, Christian Kirbach,
+Clayton Walker, Daniel Mustieles, Daniel Nylander, Daniel Sabo, Debarshi Ray,
+Denis Knoepfle, Dimitris Papavasiliou, Dimitris Spingos, Djavan Fagundes, Dov
+Grobgeld, Elle Stone, Enrico Nicoletto, Felix Ulber, Florian Klemme,
+Francisco Vila, Fran Diéguez, Georges Basile Stavracas Neto, Hans Lo, Harald
+Korneliussen, Hartmut Kuhse, Inaki Larranaga Murgoitio, Isaac Wagner, Jan
+Vesely, Jan Vesely, Jehan, Jon Nordby, Jordi Mas, Kalev Lember, Kristjan
+Schmidt, Marco Ciampa, Marek Dvoroznak, Maria Mavridou, Martijn van Beers,
+Martin Nordholts, Martin Srebotnjak, Massimo Valentini, Matej Urbančič,
+Maxime Nicco, Michael Henning, Michael Muré, Michael Natterer, Mikael
+Magnusson, Miroslav Talasek, Muhammet Kara, Mukund Sivaraman, Nana Chery,
+Nick Black, Nicolas Robidoux, Nils Philippsen, Norm Murray, Pascal Giessler,
+Piotr Drąg, Quentin Glidic, Rafael Ferreira, Rasmus, RPG, Rūdolfs Mazurs,
+Samir Ribic, Samuel Pitoiset, sebul, Simon Budig, Sven Claussner, Téo Mazars,
+Thomas Manni, Tim Lunn, Tim Mooney, Ting-Wei Lan, Tom Stellard, Ulf-D.
+Ehlert, Vadim Rutkovsky, Victor Oliveira, Ville Sokk, Vincent Untz, Yongjia
+Zhang, Yongjia Zhang, Øyvind Kolås and 周 周.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_2_0_2012_04_02">GEGL-0.2.0 2012-04-02</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+OpenCL support
+</p>
+</li>
+<li>
+<p>
+build improvements.
+</p>
+</li>
+<li>
+<p>
+High level API to apply ops directly to buffers with arguments.
+</p>
+</li>
+<li>
+<p>
+Final bits of translation infrastructure.
+</p>
+</li>
+<li>
+<p>
+Invalidate regions when disconnecting input pads.
+</p>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_operations_15">Operations</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+New operation: global-matting
+</p>
+</li>
+<li>
+<p>
+Allow transform core to do perspective transforms.
+</p>
+</li>
+<li>
+<p>
+Added string based key/value pairs to operations.
+</p>
+</li>
+<li>
+<p>
+Added arguments for dealing with scaled down preview rendering.
+</p>
+</li>
+<li>
+<p>
+Added human interaction ranges and non-linear mapping to properties.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_buffer_12">Buffer</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Removed broken lanczos sampler.
+</p>
+</li>
+<li>
+<p>
+Add gegl_buffer_set_color and gegl_buffer_set_pattern
+</p>
+</li>
+<li>
+<p>
+Added ability to drop cached tiles.
+</p>
+</li>
+<li>
+<p>
+Added API for handling abyss policy (not implemented yet)
+</p>
+</li>
+<li>
+<p>
+Avoid iterating global tile cache when flushing/destroying buffers
+  that have no tiles in the cache.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_contributors_12">Contributors</h3>
+<div class="paragraph"><p>Øyvind Kolås, Martin Nordholts, Hans Petter Jansson, Mikael Magnusson, Victor
+Oliveira, Nils Philippsen, Kevin Cozens, Michael Muré, Jan Rüegg, Michael
+Natterer, Michael Henning, Massimo Valentini, Alexandre Prokoudine and
+Jon Nordby.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_1_8_2011_11_18">GEGL-0.1.8 2011-11-18</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+New operations: spread, vignette, map-relative, noise-reduction, plasma,
+fractal-trace, exr-save, lens-correct, emboss, cubism, ripple,
+color-to-alpha, color-rotate, red-eye-removal, convolution-matrix,
+deinterlace, polar-coordinates, lens-distortion, pixelise.
+</p>
+</li>
+<li>
+<p>
+Split GeglView GTK Widget into separate utility library
+</p>
+</li>
+<li>
+<p>
+build/test improvements.
+</p>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_buffer_13">Buffer</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Added lohalo resampler
+</p>
+</li>
+<li>
+<p>
+API and infrastructure for doing non-affine resamplings.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_contributors_13">Contributors</h3>
+<div class="paragraph"><p>Øyvind Kolås, Michael Natterer, Barak Itkin, Nils Philippsen, Mukund
+Sivaraman, Jon Nordby, Emilio Pozuelo Monfort, Étienne Bersac, Martin
+Nordholts, Victor Oliveira, Michael Muré, Michael Schumacher, Adam
+Turcotte, Nicolas Robidoux, Robert Sasu, Massimo Valentini, Joao S. O.
+Bueno, Hans Lo, Zbigniew Chyla, David Evans and Javier Jardón.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_1_6_2011_02_13">GEGL-0.1.6 2011-02-13</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+New operations: max-rgb, pixelise, motion blur.
+</p>
+</li>
+<li>
+<p>
+Fixed a bug in matting-levin that made GEGL halt due to errors
+  detected by babl sanity code, this made 0.1.4 be unusable if you had
+  all dependendencies when building.
+</p>
+</li>
+<li>
+<p>
+build/test improvements.
+</p>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_buffer_14">Buffer</h3>
+<div class="paragraph"><p>Added API to use external tile backends, allowing to plug-in alien
+tilebackends, for GIMP/Krita/OSM or similar.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_contributors_14">Contributors</h3>
+<div class="paragraph"><p>Tobias Ellinghaus, Øyvind Kolås, Barak Itkin and Martin Nordholts</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_1_4_2011_01_20">GEGL-0.1.4 2011-01-20</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_operations_16">Operations</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+save (chooses delegate save op automatically)
+</p>
+</li>
+<li>
+<p>
+rgbe load/save
+</p>
+</li>
+<li>
+<p>
+jpeg200 load/save
+</p>
+</li>
+<li>
+<p>
+ppm load/save
+</p>
+</li>
+<li>
+<p>
+map-absolute (GIMP cage tool gsoc helper op)
+</p>
+</li>
+<li>
+<p>
+whirl and pinch
+</p>
+</li>
+<li>
+<p>
+mirrors
+</p>
+</li>
+<li>
+<p>
+grid render
+</p>
+</li>
+<li>
+<p>
+fixed imagemagick fallback load op
+</p>
+</li>
+<li>
+<p>
+fixed pipe based dcraw wrapper
+</p>
+</li>
+<li>
+<p>
+GSoC 2010 ops: exp-combine, reinhard05, fattal02, mantiuk06, matting-levin
+</p>
+</li>
+<li>
+<p>
+Various source and build improvements.
+</p>
+</li>
+<li>
+<p>
+improvements towards threaded rendering
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_buffer_15">Buffer</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+refactored away some constant overhead made GeglBufferIterator API
+  public
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_contributors_15">Contributors</h3>
+<div class="paragraph"><p>Michael Natterer, Øyvind Kolås, Vincent Untz, Kaja Liiv, Nils
+Philippsen, Étienne Bersac, Martin Nordholts, Debarshi Ray, Danny
+Robson, Stuart Axon, Kao, Mukund Sivaraman, Ruben Vermeersch, Barak
+Itkin, Michael Muré, Mikael Magnusson, Patrick Horgan and Andy Gill.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_1_2_2010_02_07">GEGL-0.1.2 2010-02-07</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+GeglLookup, configurable floating point lookup tables for lazy computation.
+</p>
+</li>
+<li>
+<p>
+Use GFileIOStream in GeglTileBackendFile.
+</p>
+</li>
+<li>
+<p>
+Optimizations: in-place processing for point filters/composers,
+  SIMD version of gegl:opacity, avoid making unneccesary sub-buffers,
+  removed some manual instrumentation from critical paths, improved
+  speed of samplers.
+</p>
+</li>
+<li>
+<p>
+Added xml composition/reference image based regression tests.
+</p>
+</li>
+<li>
+<p>
+Added performance tracking framework.
+</p>
+</li>
+<li>
+<p>
+Syntactic sugar using varargs for constructing gegl graphs from C.
+</p>
+</li>
+<li>
+<p>
+Build fixes on cygwin,
+</p>
+</li>
+<li>
+<p>
+Gegl# fixes.
+</p>
+</li>
+<li>
+<p>
+Initial, but unstable code towards multithreading.
+</p>
+</li>
+<li>
+<p>
+Improvements to lua op in workshop.
+</p>
+</li>
+<li>
+<p>
+Added new resamplers upsize, upsharp, upsmooth, downsize, downsharp and
+  downsmooth.
+</p>
+</li>
+<li>
+<p>
+Removed gegl:tonemap and gegl:normal ops.
+</p>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_contributors_16">Contributors</h3>
+<div class="literalblock">
+<div class="content">
+<pre><code>Martin Nordholts, Sven Neumann, Nils Philippsen, Adam Turcotte,
+Danny Robson, Michael Schumacher, Ruben Vermeersch, Øyvind Kolås,
+Javier Jardón, Yaakov Selkowitz and Michael Natterer, Kaja Liiv
+and Eric Daoust.</code></pre>
+</div></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_1_0_2009_07_01">GEGL-0.1.0 2009-07-01</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Renamed gegl:load-buffer to gegl:buffer-source and gegl:save-buffer
+  to gegl:buffer-sink (but the old names still work)
+</p>
+</li>
+<li>
+<p>
+Represent colors using doubles instead of floats (this change is
+  independent from internal processing)
+</p>
+</li>
+<li>
+<p>
+Removed the GTK+ UI parts of the gegl binary and turned gegl into a
+  pure command line tool (which can still visualize stuff with help
+  help the SDL based display operation)
+</p>
+</li>
+<li>
+<p>
+Consider G_MININT/2, y=G_MININT/2, width=G_MAXINT, height=G_MAXINT
+   as the only valid region in which processing may occur. Processing
+   outside of this region is undefined behaviour.
+</p>
+</li>
+<li>
+<p>
+Added support for storing allocation stack traces for GeglBuffers
+  so that debugging buffer leaks becomes much easier
+</p>
+</li>
+<li>
+<p>
+Made small changes and cleanups of the public API, e.g.
+</p>
+</li>
+<li>
+<p>
+Removed gegl_node_adapt_child()
+</p>
+</li>
+<li>
+<p>
+Made GeglConfig an explicit object
+</p>
+</li>
+<li>
+<p>
+Removed most of the ifdeffed stuff to mask away internal
+     structures
+</p>
+</li>
+<li>
+<p>
+Added gegl_rectangle_infinite_plane() and
+     gegl_rectangle_is_infinite_plane()
+</p>
+</li>
+<li>
+<p>
+Added new sampler GeglSamplerSharp
+</p>
+</li>
+<li>
+<p>
+Added format property to gegl:buffer-sink
+</p>
+</li>
+<li>
+<p>
+Cleaned up and made gegl:introspect work again
+</p>
+</li>
+<li>
+<p>
+Add a bunch of test cases using the automake test system (make check)
+  and also port buffer tests to automake
+</p>
+</li>
+<li>
+<p>
+General cleanups, bug fixes, increased robustness and improved
+  documentation
+</p>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_contributors_17">Contributors</h3>
+<div class="paragraph"><p>Øyvind Kolås, Sven Neumann, Étienne Bersac, Hubert Figuiere, Martin
+Nordholts, Nicolas Robidoux, Michael Natterer, Ruben Vermeersch,
+Kevin Cozens, Manish Singh, Gary V. Vaughan, James Legg,
+Henrik Åkesson, Fryderyk Dziarmagowski, Ozan Caglayan and
+Tobias Mueller.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_0_22_2008_12_31">GEGL-0.0.22 2008-12-31</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_gegloperation">GeglOperation</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+operation names are now prefixed, the ops in GEGL use <em>gegl:</em> as prefix.
+</p>
+</li>
+<li>
+<p>
+gegl:opacity - combine value and aux mask input when both are available.
+</p>
+</li>
+<li>
+<p>
+gegl:src-in - deal correctly with extens.
+</p>
+</li>
+<li>
+<p>
+gegl:path - new op covering the stroke/fill needs of SVG.
+</p>
+</li>
+<li>
+<p>
+deprecated gegl:shift, the affine family of operations now
+     uses the same fast code paths for integer translations.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_geglbuffer">GeglBuffer</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Profiling motivated speed ups in data reading/writing.
+</p>
+</li>
+<li>
+<p>
+Remove left-over swapfiles from dead processes at startup.
+ • GeglNode
+</p>
+</li>
+<li>
+<p>
+made gegl_node_add_child and gegl_node_remove_child public API. (#507298)
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_geglpath">GeglPath</h3>
+<div class="paragraph"><p>Vector path representation infrastructure, supporting poly lines and
+beziers by default, the infrastructure allows extensions from
+applications with other curve types (smooth curves, spiro curves and
+others.).</p></div>
+<div class="paragraph"><p>Contributors:</p></div>
+<div class="paragraph"><p>Hubert Figuiere, Sven Neumann, Øyvind Kolås, Michael Natterer,
+Kevin Cozens, Sam Hocevar, Martin Nordholts, Manish Singh,
+Étienne Bersac and Michael Schumacher.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_0_20_2008_10_05">GEGL-0.0.20 2008-10-05</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Build and code clean ups and fixes.
+</p>
+</li>
+<li>
+<p>
+RAW loader using libopenraw.
+</p>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_geglbuffer_2">GeglBuffer</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Linear buffer support, amongst other things enabling GeglBuffer API access
+  to external linear buffers in memory.
+</p>
+</li>
+<li>
+<p>
+Reworked samplers using a shared caching neighbourhood infrastructure.
+</p>
+</li>
+<li>
+<p>
+YAFR - a new resampler contributed by Nicolas Robidoux.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_geglvector">GeglVector</h3>
+<div class="paragraph"><p>Added SVG parsing capability (no serialisation yet).</p></div>
+</div>
+<div class="sect2">
+<h3 id="_gegloperations">GeglOperations</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Marked user visible strings for translation.
+</p>
+</li>
+<li>
+<p>
+Added a fill operation that renders a path.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_contributors_18">Contributors</h3>
+<div class="paragraph"><p>Martin Nordholts, Øyvind Kolås, Sam Hocevar, Manish Singh, Hubert
+Figuiere, Sven Neumann and yahvuu at gmail.com.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_0_18_2008_06_14">GEGL-0.0.18 2008-06-14</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Configuration both from commandline arguments and at runtime.
+</p>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_geglbuffer_3">GeglBuffer</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+New raw tiled raster file format, used both as swap and stored buffers.
+</p>
+</li>
+<li>
+<p>
+Sharing between processes through synced swap.
+</p>
+</li>
+<li>
+<p>
+Babl powered scan iteration infrastructure for efficient access.
+</p>
+</li>
+<li>
+<p>
+Cubic and lanczos samplers re-enabled.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_operations_17">Operations</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Use scan iterator for point-filter, point-composer and point-render base
+  classes internally for minimal amount of copies.
+</p>
+</li>
+<li>
+<p>
+Optimized variants of some point and compositing operations reimplemented
+  using a new data type /g4float/ that allows writing CPU agnostic vectorized
+  code for GCC.
+</p>
+</li>
+<li>
+<p>
+New temporal filter base class, for operations operating on color values from
+  neighbouring frames in a video stream.
+</p>
+</li>
+<li>
+<p>
+Autogenerated operation reference installed for use with devhelp.
+</p>
+</li>
+<li>
+<p>
+New operations: write-buffer, v4l, color-temperature.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_contributors_19">Contributors</h3>
+<div class="paragraph"><p>Øyvind Kolås, Kevin Cozens, Sven Neumann, Manish Singh, Martin Nordholts,
+Étienne Bersac, Hans Petter Jansson, Jan Heller, <a href="mailto:dmacks@netspace.org">dmacks@netspace.org</a>,
+Sven Anders, Hubert Figuiere and Geert Jordaens.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_0_16_2008_02_29">GEGL-0.0.16 2008-02-29</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Install headers for development of external operation plug-ins.
+</p>
+</li>
+<li>
+<p>
+Added rowstride argument to gegl_buffer_set ()
+</p>
+</li>
+<li>
+<p>
+Made it possible for sink operations to do chunkwise processing
+   through GeglProcessor.
+   when processed using a GeglProcessor.
+</p>
+</li>
+<li>
+<p>
+constification of GeglRectangles and babl formats.
+</p>
+</li>
+<li>
+<p>
+Build and dist fixes, plugged annoying buffer leaks, GEGL now
+   also works on OSX
+</p>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_contributors_20">Contributors</h3>
+<div class="paragraph"><p>Øyvind Kolås, Étienne Bersac, Kevin Cozens, Sven Neumann,
+Manish Singh, Michael Natterer, Hans Brauer, Deji Akingunola,
+Bradley Broom and Tor Lillqvist.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_0_14_2007_12_20">GEGL-0.0.14 2007-12-20</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Relicensed under LGPLv3+.
+</p>
+</li>
+<li>
+<p>
+Per node caches (faster recomputation when properties of nodes in
+   composition change)
+</p>
+</li>
+<li>
+<p>
+Sampler framework for interpolation.
+</p>
+</li>
+<li>
+<p>
+Modified API for retrieving scaled buffers gegl_node_blit / gegl_buffer_get.
+</p>
+</li>
+<li>
+<p>
+Renamed XML serialization and parsing API to be descendants of GeglNode.
+</p>
+</li>
+<li>
+<p>
+Progress monitoring for GeglProcessor
+</p>
+</li>
+<li>
+<p>
+New operation base class GeglOperationAreaFilter
+</p>
+</li>
+<li>
+<p>
+API reference installed and browsable using devhelp.
+</p>
+</li>
+<li>
+<p>
+New operations: ff-load, mono-mixer, contrast-curve, save-pixbuf,
+   compositing ops from SVG-1.2 draft, value-invert, convert-format,
+   bilateral-filter, snn-mean
+</p>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_contributors_21">Contributors</h3>
+<div class="paragraph"><p>Étienne Bersac, Kevin Cozens, Manish Singh, Mark Probst, Martin Nordholts,
+Michael Schumacher, Mukund Sivaraman, Shlomi Fish, Tor Lillqvist and
+Øyvind Kolås</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_0_12_2007_02_18">GEGL-0.0.12 2007-02-18</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Swapping out of image pyramid.
+</p>
+</li>
+<li>
+<p>
+Speedups to text rendering.
+</p>
+</li>
+<li>
+<p>
+GEGL compiles on win32
+</p>
+</li>
+<li>
+<p>
+GEGL_SWAP now specifies swapdir location.
+</p>
+</li>
+<li>
+<p>
+Small refactorings of public API.
+</p>
+</li>
+<li>
+<p>
+Changed the XML parser/serializer to not use attributes for node properties.
+</p>
+</li>
+<li>
+<p>
+Improvements to documentation.
+</p>
+</li>
+<li>
+<p>
+Automagic build environment for operations simplified.
+</p>
+</li>
+<li>
+<p>
+Internal API for saving/loading GeglBuffers to/from disk.
+</p>
+</li>
+<li>
+<p>
+Ruby, C# and Python bindings added to version control system
+   (not included in distributed tarball)
+</p>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_contributors_22">Contributors</h3>
+<div class="paragraph"><p>Kevin Cozens, Michael Schumacher. Sven Neumann and Øyvind Kolås,</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_0_6_2007_01_07">GEGL-0.0.6 2007-01-07</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+hit detection code
+</p>
+</li>
+<li>
+<p>
+handling of relative/absolute path names for XML.
+</p>
+</li>
+<li>
+<p>
+merged GeglNode and GeglGraph classes.
+</p>
+</li>
+<li>
+<p>
+build fixes for Win32 and FreeBSD
+</p>
+</li>
+<li>
+<p>
+temporarily disabled custom cairo in test application.
+</p>
+</li>
+<li>
+<p>
+png and EXR improvements.
+</p>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_contributors_23">Contributors</h3>
+<div class="paragraph"><p>Dominik Ernst, Kevin Cozens, Øyvind Kolås and Michael Schumacher.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_0_4_2006_12_29">GEGL-0.0.4 2006-12-29</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>This was the first public release of GEGL.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+8bit, 16bit integer and 32bit floating point, RGB, CIE Lab, YCbCr
+  and naive CMYK output.
+</p>
+</li>
+<li>
+<p>
+Extendable through plug-ins.
+</p>
+</li>
+<li>
+<p>
+XML, C and Python interfaces.
+</p>
+</li>
+<li>
+<p>
+Memory efficient evaluation of subregions.
+</p>
+</li>
+<li>
+<p>
+Tiled, sparse, pyramidial and larger than RAM buffers.
+</p>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_operations_18">Operations</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+PNG, JPEG, SVG, EXR, RAW and other image sources.
+</p>
+</li>
+<li>
+<p>
+Arithmetic operations, porter duff compositing operations, SVG blend
+  modes, other blend modes, apply mask.
+</p>
+</li>
+<li>
+<p>
+Gaussian blur.
+</p>
+</li>
+<li>
+<p>
+Basic color correction tools.
+</p>
+</li>
+<li>
+<p>
+Most processing done with High Dynamic Range routines.
+</p>
+</li>
+<li>
+<p>
+Text layouting using pango
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_contributors_24">Contributors</h3>
+<div class="paragraph"><p>Dominik Ernst, Kevin Cozens, Manish Singh, Martin Nordholts, Michael
+Natterer.  Philip Lafleur, Sven Neumann and Øyvind Kolås.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gegl_0_0_0">GEGL-0.0.0</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Contributors:</p></div>
+<div class="paragraph"><p>Calvin Williamson, Caroline Dahloff Daniel Rogers, Garry R. Osgood, Jay
+Cox and Sven Neumann</p></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated
+ 2018-01-23 16:08:01 CET
+</div>
+</div>
+</body>
+</html>

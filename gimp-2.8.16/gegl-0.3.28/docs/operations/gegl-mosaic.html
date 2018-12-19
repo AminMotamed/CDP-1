@@ -1,0 +1,147 @@
+<html><head><title>gegl:mosaic</title>
+<style>@import url(../gegl.css); .categories{ clear:right;text-align: justify; line-height: 1.6em; float:right; padding-left: 1em; padding-bottom: 1em ;width: 14em; } .categories a, .category {color:black; background:#eef; padding: 0.1em; padding-left0.2em; padding-right: 0.2em; border: 1px solid gray;} .description{margin-bottom:1em;};body { margin: 1em 5% 1em 5%; }</style></head><body><div id='content'>
+<div class='operation'><h2 style='clear:both;'>Mosaic</h2>
+<img style='clear: both; padding-left: 1em; float: right; ' src='images/gegl-mosaic.png' />
+<div class='description'>Mosaic is a filter which transforms an image into what appears to be a mosaic, composed of small primitives, each of constant color and of an approximate size.</div>
+<div style='margin-bottom:1em;'><div class='properties'>
+<div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Tile geometry</div>
+<div>What shape to use for tiles</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>tile-type
+<b>type:&nbsp;</b>enum
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Tile size</div>
+<div>Average diameter of each tile (in pixels)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>tile-size
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;15.00 
+<b>minimum:</b>&nbsp;1.00 
+<b>maximum:</b>&nbsp;1000.00 
+<b>ui-minimum:</b>&nbsp;5.00 
+<b>ui-maximum:</b>&nbsp;400.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;10.00 
+<b>ui-digits:</b>&nbsp;2 
+<b>unit</b>:pixel-distance
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Tile height</div>
+<div>Apparent height of each tile (in pixels)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>tile-height
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;4.00 
+<b>minimum:</b>&nbsp;1.00 
+<b>maximum:</b>&nbsp;1000.00 
+<b>ui-minimum:</b>&nbsp;1.00 
+<b>ui-maximum:</b>&nbsp;20.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.01 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Tile neatness</div>
+<div>Deviation from perfectly formed tiles</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>tile-neatness
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.65 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;1.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;1.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Tile color variation</div>
+<div>Magnitude of random color variations</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>color-variation
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;0.20 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;1.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;1.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.00 
+<b>ui-step-big:</b>&nbsp;0.10 
+<b>ui-digits:</b>&nbsp;3 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Color averaging</div>
+<div>Tile color based on average of subsumed pixels</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>color-averaging
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;True 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Rough tile surface</div>
+<div>Surface characteristics</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>tile-surface
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;False 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Allow splitting tiles</div>
+<div>Allows splitting tiles at hard edges</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>tile-allow-split
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;True 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Tile spacing</div>
+<div>Inter-tile spacing (in pixels)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>tile-spacing
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;1.00 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;1000.00 
+<b>ui-minimum:</b>&nbsp;0.50 
+<b>ui-maximum:</b>&nbsp;30.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;0.01 
+<b>ui-step-big:</b>&nbsp;1.00 
+<b>ui-digits:</b>&nbsp;3 
+<b>unit</b>:pixel-distance
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Joints color</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>joints-color
+<b>type:&nbsp;</b>color
+<b>default:</b>&nbsp;rgb(0.0000, 0.0000, 0.0000) 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Light color</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>light-color
+<b>type:&nbsp;</b>color
+<b>default:</b>&nbsp;rgb(1.0000, 1.0000, 1.0000) 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Light direction</div>
+<div>Direction of light-source (in degrees)</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>light-dir
+<b>type:&nbsp;</b>double
+<b>default:</b>&nbsp;135.00 
+<b>minimum:</b>&nbsp;0.00 
+<b>maximum:</b>&nbsp;360.00 
+<b>ui-minimum:</b>&nbsp;0.00 
+<b>ui-maximum:</b>&nbsp;360.00 
+<b>ui-gamma:</b>&nbsp;1.00 
+<b>ui-step-small:</b>&nbsp;1.00 
+<b>ui-step-big:</b>&nbsp;15.00 
+<b>ui-digits:</b>&nbsp;2 
+<b>unit</b>:degree
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Antialiasing</div>
+<div>Enables smoother tile output</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>antialiasing
+<b>type:&nbsp;</b>boolean
+ <b>default:</b>&nbsp;True 
+</div></div><div style='margin-top:0.5em;'><div style='padding-left:0.1em;border-left:0.3em solid black;margin-left:-0.35em;'>
+Random seed</div>
+<div style='font-size:70%;'><b>name:&nbsp;</b>seed
+<b>type:&nbsp;</b>seed
+<b>default:</b>&nbsp;0 
+<b>minimum:</b>&nbsp;0 
+<b>maximum:</b>&nbsp;+inf 
+</div></div></div></div><b>name:</b>&nbspgegl:mosaic<br/><b>pads:</b>
+input
+output
+<br/><b>parent-class:</b>&nbsp;<a href='GeglOperationAreaFilter.html'>GeglOperationAreaFilter</a><br/>
+<b>categories:</b> <a class='category' style='color:black' href='artistic.html'>artistic</a> <a class='category' style='color:black' href='scramble.html'>scramble</a> <br/>
+<b>source:</b>&nbsp;<a href='https://git.gnome.org/browse/gegl/tree/operations/common-gpl3+/mosaic.c'>operations/common-gpl3+/mosaic.c</a><br/>
+<b>license:</b>&nbsp;GPL3+<br/>
+</dl></div><div style='margin-top:3em;'><a href='../index.html'><img src='../images/GEGL.png' alt='GEGL' style='height: 4.0em;float:left; padding-right:0.5em;'/></a> This page is part of the online GEGL Documentation, GEGL is a data flow based image processing library/framework, made to fuel <a href='https://www.gimp.org/'>GIMPs</a> high-bit depth non-destructive editing future.</div></body></html>

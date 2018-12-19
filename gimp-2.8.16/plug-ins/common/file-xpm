@@ -188,7 +188,7 @@ func_exec_program ()
 
   if test -f "$progdir/$program"; then
     # Add our own library path to LD_LIBRARY_PATH
-    LD_LIBRARY_PATH="/home/xkali/Documents/Informatique/CDP/ggg/gimp-2.8.16/libgimp/.libs:/home/xkali/Documents/Informatique/CDP/ggg/gimp-2.8.16/libgimpwidgets/.libs:/home/xkali/Documents/Informatique/CDP/ggg/gimp-2.8.16/libgimpmodule/.libs:/home/xkali/Documents/Informatique/CDP/ggg/gimp-2.8.16/libgimpmath/.libs:/home/xkali/Documents/Informatique/CDP/ggg/gimp-2.8.16/libgimpconfig/.libs:/home/xkali/Documents/Informatique/CDP/ggg/gimp-2.8.16/libgimpcolor/.libs:/home/xkali/Documents/Informatique/CDP/ggg/gimp-2.8.16/libgimpbase/.libs:/usr/local/lib:/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH"
+    LD_LIBRARY_PATH="/home/xkali/Bureau/gimp-2.8.16/libgimp/.libs:/home/xkali/Bureau/gimp-2.8.16/libgimpwidgets/.libs:/home/xkali/Bureau/gimp-2.8.16/libgimpmodule/.libs:/home/xkali/Bureau/gimp-2.8.16/libgimpmath/.libs:/home/xkali/Bureau/gimp-2.8.16/libgimpconfig/.libs:/home/xkali/Bureau/gimp-2.8.16/libgimpcolor/.libs:/home/xkali/Bureau/gimp-2.8.16/libgimpbase/.libs:/usr/local/lib:/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH"
 
     # Some systems cannot cope with colon-terminated LD_LIBRARY_PATH
     # The second colon is a workaround for a bug in BeOS R4 sed

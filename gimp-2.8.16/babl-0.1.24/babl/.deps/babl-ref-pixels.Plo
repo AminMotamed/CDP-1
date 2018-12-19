@@ -1,0 +1,8 @@
+babl-ref-pixels.lo: babl-ref-pixels.c /usr/include/stdc-predef.h \
+ babl-ref-pixels.h babl-ref-pixels.inc
+
+/usr/include/stdc-predef.h:
+
+babl-ref-pixels.h:
+
+babl-ref-pixels.inc:

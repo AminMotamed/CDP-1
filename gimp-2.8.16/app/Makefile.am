@@ -47,6 +47,7 @@ endif
 
 libapp_sources = \
 	about.h		\
+	twitter.h	\
 	app.c		\
 	app.h		\
 	batch.c		\

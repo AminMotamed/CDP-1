@@ -1,0 +1,32 @@
+GEGL-0.3.28
+
+GEGL
+
+GEGL
+
+GEGL (Generic Graphics Library) is a data flow based image processing
+framework, providing floating point processing and non-destructive
+image processing capabilities to GNU Image Manipulation Program and
+other projects (imgflo, GNOME Photos, gcut, iconographer, …)
+
+With GEGL you chain together processing operations to represent the
+desired image processing pipeline. GEGL provides operations for image
+loading and storing, color adjustments, GIMPs artistic filters and more
+forms of image processing GEGL can also be used from the commandline.
+
+The primary repository for the GEGL source code in GNOME git, and at
+GIMPs download site tarball releases.
+
+GEGL is Free Software, and both new functionality in new operations as
+well as relevant development, enhancement requests, patches and bug
+reports for GEGL and babl in bugzilla.
+
+Important links for tracking GEGL development: GEGL NEWS file, GEGL
+commit log, bugzilla, and IRC in #gegl (and #gimp) on GIMPnet
+(irc.gimp.org). links:mailing list Finanical support for fun new
+filters and capabilities as well as gardening/janitor bits part of
+project maintainership is welcome through the patreon campaign at GIMPs
+donation page.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Last updated 2018-01-23 16:15:51 CET
