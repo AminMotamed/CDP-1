@@ -171,8 +171,14 @@ static const GimpEnumActionEntry image_flip_actions[] =
 
 static const GimpEnumActionEntry image_rotate_actions[] =
 {
+  { "image-rotate-45", GIMP_STOCK_ROTATE_90,
+    NC_("image-action", "Rotate 45°"), NULL,
+    NC_("image-action", "Rotate the image 45 degrees to the right"),
+    GIMP_ROTATE_45, FALSE,
+    GIMP_HELP_IMAGE_ROTATE_45 },
+
   { "image-rotate-90", GIMP_STOCK_ROTATE_90,
-    NC_("image-action", "Rotate 90° _clockwise"), NULL,
+    NC_("image-action", "Rotate 90°"), NULL,
     NC_("image-action", "Rotate the image 90 degrees to the right"),
     GIMP_ROTATE_90, FALSE,
     GIMP_HELP_IMAGE_ROTATE_90 },
@@ -217,6 +223,7 @@ image_actions_setup (GimpActionGroup *group)
 #define SET_ALWAYS_SHOW_IMAGE(action,show) \
         gimp_action_group_set_action_always_show_image (group, action, show)
 
+  SET_ALWAYS_SHOW_IMAGE ("image-rotate-45",  TRUE);
   SET_ALWAYS_SHOW_IMAGE ("image-rotate-90",  TRUE);
   SET_ALWAYS_SHOW_IMAGE ("image-rotate-180", TRUE);
   SET_ALWAYS_SHOW_IMAGE ("image-rotate-270", TRUE);
@@ -274,6 +281,7 @@ image_actions_update (GimpActionGroup *group,
 
   SET_SENSITIVE ("image-flip-horizontal", image);
   SET_SENSITIVE ("image-flip-vertical",   image);
+  SET_SENSITIVE ("image-rotate-45",       image);
   SET_SENSITIVE ("image-rotate-90",       image);
   SET_SENSITIVE ("image-rotate-180",      image);
   SET_SENSITIVE ("image-rotate-270",      image);

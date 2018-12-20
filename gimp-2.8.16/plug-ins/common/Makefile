@@ -125,19 +125,20 @@ libexec_PROGRAMS = alien-map$(EXEEXT) align-layers$(EXEEXT) \
 	guillotine$(EXEEXT) hot$(EXEEXT) illusion$(EXEEXT) \
 	iwarp$(EXEEXT) jigsaw$(EXEEXT) $(LCMS) lens-apply$(EXEEXT) \
 	lens-distortion$(EXEEXT) lens-flare$(EXEEXT) $(MAIL) \
-	max-rgb$(EXEEXT) mosaic$(EXEEXT) newsprint$(EXEEXT) \
-	nl-filter$(EXEEXT) noise-hsv$(EXEEXT) noise-randomize$(EXEEXT) \
-	noise-rgb$(EXEEXT) noise-solid$(EXEEXT) noise-spread$(EXEEXT) \
-	nova$(EXEEXT) oilify$(EXEEXT) photocopy$(EXEEXT) \
-	pixelize$(EXEEXT) plasma$(EXEEXT) plugin-browser$(EXEEXT) \
-	polar-coords$(EXEEXT) procedure-browser$(EXEEXT) \
-	qbist$(EXEEXT) red-eye-removal$(EXEEXT) ripple$(EXEEXT) \
-	rotate$(EXEEXT) sample-colorize$(EXEEXT) $(SCREENSHOT) \
-	semi-flatten$(EXEEXT) sharpen$(EXEEXT) shift$(EXEEXT) \
-	sinus$(EXEEXT) smooth-palette$(EXEEXT) softglow$(EXEEXT) \
-	sparkle$(EXEEXT) sphere-designer$(EXEEXT) \
-	threshold-alpha$(EXEEXT) tile$(EXEEXT) tile-glass$(EXEEXT) \
-	tile-paper$(EXEEXT) tile-seamless$(EXEEXT) tile-small$(EXEEXT) \
+	max-rgb$(EXEEXT) mosaic$(EXEEXT) \
+	newsprint$(EXEEXT) nl-filter$(EXEEXT) noise-hsv$(EXEEXT) \
+	noise-randomize$(EXEEXT) noise-rgb$(EXEEXT) \
+	noise-solid$(EXEEXT) noise-spread$(EXEEXT) nova$(EXEEXT) \
+	oilify$(EXEEXT) photocopy$(EXEEXT) pixelize$(EXEEXT) \
+	plasma$(EXEEXT) plugin-browser$(EXEEXT) polar-coords$(EXEEXT) \
+	procedure-browser$(EXEEXT) qbist$(EXEEXT) \
+	red-eye-removal$(EXEEXT) reverse-rgb$(EXEEXT) ripple$(EXEEXT) rotate$(EXEEXT) \
+	sample-colorize$(EXEEXT) $(SCREENSHOT) semi-flatten$(EXEEXT) \
+	sharpen$(EXEEXT) shift$(EXEEXT) sinus$(EXEEXT) \
+	smooth-palette$(EXEEXT) softglow$(EXEEXT) sparkle$(EXEEXT) \
+	sphere-designer$(EXEEXT) threshold-alpha$(EXEEXT) \
+	tile$(EXEEXT) tile-glass$(EXEEXT) tile-paper$(EXEEXT) \
+	tile-seamless$(EXEEXT) tile-small$(EXEEXT) \
 	unit-editor$(EXEEXT) unsharp-mask$(EXEEXT) \
 	value-invert$(EXEEXT) value-propagate$(EXEEXT) \
 	van-gogh-lic$(EXEEXT) video$(EXEEXT) warp$(EXEEXT) \
@@ -870,6 +871,12 @@ max_rgb_DEPENDENCIES = $(libgimpui) $(libgimpwidgets) $(libgimpmodule) \
 	$(libgimp) $(am__DEPENDENCIES_2) $(libgimpconfig) \
 	$(libgimpcolor) $(libgimpbase) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) $(max_rgb_RC)
+am_reverse_rgb_OBJECTS = reverse-rgb.$(OBJEXT)
+reverse_rgb_OBJECTS = $(am_reverse_rgb_OBJECTS)
+reverse_rgb_DEPENDENCIES = $(libgimpui) $(libgimpwidgets) $(libgimpmodule) \
+	$(libgimp) $(am__DEPENDENCIES_2) $(libgimpconfig) \
+	$(libgimpcolor) $(libgimpbase) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) $(reverse_rgb_RC)
 am_mosaic_OBJECTS = mosaic.$(OBJEXT)
 mosaic_OBJECTS = $(am_mosaic_OBJECTS)
 mosaic_DEPENDENCIES = $(libgimpui) $(libgimpwidgets) $(libgimpmodule) \
@@ -991,6 +998,9 @@ red_eye_removal_DEPENDENCIES = $(libgimpui) $(libgimpwidgets) \
 	$(libgimpconfig) $(libgimpcolor) $(libgimpbase) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(red_eye_removal_RC)
+reverse_rgb_SOURCES = reverse-rgb.c
+reverse_rgb_OBJECTS = reverse-rgb.$(OBJEXT)
+reverse_rgb_LDADD = $(LDADD)
 am_ripple_OBJECTS = ripple.$(OBJEXT)
 ripple_OBJECTS = $(am_ripple_OBJECTS)
 ripple_DEPENDENCIES = $(libgimpui) $(libgimpwidgets) $(libgimpmodule) \
@@ -1276,8 +1286,8 @@ SOURCES = $(alien_map_SOURCES) $(align_layers_SOURCES) \
 	$(oilify_SOURCES) $(photocopy_SOURCES) $(pixelize_SOURCES) \
 	$(plasma_SOURCES) $(plugin_browser_SOURCES) \
 	$(polar_coords_SOURCES) $(procedure_browser_SOURCES) \
-	$(qbist_SOURCES) $(red_eye_removal_SOURCES) $(ripple_SOURCES) \
-	$(rotate_SOURCES) $(sample_colorize_SOURCES) \
+	$(qbist_SOURCES) $(red_eye_removal_SOURCES) reverse-rgb.c \
+	$(ripple_SOURCES) $(reverse_rgb_SOURCES) $(rotate_SOURCES) $(sample_colorize_SOURCES) \
 	$(screenshot_SOURCES) $(semi_flatten_SOURCES) \
 	$(sharpen_SOURCES) $(shift_SOURCES) $(sinus_SOURCES) \
 	$(smooth_palette_SOURCES) $(softglow_SOURCES) \
@@ -1338,8 +1348,8 @@ DIST_SOURCES = $(alien_map_SOURCES) $(align_layers_SOURCES) \
 	$(oilify_SOURCES) $(photocopy_SOURCES) $(pixelize_SOURCES) \
 	$(plasma_SOURCES) $(plugin_browser_SOURCES) \
 	$(polar_coords_SOURCES) $(procedure_browser_SOURCES) \
-	$(qbist_SOURCES) $(red_eye_removal_SOURCES) $(ripple_SOURCES) \
-	$(rotate_SOURCES) $(sample_colorize_SOURCES) \
+	$(qbist_SOURCES) $(red_eye_removal_SOURCES) $(reverse_rgb_SOURCES) \
+	$(ripple_SOURCES) $(rotate_SOURCES) $(sample_colorize_SOURCES) \
 	$(screenshot_SOURCES) $(semi_flatten_SOURCES) \
 	$(sharpen_SOURCES) $(shift_SOURCES) $(sinus_SOURCES) \
 	$(smooth_palette_SOURCES) $(softglow_SOURCES) \
@@ -1818,6 +1828,7 @@ libm = -lm
 #lens_flare_RC = lens-flare.rc.o
 #mail_RC = mail.rc.o
 #max_rgb_RC = max-rgb.rc.o
+#reverse_rgb_RC = reverse-rgb.rc.o
 #mosaic_RC = mosaic.rc.o
 #newsprint_RC = newsprint.rc.o
 #nl_filter_RC = nl-filter.rc.o
@@ -3512,7 +3523,7 @@ mail_LDADD = \
 	$(mail_RC)
 
 max_rgb_SOURCES = \
-	max-rgb.c
+	max-rgb.c \
 
 max_rgb_LDADD = \
 	$(libgimpui)		\
@@ -3527,6 +3538,24 @@ max_rgb_LDADD = \
 	$(RT_LIBS)		\
 	$(INTLLIBS)		\
 	$(max_rgb_RC)
+
+reverse_rgb_SOURCES = \
+	reverse-rgb.c \
+
+reverse_rgb_LDADD = \
+	$(libgimpui)		\
+	$(libgimpwidgets)	\
+	$(libgimpmodule)	\
+	$(libgimp)		\
+	$(libgimpmath)		\
+	$(libgimpconfig)	\
+	$(libgimpcolor)		\
+	$(libgimpbase)		\
+	$(GTK_LIBS)		\
+	$(RT_LIBS)		\
+	$(INTLLIBS)		\
+	$(reverse_rgb_RC)
+
 
 mosaic_SOURCES = \
 	mosaic.c
@@ -4812,6 +4841,10 @@ max-rgb$(EXEEXT): $(max_rgb_OBJECTS) $(max_rgb_DEPENDENCIES) $(EXTRA_max_rgb_DEP
 	@rm -f max-rgb$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(max_rgb_OBJECTS) $(max_rgb_LDADD) $(LIBS)
 
+reverse-rgb$(EXEEXT): $(reverse_rgb_OBJECTS) $(reverse_rgb_DEPENDENCIES) $(EXTRA_reverse_rgb_DEPENDENCIES) 
+	@rm -f reverse-rgb$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(reverse_rgb_OBJECTS) $(reverse_rgb_LDADD) $(LIBS)
+
 mosaic$(EXEEXT): $(mosaic_OBJECTS) $(mosaic_DEPENDENCIES) $(EXTRA_mosaic_DEPENDENCIES) 
 	@rm -f mosaic$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(mosaic_OBJECTS) $(mosaic_LDADD) $(LIBS)
@@ -4883,6 +4916,10 @@ qbist$(EXEEXT): $(qbist_OBJECTS) $(qbist_DEPENDENCIES) $(EXTRA_qbist_DEPENDENCIE
 red-eye-removal$(EXEEXT): $(red_eye_removal_OBJECTS) $(red_eye_removal_DEPENDENCIES) $(EXTRA_red_eye_removal_DEPENDENCIES) 
 	@rm -f red-eye-removal$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(red_eye_removal_OBJECTS) $(red_eye_removal_LDADD) $(LIBS)
+
+reverse-rgb$(EXEEXT): $(reverse_rgb_OBJECTS) $(reverse_rgb_DEPENDENCIES) $(EXTRA_reverse_rgb_DEPENDENCIES) 
+	@rm -f reverse-rgb$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(reverse_rgb_OBJECTS) $(reverse_rgb_LDADD) $(LIBS)
 
 ripple$(EXEEXT): $(ripple_OBJECTS) $(ripple_DEPENDENCIES) $(EXTRA_ripple_DEPENDENCIES) 
 	@rm -f ripple$(EXEEXT)
@@ -5125,6 +5162,7 @@ include ./$(DEPDIR)/polar-coords.Po
 include ./$(DEPDIR)/procedure-browser.Po
 include ./$(DEPDIR)/qbist.Po
 include ./$(DEPDIR)/red-eye-removal.Po
+include ./$(DEPDIR)/reverse-rgb.Po
 include ./$(DEPDIR)/ripple.Po
 include ./$(DEPDIR)/rotate.Po
 include ./$(DEPDIR)/sample-colorize.Po

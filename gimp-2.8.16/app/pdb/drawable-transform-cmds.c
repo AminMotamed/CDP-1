@@ -1910,7 +1910,7 @@ register_drawable_transform_procs (GimpPDB *pdb)
                                                   "rotate type",
                                                   "Type of rotation",
                                                   GIMP_TYPE_ROTATION_TYPE,
-                                                  GIMP_ROTATE_90,
+                                                  GIMP_ROTATE_45,
                                                   GIMP_PARAM_READWRITE));
   gimp_procedure_add_argument (procedure,
                                g_param_spec_boolean ("auto-center",

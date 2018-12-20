@@ -306,6 +306,15 @@ gimp_drawable_transform_rotate_point (gint              x,
 
   switch (rotate_type)
     {
+    case GIMP_ROTATE_45:
+      *new_x = RINT ((center_x - (gdouble) y + center_y)/2);
+      *new_y = RINT ((center_y + (gdouble) x - center_x)/2);
+      //*new_x = RINT (cos(45) * ((gdouble) x - center_x) -
+      //               sin(45) * ((gdouble) y - center_y) + center_x);
+      // *new_y = RINT (sin(45) * ((gdouble) x - center_x) -
+      //               cos(45) * ((gdouble) y - center_y) + center_y);
+      break;
+
     case GIMP_ROTATE_90:
       *new_x = RINT (center_x - (gdouble) y + center_y);
       *new_y = RINT (center_y + (gdouble) x - center_x);
@@ -365,6 +374,11 @@ gimp_drawable_transform_tiles_rotate (GimpDrawable     *drawable,
 
   switch (rotate_type)
     {
+    case GIMP_ROTATE_45:
+      gimp_drawable_transform_rotate_point (orig_x,
+                                            orig_y - orig_height,
+                                            rotate_type, center_x, center_y,
+                                            &new_x, &new_y);
     case GIMP_ROTATE_90:
       gimp_drawable_transform_rotate_point (orig_x,
                                             orig_y + orig_height,
@@ -434,6 +448,17 @@ gimp_drawable_transform_tiles_rotate (GimpDrawable     *drawable,
 
           switch (rotate_type)
             {
+	    case GIMP_ROTATE_45:
+              gimp_drawable_transform_rotate_point (clip_x + clip_width,
+                                                    clip_y,
+                                                    GIMP_ROTATE_45,
+                                                    center_x,
+                                                    center_y,
+                                                    &orig_x,
+                                                    &orig_y);
+              orig_width   = clip_height;
+              orig_height  = clip_width;
+              break;
             case GIMP_ROTATE_90:
               gimp_drawable_transform_rotate_point (clip_x + clip_width,
                                                     clip_y,
@@ -513,7 +538,8 @@ gimp_drawable_transform_tiles_rotate (GimpDrawable     *drawable,
           pixel_region_set_col (&destPR, new_x + i, new_y, new_height, buf);
         }
       break;
-
+ 
+    case GIMP_ROTATE_45:
     case GIMP_ROTATE_180:
       g_assert (new_width == orig_width);
       buf = g_new (guchar, new_width * orig_bpp);

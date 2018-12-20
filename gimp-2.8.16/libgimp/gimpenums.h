@@ -264,6 +264,7 @@ GType gimp_rotation_type_get_type (void) G_GNUC_CONST;
 
 typedef enum
 {
+  GIMP_ROTATE_45,
   GIMP_ROTATE_90,
   GIMP_ROTATE_180,
   GIMP_ROTATE_270

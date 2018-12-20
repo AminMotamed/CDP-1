@@ -140,6 +140,7 @@ libexec_PROGRAMS = \
 	lens-flare \
 	$(MAIL) \
 	max-rgb \
+	reverse-rgb \
 	mosaic \
 	newsprint \
 	nl-filter \
@@ -1857,7 +1858,7 @@ mail_LDADD = \
 	$(mail_RC)
 
 max_rgb_SOURCES = \
-	max-rgb.c
+	max-rgb.c \
 
 max_rgb_LDADD = \
 	$(libgimpui)		\
@@ -1872,6 +1873,23 @@ max_rgb_LDADD = \
 	$(RT_LIBS)		\
 	$(INTLLIBS)		\
 	$(max_rgb_RC)
+
+reverse_rgb_SOURCES = \
+        reverse-rgb.c
+
+reverse_rgb_LDADD = \
+	$(libgimpui)		\
+	$(libgimpwidgets)	\
+	$(libgimpmodule)	\
+	$(libgimp)		\
+	$(libgimpmath)		\
+	$(libgimpconfig)	\
+	$(libgimpcolor)		\
+	$(libgimpbase)		\
+	$(GTK_LIBS)		\
+	$(RT_LIBS)		\
+	$(INTLLIBS)		\
+	$(reverse_rgb_RC)
 
 mosaic_SOURCES = \
 	mosaic.c

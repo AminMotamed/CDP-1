@@ -118,6 +118,7 @@
 #define GIMP_HELP_IMAGE_CONVERT_INDEXED           "gimp-image-convert-indexed"
 #define GIMP_HELP_IMAGE_FLIP_HORIZONTAL           "gimp-image-flip-horizontal"
 #define GIMP_HELP_IMAGE_FLIP_VERTICAL             "gimp-image-flip-vertical"
+#define GIMP_HELP_IMAGE_ROTATE_45                 "gimp-image-rotate-45"
 #define GIMP_HELP_IMAGE_ROTATE_90                 "gimp-image-rotate-90"
 #define GIMP_HELP_IMAGE_ROTATE_180                "gimp-image-rotate-180"
 #define GIMP_HELP_IMAGE_ROTATE_270                "gimp-image-rotate-270"
@@ -513,7 +514,7 @@
 #define GIMP_HELP_HELP                            "gimp-help"
 #define GIMP_HELP_HELP_CONTEXT                    "gimp-help-context"
 // Modification : ajout d'un identifiant pour redirection d'un lien
-#define GIMP_HELP_TWITTER 						  "gimp-twitter"
+#define GIMP_HELP_TWITTER 			  "gimp-twitter"
 
 #define GIMP_HELP_COLORDISPLAY_COLORBLIND         "gimp-colordisplay-colorblind"
 #define GIMP_HELP_COLORDISPLAY_CONTRAST           "gimp-colordisplay-contrast"

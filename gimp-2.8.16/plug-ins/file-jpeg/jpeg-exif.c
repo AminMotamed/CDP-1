@@ -282,11 +282,6 @@ jpeg_exif_rotate (gint32 image_ID,
       gimp_image_flip (image_ID, GIMP_ORIENTATION_HORIZONTAL);
       break;
 
-    case 6:  /* 90 CW                            */
-      gimp_image_rotate (image_ID, GIMP_ROTATE_90);
-      jpeg_swap_original_settings (image_ID);
-      break;
-
     case 7:  /* flipped diagonally around '/'    */
       gimp_image_rotate (image_ID, GIMP_ROTATE_90);
       jpeg_swap_original_settings (image_ID);

@@ -18,7 +18,7 @@
 #include "config.h"
 
 #include <gegl.h>
-
+#include <math.h>
 #include "core-types.h"
 
 #include "gimp.h"
@@ -90,6 +90,7 @@ gimp_image_rotate (GimpImage        *image,
   /*  Resize the image (if needed)  */
   switch (rotate_type)
     {
+    case GIMP_ROTATE_45:
     case GIMP_ROTATE_90:
     case GIMP_ROTATE_270:
       new_image_width  = gimp_image_get_height (image);
@@ -253,6 +254,12 @@ gimp_image_rotate_item_offset (GimpImage        *image,
 
   switch (rotate_type)
     {
+
+    case GIMP_ROTATE_45:
+      x = gimp_image_get_height (image) - (off_y/2) - gimp_item_get_width (item);
+      y = off_x/2;
+      break;
+
     case GIMP_ROTATE_90:
       x = gimp_image_get_height (image) - off_y - gimp_item_get_width (item);
       y = off_x;
@@ -293,6 +300,7 @@ gimp_image_rotate_guides (GimpImage        *image,
 
       switch (rotate_type)
         {
+        case GIMP_ROTATE_45:
         case GIMP_ROTATE_90:
           switch (orientation)
             {
@@ -379,6 +387,9 @@ gimp_image_rotate_sample_points (GimpImage        *image,
 
       switch (rotate_type)
         {
+        case GIMP_ROTATE_45:
+          sample_point->x = cos(45) * gimp_image_get_height (image) - old_y;
+          sample_point->y = sin(45) * old_x;
         case GIMP_ROTATE_90:
           sample_point->x = gimp_image_get_height (image) - old_y;
           sample_point->y = old_x;

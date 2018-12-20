@@ -617,6 +617,7 @@ gimp_rotation_type_get_type (void)
 {
   static const GEnumValue values[] =
   {
+    { GIMP_ROTATE_45, "GIMP_ROTATE_45", "45" },
     { GIMP_ROTATE_90, "GIMP_ROTATE_90", "90" },
     { GIMP_ROTATE_180, "GIMP_ROTATE_180", "180" },
     { GIMP_ROTATE_270, "GIMP_ROTATE_270", "270" },
@@ -625,6 +626,7 @@ gimp_rotation_type_get_type (void)
 
   static const GimpEnumDesc descs[] =
   {
+    { GIMP_ROTATE_45, "GIMP_ROTATE_45", NULL },
     { GIMP_ROTATE_90, "GIMP_ROTATE_90", NULL },
     { GIMP_ROTATE_180, "GIMP_ROTATE_180", NULL },
     { GIMP_ROTATE_270, "GIMP_ROTATE_270", NULL },

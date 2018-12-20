@@ -318,6 +318,7 @@
         </placeholder>
         <separator/>
         <placeholder name="Rotate">
+          <menuitem action="image-rotate-45"/>
           <menuitem action="image-rotate-90"/>
           <menuitem action="image-rotate-270"/>
           <menuitem action="image-rotate-180"/>
