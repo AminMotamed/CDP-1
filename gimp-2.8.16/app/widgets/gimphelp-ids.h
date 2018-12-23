@@ -500,7 +500,11 @@
 #define GIMP_HELP_TEXT_EDITOR_DIALOG              "gimp-text-editor-dialog"
 #define GIMP_HELP_TIPS_DIALOG                     "gimp-tips-dialog"
 #define GIMP_HELP_UNDO_DIALOG                     "gimp-undo-dialog"
-#define GIMP_HELP_TWITTER_DIALOG				  "gimp-twitter-dialog"
+
+#define GIMP_HELP_TWITTER_DIALOG		          "gimp-twitter-dialog"
+#define GIMP_HELP_EXEMPLE01_DIALOG		          "gimp-exemple01-dialog"
+
+#define GIMP_HELP_DONATION_DIALOG                 "gimp-donation-dialog"
 
 #define GIMP_HELP_EXPORT_DIALOG                   "gimp-export-dialog"
 #define GIMP_HELP_EXPORT_CONFIRM_DIALOG           "gimp-export-confirm-dialog"
@@ -515,6 +519,7 @@
 #define GIMP_HELP_HELP_CONTEXT                    "gimp-help-context"
 // Modification : ajout d'un identifiant pour redirection d'un lien
 #define GIMP_HELP_TWITTER 			  "gimp-twitter"
+#define GIMP_HELP_EXEMPLE02                       "gimp-exemple02"
 
 #define GIMP_HELP_COLORDISPLAY_COLORBLIND         "gimp-colordisplay-colorblind"
 #define GIMP_HELP_COLORDISPLAY_CONTRAST           "gimp-colordisplay-contrast"

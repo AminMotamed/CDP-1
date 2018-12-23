@@ -254,18 +254,31 @@ static const GimpStringActionEntry dialogs_toplevel_actions[] =
     "gimp-module-dialog",
     GIMP_HELP_MODULE_DIALOG },
 
-    //  Modification : Ajout d'un nouvel element dans Help
-  { "dialogs-twitter", GIMP_STOCK_INFO,
+  // Exemple pour implémenter l'entrée "boîte de dialogue" pour le menu 
+  { "dialogs-exemple01", NULL,
+    NC_("dialogs-action", "Exemple-BdDialogue"), NULL,
+    NC_("dialogs-action", "La description de l'entrée Exemple-BdDialogue"),
+    "gimp-exemple01-dialog",
+    GIMP_HELP_EXEMPLE01_DIALOG },
+
+  //  Modification : Ajout d'un nouvel element dans Help
+  { "dialogs-twitter", NULL,
     NC_("dialogs-action", "Twitter"), NULL,
     NC_("dialogs-action", "Redirect to Twitter"),
     "gimp-twitter-dialog",
-     GIMP_HELP_TIPS_DIALOG },
+     GIMP_HELP_TWITTER_DIALOG },
 
   { "dialogs-tips", GIMP_STOCK_INFO,
     NC_("dialogs-action", "_Tip of the Day"), NULL,
     NC_("dialogs-action", "Show some helpful tips on using GIMP"),
     "gimp-tips-dialog",
     GIMP_HELP_TIPS_DIALOG },
+
+  { "dialogs-donation", GIMP_STOCK_INFO,
+    NC_("dialogs-action", "Donate"), NULL,
+    NC_("dialogs-action", "Donate"),
+    "gimp-tips-dialog",
+    GIMP_HELP_DONATION_DIALOG },
 
   { "dialogs-about", GTK_STOCK_ABOUT,
 #if defined (G_OS_WIN32)

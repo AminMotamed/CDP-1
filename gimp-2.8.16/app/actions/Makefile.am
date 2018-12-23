@@ -105,6 +105,8 @@ libappactions_a_SOURCES = \
 	gradients-commands.h		\
 	help-actions.c			\
 	help-actions.h			\
+	donation-actions.c			\
+	donation-actions.h			\
 	help-commands.c			\
 	help-commands.h			\
 	image-actions.c			\

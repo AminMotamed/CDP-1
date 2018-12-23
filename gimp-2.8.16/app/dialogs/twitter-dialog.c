@@ -43,8 +43,8 @@
 
 typedef struct
 {
-  GtkWidget   *dialog;
-  int 				state;
+  GtkWidget  *dialog;
+  int        state;
 } GimpTwitterDialog;
 
 static GdkPixbuf * twitter_dialog_load_logo     (void);
@@ -57,41 +57,40 @@ twitter_dialog_create (GimpContext *context)
 
   g_return_val_if_fail (GIMP_IS_CONTEXT (context), NULL);
 
-  if (! dialog.dialog)
-    {
-      GtkWidget *widget;
-      GdkPixbuf *pixbuf;
+	if(!dialog.dialog) {
+		GtkWidget *widget;
+		GdkPixbuf *pixbuf;
 
-      pixbuf = twitter_dialog_load_logo ();
+		pixbuf = twitter_dialog_load_logo ();
+		
+		widget = g_object_new (GTK_TYPE_ABOUT_DIALOG,
+		                       "role",               "gimp-twitter",
+		                       "window-position",    GTK_WIN_POS_CENTER,
+		                       "title",              _("Social Network"),
+		                       "program-name",       TWITTER_ACRONYM,
+		                       "comments",           TWITTER_DESCRIPTION,
+		                       "logo",               pixbuf,
+		                       "website",            TWITTER_WEBSITE,
+		                       "website-label",      TWITTER_WEBSITE_LABEL,
+		                       NULL);
 
-      widget = g_object_new (GTK_TYPE_ABOUT_DIALOG,
-                             "role",               "gimp-twitter",
-                             "window-position",    GTK_WIN_POS_CENTER,
-                             "title",              _("Social Network"),
-                             "program-name",       TWITTER_ACRONYM,
-                             "comments",           TWITTER_DESCRIPTION,
-                             "logo",               pixbuf,
-                             "website",            TWITTER_WEBSITE,
-                             "website-label",      TWITTER_WEBSITE_LABEL,
-                             NULL);
+		if (pixbuf)
+			g_object_unref (pixbuf);
 
-      if (pixbuf)
-        g_object_unref (pixbuf);
-
-      dialog.dialog = widget;
-
-      g_object_add_weak_pointer (G_OBJECT (widget), (gpointer) &dialog.dialog);
-
-      g_signal_connect (widget, "response",
-                        G_CALLBACK (gtk_widget_destroy),
-                        NULL);
-	    dialog.state = 1;
-    }
+		dialog.dialog = widget;
+	
+		g_signal_connect (widget, "response",
+		                  G_CALLBACK (gtk_widget_destroy),
+		                  NULL);
+	
+		dialog.state = 1;
+	}
 
 	if(dialog.state)
     printf("La boîte de dialogue Twitter s'est bien déroulée.\n");
   else
     printf("Erreur avec la boîte de dialogue Twitter (cf twitter-dialog.c).\n");
+
   gtk_window_present (GTK_WINDOW (dialog.dialog));
 
   return dialog.dialog;
@@ -103,7 +102,8 @@ twitter_dialog_load_logo (void)
   GdkPixbuf *pixbuf;
   gchar     *filename;
 
-  filename = g_build_filename (gimp_data_directory (), "images",
+  filename = g_build_filename (gimp_data_directory (), 
+                               "images",
                                "twitter-logo.png",
                                NULL);
 

@@ -24,10 +24,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* Modification :: Ajout du fichier reverse-rgb.c permettant de réduire 
- * la valeur de la couleur R,G ou B dominante de l'objet selectionnée et 
- * de les répartir avec les autres couleurs primaires.
- */
 #include "config.h"
 
 #include <libgimp/gimp.h>
@@ -41,17 +37,30 @@
 #define PLUG_IN_ROLE   "gimp-reverse-rgb"
 
 
-static void     query   (void);
-static void     run     (const gchar      *name,
-                         gint              nparams,
-                         const GimpParam  *param,
-                         gint             *nreturn_vals,
-                         GimpParam       **return_vals);
+static void    query   (void);
+static void    run     (const gchar      *name,
+                        gint              nparams,
+                        const GimpParam  *param,
+                        gint             *nreturn_vals,
+                        GimpParam        **return_vals);
 
-static GimpPDBStatusType main_function  (GimpDrawable *drawable,
-                                         GimpPreview  *preview);
+static         GimpPDBStatusType main_function  (GimpDrawable *drawable,
+                                                 GimpPreview  *preview);
 
-static gint              reverse_rgb_dialog (GimpDrawable *drawable);
+static gint    reverse_rgb_dialog (GimpDrawable *drawable);
+
+// Structure utilisée pour l'algorithme Reverse RGB
+typedef struct
+{
+  gint  pourcent;    // Pourcentage de couleur qu'il faut retirer
+  gint  state;       // Etat de l'algorithme de la fonction/algorithme
+} ReverseParams;
+
+static ReverseParams reversergb =
+{
+  10,  
+  1  
+};
 
 const GimpPlugInInfo PLUG_IN_INFO =
 {
@@ -61,22 +70,12 @@ const GimpPlugInInfo PLUG_IN_INFO =
   run,   /* run_proc   */
 };
 
-enum
-{
-  MIN_CHANNELS = 0,
-  MAX_CHANNELS = 1
-};
-
 typedef struct
 {
   gint max_p;
 } ValueType;
 
-static ValueType pvals =
-{
-  MAX_CHANNELS
-};
-
+static ValueType pvals = {1}; 
 MAIN ()
 
 static void
@@ -110,7 +109,7 @@ run (const gchar      *name,
      gint              nparams,
      const GimpParam  *param,
      gint             *nreturn_vals,
-     GimpParam       **return_vals)
+     GimpParam        **return_vals)
 {
   GimpDrawable      *drawable;
   static GimpParam   values[1];
@@ -129,7 +128,7 @@ run (const gchar      *name,
   values[0].data.d_status = status;
 
   switch (run_mode)
-    {
+  {
     case GIMP_RUN_INTERACTIVE:
       gimp_get_data (PLUG_IN_PROC, &pvals);
       /* Since a channel might be selected, we must check wheter RGB or not. */
@@ -148,7 +147,7 @@ run (const gchar      *name,
     case GIMP_RUN_WITH_LAST_VALS:
       gimp_get_data (PLUG_IN_PROC, &pvals);
       break;
-    }
+  }
 
   status = main_function (drawable, NULL);
 
@@ -165,39 +164,35 @@ typedef struct
   gint     init_value;
   gint     flag;
   gboolean has_alpha;
-} MaxRgbParam_t;
+} ReverseRGBParam;
 
 static void
 reverse_rgb_func (const guchar *src,
-              guchar       *dest,
-              gint          bpp,
-              gpointer      data)
+                  guchar       *dest,
+                  gint          bpp,
+                  gpointer      data)
 {
-  MaxRgbParam_t *param = (MaxRgbParam_t*) data;
+
+  ReverseRGBParam *param = (ReverseRGBParam*) data;
   gint   ch, max_ch = 0, i, value = 0; 
   guchar max, tmp_value;
-
   max = param->init_value;
   for (ch = 0; ch < 3; ch++)
-    if (param->flag * max <= param->flag * (tmp_value = (*src++)))
-      {
-        if (max == tmp_value)
-          {
-            max_ch += 1 << ch;
-          }
-        else
-          {
-            max_ch = 1 << ch; /* clear memories of old channels */
-            max = tmp_value;
-          }
+    if (param->flag * max <= param->flag * (tmp_value = (*src++))) {
+      if (max == tmp_value)
+        max_ch += 1 << ch;
+      else {
+        max_ch = 1 << ch;
+        max = tmp_value;
       }
+    }
 
-  for(i = 0; i < 3; i++) {
-    if(max_ch & (1 << i))
-      value = i;
+    for(i = 0; i < 3; i++) {
+      if(max_ch & (1 << i))
+        value = i;
   }
 
-  dest[value] = 0;
+  dest[value] = (reversergb.pourcent * max) / 100;
   for(i = 0; i < 3; i++) {
     if(value != i) {
     	dest[i] = max;
@@ -206,13 +201,32 @@ reverse_rgb_func (const guchar *src,
 
   if (param->has_alpha)
     dest[3] = *src;
+
+	
+	// Affichage du résultat :
+  switch(value) {
+    case 0:
+      printf("La valeur affecté est le Rouge. ");
+      break;
+    case 1:
+      printf("La valeur affecté est le Vert. ");
+      break;
+    case 2:
+      printf("La valeur affecté est le Bleu. ");
+      break;
+    default:
+      printf("Erreur dans reverse-rgb lors du choix des couleurs\n");
+      reversergb.state = 0;
+      break;
+  }
+  printf("Pourcentage de la valeur : %d\n", reversergb.pourcent);
 }
 
 static GimpPDBStatusType
 main_function (GimpDrawable *drawable,
                GimpPreview  *preview)
 {
-  MaxRgbParam_t param;
+  ReverseRGBParam param;
 
   param.init_value = (pvals.max_p > 0) ? 0 : 255;
   param.flag = (0 < pvals.max_p) ? 1 : -1;
@@ -244,7 +258,7 @@ main_function (GimpDrawable *drawable,
     }
   else
     {
-      gimp_progress_init (_("Max RGB"));
+      gimp_progress_init (_("Reverse RGB"));
 
       gimp_rgn_iterate2 (drawable, 0 /* unused */, reverse_rgb_func, &param);
 
@@ -261,10 +275,9 @@ reverse_rgb_dialog (GimpDrawable *drawable)
 {
   GtkWidget *dialog;
   GtkWidget *main_vbox;
+  GtkWidget *table;    // Modification variable table de type GtkWidget pour pouvoir initialiser une table
   GtkWidget *preview;
-  GtkWidget *frame;
-  GtkWidget *max;
-  GtkWidget *min;
+  GtkObject *adj;
   gboolean   run;
 
   gimp_ui_init (PLUG_IN_BINARY, TRUE);
@@ -272,10 +285,8 @@ reverse_rgb_dialog (GimpDrawable *drawable)
   dialog = gimp_dialog_new (_("Reverse RGB Value"), PLUG_IN_ROLE,
                             NULL, 0,
                             gimp_standard_help_func, PLUG_IN_PROC,
-
                             GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
                             GTK_STOCK_OK,     GTK_RESPONSE_OK,
-
                             NULL);
 
   gtk_dialog_set_alternative_button_order (GTK_DIALOG (dialog),
@@ -299,27 +310,22 @@ reverse_rgb_dialog (GimpDrawable *drawable)
                             G_CALLBACK (main_function),
                             drawable);
 
-  frame = gimp_int_radio_group_new (FALSE, NULL,
-                                    G_CALLBACK (gimp_radio_button_update),
-                                    &pvals.max_p, pvals.max_p,
+  // Modification :: Ajout d'une table GTK
+  table = gtk_table_new (4, 3, FALSE);
+  gtk_table_set_col_spacings (GTK_TABLE (table), 6);
+  gtk_table_set_row_spacings (GTK_TABLE (table), 6);
+  gtk_box_pack_start (GTK_BOX (main_vbox), table, FALSE, FALSE, 0);
+  gtk_widget_show (table);
 
-                                    _("_Hold the maximal channels"),
-                                    MAX_CHANNELS, &max,
+  adj = gimp_scale_entry_new (GTK_TABLE (table), 0, 1,
+                              _("Pourcentage:"), 100, 50,
+                              reversergb.pourcent,
+                              0, 100, 1, 1, 0,
+                              TRUE, 0, 0, NULL, NULL);
 
-                                    _("Ho_ld the minimal channels"),
-                                    MIN_CHANNELS, &min,
-
-                                    NULL);
-
-  g_signal_connect_swapped (max, "toggled",
-                            G_CALLBACK (gimp_preview_invalidate),
-                            preview);
-  g_signal_connect_swapped (min, "toggled",
-                            G_CALLBACK (gimp_preview_invalidate),
-                            preview);
-
-  gtk_box_pack_start (GTK_BOX (main_vbox), frame, FALSE, FALSE, 0);
-  gtk_widget_show (frame);
+  g_signal_connect (adj, "value-changed",
+                    G_CALLBACK (gimp_int_adjustment_update),
+                    &reversergb.pourcent);
 
   gtk_widget_show (dialog);
 

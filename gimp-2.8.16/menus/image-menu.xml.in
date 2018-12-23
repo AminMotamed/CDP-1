@@ -649,6 +649,11 @@
       <separator />
     </menu>
 
+
+<!--    <menu action="donation-menu" name="Donation">
+	<menuitem action="dialogs-donation"/>
+    </menu> -->
+
   </menubar-and-popup>
 
 </ui>

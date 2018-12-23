@@ -90,6 +90,7 @@ static void        about_dialog_add_unstable_message
 GtkWidget *
 about_dialog_create (GimpContext *context)
 {
+  printf("Ouverture de la boîte de dialogue About.\n");
   static GimpAboutDialog dialog;
 
   g_return_val_if_fail (GIMP_IS_CONTEXT (context), NULL);

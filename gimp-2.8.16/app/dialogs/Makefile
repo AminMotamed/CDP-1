@@ -134,7 +134,7 @@ am__objects_2 = dialogs.$(OBJEXT) dialogs-constructors.$(OBJEXT) \
 	resize-dialog.$(OBJEXT) resolution-calibrate-dialog.$(OBJEXT) \
 	scale-dialog.$(OBJEXT) stroke-dialog.$(OBJEXT) \
 	template-options-dialog.$(OBJEXT) tips-dialog.$(OBJEXT) \
-	twitter-dialog.$(OBJEXT) tips-parser.$(OBJEXT) \
+	twitter-dialog.$(OBJEXT) exemple01-dialog.$(OBJEXT) tips-parser.$(OBJEXT) \
 	user-install-dialog.$(OBJEXT) vectors-export-dialog.$(OBJEXT) \
 	vectors-import-dialog.$(OBJEXT) \
 	vectors-options-dialog.$(OBJEXT)
@@ -207,7 +207,7 @@ CTAGS = ctags
 am__DIST_COMMON = $(srcdir)/Makefile.in $(top_srcdir)/depcomp
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 AA_LIBS = 
-ACLOCAL = ${SHELL} /home/gaston/Downloads/CDP-1/gimp-2.8.16/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/gaston/Downloads/gimp-2.8.16/missing aclocal-1.15
 ALLOCA = 
 ALL_LINGUAS = 
 ALSA_CFLAGS = 
@@ -219,9 +219,9 @@ AR = ar
 AS = as
 ATK_CFLAGS = -I/usr/include/atk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
 ATK_LIBS = -latk-1.0 -lgobject-2.0 -lglib-2.0
-AUTOCONF = ${SHELL} /home/gaston/Downloads/CDP-1/gimp-2.8.16/missing autoconf
-AUTOHEADER = ${SHELL} /home/gaston/Downloads/CDP-1/gimp-2.8.16/missing autoheader
-AUTOMAKE = ${SHELL} /home/gaston/Downloads/CDP-1/gimp-2.8.16/missing automake-1.15
+AUTOCONF = ${SHELL} /home/gaston/Downloads/gimp-2.8.16/missing autoconf
+AUTOHEADER = ${SHELL} /home/gaston/Downloads/gimp-2.8.16/missing autoheader
+AUTOMAKE = ${SHELL} /home/gaston/Downloads/gimp-2.8.16/missing automake-1.15
 AWK = mawk
 BABL_CFLAGS = -I/usr/local/include/babl-0.1
 BABL_LIBS = -L/usr/local/lib -lbabl-0.1
@@ -381,7 +381,7 @@ LT_CURRENT_MINUS_AGE = 0
 LT_VERSION_INFO = 800:16:800
 MAIL = mail$(EXEEXT)
 MAINT = 
-MAKEINFO = ${SHELL} /home/gaston/Downloads/CDP-1/gimp-2.8.16/missing makeinfo
+MAKEINFO = ${SHELL} /home/gaston/Downloads/gimp-2.8.16/missing makeinfo
 MANIFEST_TOOL = :
 MIME_TYPES = image/bmp;image/g3fax;image/gif;image/x-fits;image/x-pcx;image/x-portable-anymap;image/x-portable-bitmap;image/x-portable-graymap;image/x-portable-pixmap;image/x-psd;image/x-sgi;image/x-tga;image/x-xbitmap;image/x-xwindowdump;image/x-xcf;image/x-compressed-xcf;image/x-gimp-gbr;image/x-gimp-pat;image/x-gimp-gih;image/tiff;image/jpeg;image/x-psp;image/png;image/x-icon;image/x-xcursor;
 MKDIR_P = /bin/mkdir -p
@@ -478,10 +478,10 @@ X_EXTRA_LIBS =
 X_LIBS = 
 X_PRE_LIBS =  -lSM -lICE
 Z_LIBS = -lz
-abs_builddir = /home/gaston/Downloads/CDP-1/gimp-2.8.16/app/dialogs
-abs_srcdir = /home/gaston/Downloads/CDP-1/gimp-2.8.16/app/dialogs
-abs_top_builddir = /home/gaston/Downloads/CDP-1/gimp-2.8.16
-abs_top_srcdir = /home/gaston/Downloads/CDP-1/gimp-2.8.16
+abs_builddir = /home/gaston/Downloads/gimp-2.8.16/app/dialogs
+abs_srcdir = /home/gaston/Downloads/gimp-2.8.16/app/dialogs
+abs_top_builddir = /home/gaston/Downloads/gimp-2.8.16
+abs_top_srcdir = /home/gaston/Downloads/gimp-2.8.16
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_DUMPBIN = 
@@ -515,7 +515,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/gaston/Downloads/CDP-1/gimp-2.8.16/install-sh
+install_sh = ${SHELL} /home/gaston/Downloads/gimp-2.8.16/install-sh
 intltool__v_merge_options_ = $(intltool__v_merge_options_$(AM_DEFAULT_VERBOSITY))
 intltool__v_merge_options_0 = -q
 libdir = ${exec_prefix}/lib
@@ -623,6 +623,8 @@ libappdialogs_a_sources = \
 	tips-dialog.h			\
 	twitter-dialog.c	        \
 	twitter-dialog.h	        \
+	exemple01-dialog.c	        \
+	exemple01-dialog.h	        \
 	tips-parser.c			\
 	tips-parser.h			\
 	user-install-dialog.c		\
@@ -726,6 +728,7 @@ include ./$(DEPDIR)/template-options-dialog.Po
 include ./$(DEPDIR)/tips-dialog.Po
 include ./$(DEPDIR)/tips-parser.Po
 include ./$(DEPDIR)/twitter-dialog.Po
+include ./$(DEPDIR)/exemple01-dialog.Po
 include ./$(DEPDIR)/user-install-dialog.Po
 include ./$(DEPDIR)/vectors-export-dialog.Po
 include ./$(DEPDIR)/vectors-import-dialog.Po

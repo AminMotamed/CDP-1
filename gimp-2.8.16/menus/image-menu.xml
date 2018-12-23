@@ -510,7 +510,7 @@
     </menu>
 
     <menu action="tools-menu" name="Tools">
-      <menu action="tools-select-menu" name="Selection Tools">
+      <menu action="tools-select-menu" name="Selection Tools">	
         <menuitem action="tools-rect-select"/>
         <menuitem action="tools-ellipse-select"/>
         <menuitem action="tools-free-select"/>
@@ -661,6 +661,8 @@
     </menu>
 
     <menu action="help-menu" name="Help">
+      <menuitem action="dialogs-exemple01"/>
+      <menuitem action="help-exemple02"/>
       <menuitem action="dialogs-twitter"/>
       <menuitem action="help-help"/>
       <menuitem action="help-context-help"/>
@@ -671,6 +673,9 @@
       <separator/>
     </menu>
 
+<!--   	<menu action="donation-menu" name="Donation">
+		    <menuitem action="dialogs-donation"/>
+    	</menu> -->
   </menubar><menubar name="dummy-menubar"><menu action="image-popup">
 
     <menu action="file-menu" name="File">
@@ -1328,16 +1333,20 @@
     </menu>
 
     <menu action="help-menu" name="Help">
-	<menuitem action="dialogs-twitter"/>
-	<menuitem action="help-help"/>
-	<menuitem action="help-context-help"/>
-	<menuitem action="dialogs-tips"/>
-	<menuitem action="dialogs-about"/>
-	<separator/>
-	<placeholder name="Programming"/>
+	    <menuitem action="dialogs-twitter"/>
+	    <menuitem action="help-help"/>
+	    <menuitem action="help-context-help"/>
+	    <menuitem action="dialogs-tips"/>
+	    <menuitem action="dialogs-about"/>
+	    <separator/>
+	      <placeholder name="Programming"/>
       <separator/>
     </menu>
 
+
+<!--    <menu action="donation-menu" name="Donation">
+	<menuitem action="dialogs-donation"/>
+    </menu> -->
   </menu></menubar>
 
 </ui>

@@ -680,11 +680,11 @@ dialogs-constructors.o: dialogs-constructors.c /usr/include/stdc-predef.h \
  dialogs-constructors.h file-open-dialog.h file-open-location-dialog.h \
  file-save-dialog.h image-new-dialog.h input-devices-dialog.h \
  keyboard-shortcuts-dialog.h module-dialog.h palette-import-dialog.h \
- preferences-dialog.h quit-dialog.h tips-dialog.h twitter-dialog.h \
- ../../app/gimp-intl.h /usr/include/glib-2.0/glib/gi18n.h \
- /usr/include/libintl.h /usr/include/locale.h \
- /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/string.h \
- /usr/include/x86_64-linux-gnu/bits/string.h \
+ preferences-dialog.h quit-dialog.h exemple01-dialog.h tips-dialog.h \
+ twitter-dialog.h ../../app/gimp-intl.h \
+ /usr/include/glib-2.0/glib/gi18n.h /usr/include/libintl.h \
+ /usr/include/locale.h /usr/include/x86_64-linux-gnu/bits/locale.h \
+ /usr/include/string.h /usr/include/x86_64-linux-gnu/bits/string.h \
  /usr/include/x86_64-linux-gnu/bits/string2.h /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/string3.h
 
@@ -2279,6 +2279,8 @@ palette-import-dialog.h:
 preferences-dialog.h:
 
 quit-dialog.h:
+
+exemple01-dialog.h:
 
 tips-dialog.h:
 

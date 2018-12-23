@@ -288,6 +288,7 @@ run (const gchar      *name,
      gint             *nreturn_vals,
      GimpParam       **return_vals)
 {
+  printf("Ouverture de la boîte de dialogue pour Screenshot...\n");
   GimpRunMode        run_mode = param[0].data.d_int32;
   GimpPDBStatusType  status   = GIMP_PDB_SUCCESS;
   GdkScreen         *screen   = NULL;

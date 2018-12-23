@@ -21,6 +21,11 @@
 
 /*  toplevel dialogs  */
 
+GtkWidget * dialogs_exemple01_get          (GimpDialogFactory *factory,
+					    GimpContext       *context,
+					    GimpUIManager     *ui_manager,
+					    gint               view_size);
+
 GtkWidget * dialogs_image_new_new          (GimpDialogFactory *factory,
                                             GimpContext       *context,
                                             GimpUIManager     *ui_manager,

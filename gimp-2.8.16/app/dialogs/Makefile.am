@@ -81,6 +81,8 @@ libappdialogs_a_sources = \
 	tips-dialog.h			\
 	twitter-dialog.c	        \
 	twitter-dialog.h	        \
+	exemple01-dialog.c	        \
+	exemple01-dialog.h	        \
 	tips-parser.c			\
 	tips-parser.h			\
 	user-install-dialog.c		\

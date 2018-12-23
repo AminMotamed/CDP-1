@@ -389,6 +389,7 @@ static void
 retinex (GimpDrawable *drawable,
          GimpPreview  *preview)
 {
+  printf("%d - %f\n", rvals.scale);
   gint          x, y, width, height;
   gint          size, bytes;
   guchar       *src  = NULL;

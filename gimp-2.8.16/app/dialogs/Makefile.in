@@ -134,7 +134,7 @@ am__objects_2 = dialogs.$(OBJEXT) dialogs-constructors.$(OBJEXT) \
 	resize-dialog.$(OBJEXT) resolution-calibrate-dialog.$(OBJEXT) \
 	scale-dialog.$(OBJEXT) stroke-dialog.$(OBJEXT) \
 	template-options-dialog.$(OBJEXT) tips-dialog.$(OBJEXT) \
-	twitter-dialog.$(OBJEXT) tips-parser.$(OBJEXT) \
+	twitter-dialog.$(OBJEXT) exemple01-dialog.$(OBJEXT) tips-parser.$(OBJEXT) \
 	user-install-dialog.$(OBJEXT) vectors-export-dialog.$(OBJEXT) \
 	vectors-import-dialog.$(OBJEXT) \
 	vectors-options-dialog.$(OBJEXT)
@@ -623,6 +623,8 @@ libappdialogs_a_sources = \
 	tips-dialog.h			\
 	twitter-dialog.c	        \
 	twitter-dialog.h	        \
+	exemple01-dialog.c	        \
+	exemple01-dialog.h	        \
 	tips-parser.c			\
 	tips-parser.h			\
 	user-install-dialog.c		\
@@ -726,6 +728,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tips-dialog.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tips-parser.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/twitter-dialog.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/exemple01-dialog.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/user-install-dialog.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/vectors-export-dialog.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/vectors-import-dialog.Po@am__quote@

@@ -35,11 +35,11 @@ void
 help_help_cmd_callback (GtkAction *action,
                         gpointer   data)
 {
+  printf("Action qui s'occupe de l'aide utilisateur dans Help.\n");
   Gimp        *gimp;
   GimpDisplay *display;
   return_if_no_gimp (gimp, data);
   return_if_no_display (display, data);
-  printf("Action se déroulant lors du clic de l'élément Help > Help");
   gimp_help_show (gimp, GIMP_PROGRESS (display), NULL, NULL);
 }
 

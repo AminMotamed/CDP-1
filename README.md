@@ -14,5 +14,5 @@ Le groupe est constitué de 5 membres :
 - PANCHALINGAMOORTHY Gajenthran
 - LOKO Loïc 
 - MOTAMED SALEHI Amin
-- BOUCHIHA Anas 
-- GHOUIBI Ghasen
+- BOUCHIHA Abdelrahim
+- GHOUIBI Ghassen

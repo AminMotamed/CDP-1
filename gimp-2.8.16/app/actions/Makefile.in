@@ -140,10 +140,11 @@ am_libappactions_a_OBJECTS = actions.$(OBJEXT) \
 	fonts-commands.$(OBJEXT) gradient-editor-actions.$(OBJEXT) \
 	gradient-editor-commands.$(OBJEXT) gradients-actions.$(OBJEXT) \
 	gradients-commands.$(OBJEXT) help-actions.$(OBJEXT) \
-	help-commands.$(OBJEXT) image-actions.$(OBJEXT) \
-	image-commands.$(OBJEXT) images-actions.$(OBJEXT) \
-	images-commands.$(OBJEXT) layers-actions.$(OBJEXT) \
-	layers-commands.$(OBJEXT) palette-editor-actions.$(OBJEXT) \
+	donation-actions.$(OBJEXT) help-commands.$(OBJEXT) \
+	image-actions.$(OBJEXT) image-commands.$(OBJEXT) \
+	images-actions.$(OBJEXT) images-commands.$(OBJEXT) \
+	layers-actions.$(OBJEXT) layers-commands.$(OBJEXT) \
+	palette-editor-actions.$(OBJEXT) \
 	palette-editor-commands.$(OBJEXT) palettes-actions.$(OBJEXT) \
 	palettes-commands.$(OBJEXT) patterns-actions.$(OBJEXT) \
 	plug-in-actions.$(OBJEXT) plug-in-commands.$(OBJEXT) \
@@ -669,6 +670,8 @@ libappactions_a_SOURCES = \
 	gradients-commands.h		\
 	help-actions.c			\
 	help-actions.h			\
+	donation-actions.c			\
+	donation-actions.h			\
 	help-commands.c			\
 	help-commands.h			\
 	image-actions.c			\
@@ -825,6 +828,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dockable-commands.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/documents-actions.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/documents-commands.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/donation-actions.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/drawable-actions.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/drawable-commands.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dynamics-actions.Po@am__quote@

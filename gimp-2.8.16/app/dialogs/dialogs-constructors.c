@@ -77,6 +77,7 @@
 #include "palette-import-dialog.h"
 #include "preferences-dialog.h"
 #include "quit-dialog.h"
+#include "exemple01-dialog.h"
 #include "tips-dialog.h"
 #include "twitter-dialog.h"
 
@@ -203,7 +204,18 @@ dialogs_twitter_get (GimpDialogFactory *factory,
 {
   return twitter_dialog_create (context);
 }
+
+// Exemple 01 -- 
+GtkWidget *
+dialogs_exemple01_get (GimpDialogFactory *factory,
+                     GimpContext       *context,
+                     GimpUIManager     *ui_manager,
+                     gint               view_size)
+{
+  return exemple01_dialog_create (context);
+}
  
+
 GtkWidget *
 dialogs_error_get (GimpDialogFactory *factory,
                    GimpContext       *context,
